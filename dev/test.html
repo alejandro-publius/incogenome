@@ -1,0 +1,65 @@
+<!--
+  Dev harness for Alex's glue layer. NOT the real UI.
+  Varsha owns index.html; this page exists only so the glue can be
+  smoke-tested before her markup lands. Plain, ugly, functional.
+
+  Run from repo root:
+    python3 -m http.server 8000
+  Then open: http://localhost:8000/dev/test.html
+  Also start the proxy in another terminal:
+    cd server && uvicorn proxy:app --reload --port 8001
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Incogenome dev harness</title>
+    <style>
+      body { font-family: system-ui, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 16px; color: #1a1f2b; }
+      h1, h2 { letter-spacing: -0.01em; }
+      section { margin: 24px 0; padding: 16px; border: 1px solid #e1e5ec; border-radius: 8px; }
+      button { padding: 8px 14px; border: 0; border-radius: 6px; background: #1a73e8; color: white; cursor: pointer; }
+      button:disabled { background: #98a8b8; cursor: not-allowed; }
+      .gene-card { padding: 12px; margin: 8px 0; border: 1px solid #e1e5ec; border-radius: 8px; }
+      .gene-card header { display: flex; justify-content: space-between; align-items: center; }
+      .drugs { list-style: none; padding: 0; }
+      .drug { padding: 6px 10px; margin: 4px 0; background: #f6f8fb; border-radius: 4px; }
+      .interaction { padding: 8px 10px; margin: 6px 0; background: #f6f8fb; border-radius: 4px; }
+      .ask { color: #495567; margin-top: 4px; }
+      input[type="text"] { width: 100%; padding: 8px; border: 1px solid #c7cdd6; border-radius: 6px; box-sizing: border-box; }
+      #file-status { color: #495567; margin-top: 8px; }
+    </style>
+  </head>
+  <body>
+    <h1>Incogenome (dev harness)</h1>
+    <p>This is the unstyled wiring page. Varsha is replacing it with the real UI.</p>
+
+    <section>
+      <h2>1. Load DNA</h2>
+      <input id="dna-file-input" type="file" accept=".txt,.tsv,.csv" />
+      <button id="demo-load-btn" type="button">Or load bundled sample</button>
+      <div id="file-status"></div>
+    </section>
+
+    <section>
+      <h2>2. Results</h2>
+      <div id="results"></div>
+    </section>
+
+    <section>
+      <h2>3. Medications check (the novelty)</h2>
+      <p>Enter your current meds (comma separated). The AI cross-references your phenotypes for drug-gene, drug-drug, and phenoconversion flags.</p>
+      <input id="meds-input" type="text" placeholder="e.g. clopidogrel, omeprazole, simvastatin" />
+      <p><button id="meds-check-btn" type="button">Check interactions</button></p>
+      <div id="meds-results"></div>
+    </section>
+
+    <section>
+      <h2>4. Prepare for your appointment</h2>
+      <button id="doctor-questions-btn" type="button">Prepare questions for my doctor</button>
+      <ul id="doctor-questions"></ul>
+    </section>
+
+    <script type="module" src="../src/main.js"></script>
+  </body>
+</html>
