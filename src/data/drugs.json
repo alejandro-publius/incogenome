@@ -1,0 +1,433 @@
+{
+  "_note": "Drug guidance per (gene, drug, phenotype). Sources: CPIC, PharmGKB. Informational only.",
+  "drugs": {
+    "CYP2C19": {
+      "clopidogrel": {
+        "Ultrarapid metabolizer": {
+          "flag": "green",
+          "recommendation": "Standard dosing — your DNA suggests clopidogrel activates efficiently in your body. No change is typically needed.",
+          "source": "CPIC"
+        },
+        "Rapid metabolizer": {
+          "flag": "green",
+          "recommendation": "Standard dosing — your DNA suggests clopidogrel activates well. No change is typically needed.",
+          "source": "CPIC"
+        },
+        "Normal metabolizer": {
+          "flag": "green",
+          "recommendation": "Standard dosing — your DNA shows no signal that clopidogrel would work differently for you.",
+          "source": "CPIC"
+        },
+        "Intermediate metabolizer": {
+          "flag": "amber",
+          "recommendation": "Your DNA suggests clopidogrel may activate less efficiently, so it could be partially less effective at preventing clots. Ask your doctor whether an alternative like ticagrelor or prasugrel is appropriate.",
+          "source": "CPIC"
+        },
+        "Poor metabolizer": {
+          "flag": "red",
+          "recommendation": "Your DNA suggests this medication may not activate efficiently in your body, so it could be less effective at preventing clots. Ask your doctor about a documented alternative like ticagrelor or prasugrel.",
+          "source": "CPIC"
+        },
+        "Not determined": {
+          "flag": "gray",
+          "recommendation": "We couldn't determine your CYP2C19 status from this file. A clinical pharmacogenomic panel can resolve it before starting clopidogrel.",
+          "source": "DoseDNA"
+        }
+      },
+      "citalopram": {
+        "Ultrarapid metabolizer": {
+          "flag": "amber",
+          "recommendation": "Your DNA suggests citalopram may be cleared too quickly, which could make it less effective. Consider discussing an alternative antidepressant with your prescriber.",
+          "source": "CPIC"
+        },
+        "Rapid metabolizer": {
+          "flag": "amber",
+          "recommendation": "Your DNA suggests citalopram may be cleared faster than typical, which could reduce its effectiveness. Talk to your prescriber if you don't see a response.",
+          "source": "CPIC"
+        },
+        "Normal metabolizer": {
+          "flag": "green",
+          "recommendation": "Standard dosing — your DNA shows no signal that citalopram would behave unusually for you.",
+          "source": "CPIC"
+        },
+        "Intermediate metabolizer": {
+          "flag": "amber",
+          "recommendation": "This drug may clear a bit slower than typical, so side effects can be more noticeable. Ask your prescriber whether a lower starting dose is appropriate.",
+          "source": "CPIC"
+        },
+        "Poor metabolizer": {
+          "flag": "red",
+          "recommendation": "This drug may build up in your system more than typical, so a lower starting dose or an alternative is often considered. Talk to your prescriber before starting or changing dose.",
+          "source": "CPIC"
+        },
+        "Not determined": {
+          "flag": "gray",
+          "recommendation": "We couldn't determine your CYP2C19 status from this file. A clinical pharmacogenomic panel can resolve it.",
+          "source": "DoseDNA"
+        }
+      },
+      "escitalopram": {
+        "Ultrarapid metabolizer": {
+          "flag": "amber",
+          "recommendation": "Your DNA suggests escitalopram may be cleared too quickly, which could reduce effectiveness. Consider discussing an alternative antidepressant with your prescriber.",
+          "source": "CPIC"
+        },
+        "Rapid metabolizer": {
+          "flag": "amber",
+          "recommendation": "Your DNA suggests escitalopram may be cleared faster than typical, which could blunt its effect. Talk to your prescriber if response is poor.",
+          "source": "CPIC"
+        },
+        "Normal metabolizer": {
+          "flag": "green",
+          "recommendation": "Standard dosing — your DNA shows no signal that escitalopram would behave unusually for you.",
+          "source": "CPIC"
+        },
+        "Intermediate metabolizer": {
+          "flag": "amber",
+          "recommendation": "This drug may clear a bit slower than typical, so side effects can be more noticeable. Ask your prescriber about a conservative starting dose.",
+          "source": "CPIC"
+        },
+        "Poor metabolizer": {
+          "flag": "red",
+          "recommendation": "This drug may build up in your system more than typical, so a lower starting dose or an alternative is often considered. Talk to your prescriber before starting or changing dose.",
+          "source": "CPIC"
+        },
+        "Not determined": {
+          "flag": "gray",
+          "recommendation": "We couldn't determine your CYP2C19 status from this file. A clinical pharmacogenomic panel can resolve it.",
+          "source": "DoseDNA"
+        }
+      },
+      "omeprazole": {
+        "Ultrarapid metabolizer": {
+          "flag": "amber",
+          "recommendation": "Your DNA suggests omeprazole may be cleared more quickly than typical, which can reduce its effect on stomach acid. If you're not getting relief, ask your doctor about adjusting the approach.",
+          "source": "CPIC"
+        },
+        "Rapid metabolizer": {
+          "flag": "amber",
+          "recommendation": "Your DNA suggests omeprazole may clear faster than typical, which can blunt its acid-lowering effect. Mention this to your doctor if symptoms persist.",
+          "source": "CPIC"
+        },
+        "Normal metabolizer": {
+          "flag": "green",
+          "recommendation": "Standard dosing — your DNA shows no signal that omeprazole would behave unusually for you.",
+          "source": "CPIC"
+        },
+        "Intermediate metabolizer": {
+          "flag": "green",
+          "recommendation": "Standard dosing is typically fine — slower clearance can actually help acid suppression. No change is usually needed.",
+          "source": "CPIC"
+        },
+        "Poor metabolizer": {
+          "flag": "green",
+          "recommendation": "Higher drug exposure is expected, which CPIC notes can actually improve healing of ulcers. Standard dosing is usually appropriate; mention this to your prescriber.",
+          "source": "CPIC"
+        },
+        "Not determined": {
+          "flag": "gray",
+          "recommendation": "We couldn't determine your CYP2C19 status from this file. A clinical pharmacogenomic panel can resolve it.",
+          "source": "DoseDNA"
+        }
+      },
+      "voriconazole": {
+        "Ultrarapid metabolizer": {
+          "flag": "red",
+          "recommendation": "Your DNA suggests voriconazole may be cleared too quickly to reach effective levels. Ask the prescriber about an alternative antifungal.",
+          "source": "CPIC"
+        },
+        "Rapid metabolizer": {
+          "flag": "amber",
+          "recommendation": "Your DNA suggests voriconazole may not reach effective levels at standard dosing. Ask the prescriber about therapeutic drug monitoring or an alternative.",
+          "source": "CPIC"
+        },
+        "Normal metabolizer": {
+          "flag": "green",
+          "recommendation": "Standard dosing — your DNA shows no signal that voriconazole would behave unusually for you.",
+          "source": "CPIC"
+        },
+        "Intermediate metabolizer": {
+          "flag": "amber",
+          "recommendation": "Your DNA suggests voriconazole may build up more than typical. Ask the prescriber about monitoring drug levels.",
+          "source": "CPIC"
+        },
+        "Poor metabolizer": {
+          "flag": "amber",
+          "recommendation": "Your DNA suggests voriconazole can build up to potentially toxic levels at standard dosing. Ask the prescriber about a lower starting dose or an alternative antifungal.",
+          "source": "CPIC"
+        },
+        "Not determined": {
+          "flag": "gray",
+          "recommendation": "We couldn't determine your CYP2C19 status from this file. A clinical pharmacogenomic panel can resolve it before voriconazole is prescribed.",
+          "source": "DoseDNA"
+        }
+      }
+    },
+    "CYP2C9": {
+      "warfarin": {
+        "Normal metabolizer": {
+          "flag": "green",
+          "recommendation": "Your DNA shows no CYP2C9 signal that would shift warfarin dosing. Read this alongside your VKORC1 result, since both genes matter together.",
+          "source": "CPIC"
+        },
+        "Intermediate metabolizer": {
+          "flag": "amber",
+          "recommendation": "Your DNA suggests warfarin may clear more slowly, raising bleeding risk at standard doses. Ask your clinician about a lower starting dose, and read this together with your VKORC1 result.",
+          "source": "CPIC"
+        },
+        "Poor metabolizer": {
+          "flag": "red",
+          "recommendation": "Your DNA suggests warfarin clears much more slowly, raising bleeding risk at standard doses. A meaningfully lower starting dose is typically used, and this should be combined with your VKORC1 result and clinician guidance.",
+          "source": "CPIC"
+        },
+        "Not determined": {
+          "flag": "gray",
+          "recommendation": "We couldn't determine your CYP2C9 status from this file. A clinical pharmacogenomic panel can resolve it before warfarin is started.",
+          "source": "DoseDNA"
+        }
+      },
+      "ibuprofen": {
+        "Normal metabolizer": {
+          "flag": "green",
+          "recommendation": "Standard dosing — your DNA shows no signal that ibuprofen would behave unusually for you.",
+          "source": "CPIC"
+        },
+        "Intermediate metabolizer": {
+          "flag": "amber",
+          "recommendation": "Your DNA suggests ibuprofen may build up slightly more than typical. Use the lowest effective dose for the shortest time, and ask your doctor if you take it regularly.",
+          "source": "CPIC"
+        },
+        "Poor metabolizer": {
+          "flag": "amber",
+          "recommendation": "Your DNA suggests NSAIDs like ibuprofen may build up more than typical, which can raise the risk of stomach or kidney side effects. Ask your doctor about a lower dose or a different option for ongoing use.",
+          "source": "CPIC"
+        },
+        "Not determined": {
+          "flag": "gray",
+          "recommendation": "We couldn't determine your CYP2C9 status from this file. A clinical pharmacogenomic panel can resolve it.",
+          "source": "DoseDNA"
+        }
+      },
+      "phenytoin": {
+        "Normal metabolizer": {
+          "flag": "green",
+          "recommendation": "Standard dosing — your DNA shows no signal that phenytoin would behave unusually for you.",
+          "source": "CPIC"
+        },
+        "Intermediate metabolizer": {
+          "flag": "amber",
+          "recommendation": "Your DNA suggests phenytoin may build up more than typical. Ask your prescriber about a more cautious starting dose and monitoring drug levels.",
+          "source": "CPIC"
+        },
+        "Poor metabolizer": {
+          "flag": "red",
+          "recommendation": "Your DNA suggests phenytoin can build up to toxic levels at standard doses. A lower starting dose with close monitoring is typically used — discuss this with your prescriber.",
+          "source": "CPIC"
+        },
+        "Not determined": {
+          "flag": "gray",
+          "recommendation": "We couldn't determine your CYP2C9 status from this file. A clinical pharmacogenomic panel can resolve it before phenytoin is prescribed.",
+          "source": "DoseDNA"
+        }
+      }
+    },
+    "VKORC1": {
+      "warfarin": {
+        "Normal sensitivity": {
+          "flag": "green",
+          "recommendation": "Your DNA shows typical warfarin sensitivity from VKORC1. Standard dosing is usually appropriate — read this together with your CYP2C9 result.",
+          "source": "CPIC"
+        },
+        "Increased sensitivity": {
+          "flag": "amber",
+          "recommendation": "Your DNA suggests you respond more strongly to warfarin than typical, so a lower starting dose is often used. This should be combined with your CYP2C9 result and clinician guidance.",
+          "source": "CPIC"
+        },
+        "High sensitivity": {
+          "flag": "red",
+          "recommendation": "Your DNA suggests you'd respond strongly to standard warfarin — a much lower starting dose is typically used. This should be combined with your CYP2C9 result and clinician guidance.",
+          "source": "CPIC"
+        },
+        "Not determined": {
+          "flag": "gray",
+          "recommendation": "We couldn't determine your VKORC1 status from this file. A clinical pharmacogenomic panel can resolve it before warfarin is started.",
+          "source": "DoseDNA"
+        }
+      }
+    },
+    "SLCO1B1": {
+      "simvastatin": {
+        "Normal function": {
+          "flag": "green",
+          "recommendation": "Standard dosing — your DNA shows no signal that simvastatin would cause unusual muscle side effects for you.",
+          "source": "CPIC"
+        },
+        "Decreased function": {
+          "flag": "amber",
+          "recommendation": "Your DNA signals a higher chance of muscle-related side effects at standard doses. Ask about a lower dose or a different statin.",
+          "source": "CPIC"
+        },
+        "Poor function": {
+          "flag": "red",
+          "recommendation": "Your DNA suggests a significantly higher risk of muscle injury from simvastatin. Ask your doctor about switching to a different statin.",
+          "source": "CPIC"
+        },
+        "Not determined": {
+          "flag": "gray",
+          "recommendation": "We couldn't determine your SLCO1B1 status from this file. A clinical pharmacogenomic panel can resolve it.",
+          "source": "DoseDNA"
+        }
+      },
+      "atorvastatin": {
+        "Normal function": {
+          "flag": "green",
+          "recommendation": "Standard dosing — your DNA shows no signal that atorvastatin would behave unusually for you.",
+          "source": "CPIC"
+        },
+        "Decreased function": {
+          "flag": "green",
+          "recommendation": "Standard dosing is generally fine. Atorvastatin is less affected by SLCO1B1 than simvastatin, so risk is small — mention any muscle symptoms to your doctor.",
+          "source": "CPIC"
+        },
+        "Poor function": {
+          "flag": "amber",
+          "recommendation": "Your DNA suggests a modestly higher risk of muscle-related side effects. Ask your doctor about a lower dose, and report any muscle pain promptly.",
+          "source": "CPIC"
+        },
+        "Not determined": {
+          "flag": "gray",
+          "recommendation": "We couldn't determine your SLCO1B1 status from this file. A clinical pharmacogenomic panel can resolve it.",
+          "source": "DoseDNA"
+        }
+      },
+      "rosuvastatin": {
+        "Normal function": {
+          "flag": "green",
+          "recommendation": "Standard dosing — your DNA shows no signal that rosuvastatin would behave unusually for you.",
+          "source": "CPIC"
+        },
+        "Decreased function": {
+          "flag": "amber",
+          "recommendation": "Your DNA suggests a higher chance of muscle-related side effects at higher doses. Ask your doctor about a conservative dose.",
+          "source": "CPIC"
+        },
+        "Poor function": {
+          "flag": "amber",
+          "recommendation": "Your DNA suggests an elevated risk of muscle-related side effects. Ask your doctor about a lower dose and report any muscle pain promptly.",
+          "source": "CPIC"
+        },
+        "Not determined": {
+          "flag": "gray",
+          "recommendation": "We couldn't determine your SLCO1B1 status from this file. A clinical pharmacogenomic panel can resolve it.",
+          "source": "DoseDNA"
+        }
+      }
+    },
+    "TPMT": {
+      "azathioprine": {
+        "Normal activity": {
+          "flag": "green",
+          "recommendation": "Standard dosing — your DNA shows no signal that azathioprine would behave unusually for you.",
+          "source": "CPIC"
+        },
+        "Intermediate activity": {
+          "flag": "amber",
+          "recommendation": "Your DNA suggests you break this drug down more slowly than typical, which raises the risk of low blood counts. Ask your specialist about a lower starting dose and closer blood monitoring.",
+          "source": "CPIC"
+        },
+        "Deficient activity": {
+          "flag": "red",
+          "recommendation": "Your DNA suggests you cannot break down this drug normally, which can be dangerous at standard doses. Discuss alternatives or a much lower dose with your specialist.",
+          "source": "CPIC"
+        },
+        "Not determined": {
+          "flag": "gray",
+          "recommendation": "We couldn't determine your TPMT status from this file. A clinical pharmacogenomic panel can resolve it before azathioprine is started.",
+          "source": "DoseDNA"
+        }
+      },
+      "mercaptopurine": {
+        "Normal activity": {
+          "flag": "green",
+          "recommendation": "Standard dosing — your DNA shows no signal that mercaptopurine would behave unusually for you.",
+          "source": "CPIC"
+        },
+        "Intermediate activity": {
+          "flag": "amber",
+          "recommendation": "Your DNA suggests you break this drug down more slowly than typical, raising the risk of low blood counts. Ask your specialist about a lower starting dose and closer blood monitoring.",
+          "source": "CPIC"
+        },
+        "Deficient activity": {
+          "flag": "red",
+          "recommendation": "Your DNA suggests you cannot break down this drug normally, which can be dangerous at standard doses. Discuss alternatives or a much lower dose with your specialist.",
+          "source": "CPIC"
+        },
+        "Not determined": {
+          "flag": "gray",
+          "recommendation": "We couldn't determine your TPMT status from this file. A clinical pharmacogenomic panel can resolve it before mercaptopurine is started.",
+          "source": "DoseDNA"
+        }
+      },
+      "thioguanine": {
+        "Normal activity": {
+          "flag": "green",
+          "recommendation": "Standard dosing — your DNA shows no signal that thioguanine would behave unusually for you.",
+          "source": "CPIC"
+        },
+        "Intermediate activity": {
+          "flag": "amber",
+          "recommendation": "Your DNA suggests you break this drug down more slowly than typical, raising the risk of low blood counts. Ask your specialist about a lower starting dose and closer blood monitoring.",
+          "source": "CPIC"
+        },
+        "Deficient activity": {
+          "flag": "red",
+          "recommendation": "Your DNA suggests you cannot break down this drug normally, which can be dangerous at standard doses. Discuss alternatives or a much lower dose with your specialist.",
+          "source": "CPIC"
+        },
+        "Not determined": {
+          "flag": "gray",
+          "recommendation": "We couldn't determine your TPMT status from this file. A clinical pharmacogenomic panel can resolve it before thioguanine is started.",
+          "source": "DoseDNA"
+        }
+      }
+    },
+    "CYP2D6": {
+      "codeine": {
+        "Coverage limited": {
+          "flag": "gray",
+          "recommendation": "We can't determine your CYP2D6 status from a consumer DNA file. This matters because codeine has an FDA black box warning for ultrarapid metabolizers, especially in children. A clinical pharmacogenomic test is recommended before relying on codeine.",
+          "source": "DoseDNA"
+        },
+        "Not determined": {
+          "flag": "gray",
+          "recommendation": "We can't determine your CYP2D6 status from a consumer DNA file. Codeine carries an FDA black box warning for ultrarapid metabolizers — a clinical pharmacogenomic test is recommended before relying on codeine.",
+          "source": "DoseDNA"
+        }
+      },
+      "tramadol": {
+        "Coverage limited": {
+          "flag": "gray",
+          "recommendation": "We can't determine your CYP2D6 status from a consumer DNA file. Like codeine, tramadol can behave very differently in ultrarapid metabolizers. A clinical pharmacogenomic test is recommended before relying on tramadol.",
+          "source": "DoseDNA"
+        },
+        "Not determined": {
+          "flag": "gray",
+          "recommendation": "We can't determine your CYP2D6 status from a consumer DNA file. A clinical pharmacogenomic test is recommended before relying on tramadol, since CYP2D6 status strongly affects its activation.",
+          "source": "DoseDNA"
+        }
+      },
+      "tamoxifen": {
+        "Coverage limited": {
+          "flag": "gray",
+          "recommendation": "We can't determine your CYP2D6 status from a consumer DNA file. CYP2D6 affects how well tamoxifen is converted into its active form, so a clinical pharmacogenomic test is recommended if tamoxifen is being considered.",
+          "source": "DoseDNA"
+        },
+        "Not determined": {
+          "flag": "gray",
+          "recommendation": "We can't determine your CYP2D6 status from a consumer DNA file. CYP2D6 status affects tamoxifen activation — a clinical pharmacogenomic test can resolve this with your oncology team.",
+          "source": "DoseDNA"
+        }
+      }
+    }
+  }
+}

@@ -15,13 +15,27 @@ import json
 import os
 import re
 import sys
+import time
+from collections import defaultdict, deque
 from typing import Literal, Optional
 
 from anthropic import Anthropic, APIError
 from dotenv import load_dotenv
-from fastapi import FastAPI, HTTPException
+from fastapi import Depends, FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field, ValidationError, field_validator
+
+# Defense-in-depth: reject any payload field that looks like DNA. The schema
+# already caps lengths, but a future client bug could still try to send an
+# rsID or a long ACGT run. Match either an rsID (rs + 3+ digits) or a long
+# uninterrupted ACGT run. Caller passes the string through _reject_dna_shaped.
+DNA_SHAPED_RE = re.compile(r"\brs\d{3,}\b|[ACGT]{20,}")
+
+
+def _reject_dna_shaped(s: str) -> str:
+    if DNA_SHAPED_RE.search(s):
+        raise ValueError("payload contains DNA-shaped data, rejecting")
+    return s
 
 load_dotenv()
 
@@ -78,17 +92,40 @@ app = FastAPI(title="DoseDNA proxy")
 app.add_middleware(
     CORSMiddleware,
     allow_origin_regex=r"^https?://(localhost|127\.0\.0\.1)(:\d+)?$",
-    allow_methods=["POST", "GET"],
+    allow_methods=["POST", "GET", "OPTIONS"],
     allow_headers=["*"],
 )
 
 client = Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
 
 
+# Lightweight per-IP rate limiter. 30 requests per 60s window. No external dep.
+RATE_LIMIT_WINDOW_S = 60.0
+RATE_LIMIT_MAX = 30
+_rate_buckets: dict[str, deque] = defaultdict(deque)
+
+
+def rate_limit(request: Request) -> None:
+    ip = request.client.host if request.client else "unknown"
+    now = time.time()
+    bucket = _rate_buckets[ip]
+    cutoff = now - RATE_LIMIT_WINDOW_S
+    while bucket and bucket[0] < cutoff:
+        bucket.popleft()
+    if len(bucket) >= RATE_LIMIT_MAX:
+        raise HTTPException(status_code=429, detail="rate limit exceeded")
+    bucket.append(now)
+
+
 class ExplainRequest(BaseModel):
     gene: str = Field(..., max_length=20)
     phenotype: str = Field(..., max_length=40)
     drug: str = Field(..., max_length=60)
+
+    @field_validator("gene", "phenotype", "drug")
+    @classmethod
+    def reject_dna(cls, v: str) -> str:
+        return _reject_dna_shaped(v)
 
 
 class ExplainResponse(BaseModel):
@@ -99,6 +136,11 @@ class ExplainResponse(BaseModel):
 class PhenotypeSummary(BaseModel):
     gene: str = Field(..., max_length=20)
     phenotype: str = Field(..., max_length=40)
+
+    @field_validator("gene", "phenotype")
+    @classmethod
+    def reject_dna(cls, v: str) -> str:
+        return _reject_dna_shaped(v)
 
 
 class QuestionsRequest(BaseModel):
@@ -113,6 +155,13 @@ class QuestionsResponse(BaseModel):
 class InteractionsRequest(BaseModel):
     phenotypes: list[PhenotypeSummary] = Field(..., max_length=20)
     medications: list[str] = Field(..., min_length=1, max_length=30)
+
+    @field_validator("medications")
+    @classmethod
+    def reject_dna_meds(cls, v: list[str]) -> list[str]:
+        for med in v:
+            _reject_dna_shaped(med)
+        return v
 
 
 SEVERITY_MAP = {
@@ -179,17 +228,34 @@ def health() -> dict:
     return {"ok": True, "model": MODEL}
 
 
-@app.post("/api/explain", response_model=ExplainResponse)
+@app.post(
+    "/api/explain",
+    response_model=ExplainResponse,
+    dependencies=[Depends(rate_limit)],
+)
 def explain(req: ExplainRequest) -> ExplainResponse:
     user_message = (
         f"Explain in simple terms what it means to be a {req.gene} "
         f"{req.phenotype} taking {req.drug}, and what to ask the doctor."
     )
-    text = _call_claude(EXPLAIN_SYSTEM, user_message)
+    try:
+        text = _call_claude(EXPLAIN_SYSTEM, user_message)
+    except APIError:
+        # README §3 fallback: still show the user something useful when
+        # Claude is unreachable. UI keys on source="fallback".
+        fallback = (
+            f"Based on your {req.gene} {req.phenotype} result, ask your clinician "
+            f"how to safely take {req.drug}."
+        )
+        return ExplainResponse(explanation=fallback, source="fallback")
     return ExplainResponse(explanation=text, source="claude")
 
 
-@app.post("/api/questions", response_model=QuestionsResponse)
+@app.post(
+    "/api/questions",
+    response_model=QuestionsResponse,
+    dependencies=[Depends(rate_limit)],
+)
 def questions(req: QuestionsRequest) -> QuestionsResponse:
     pheno_lines = "\n".join(f"- {p.gene}: {p.phenotype}" for p in req.phenotypes)
     meds = ", ".join(req.medications) if req.medications else "(none provided)"
@@ -200,7 +266,16 @@ def questions(req: QuestionsRequest) -> QuestionsResponse:
         "Generate 4-6 specific questions this patient should bring to their "
         "doctor or pharmacist. Format as bullet points."
     )
-    text = _call_claude(QUESTIONS_SYSTEM, user_message, max_tokens=500)
+    try:
+        text = _call_claude(QUESTIONS_SYSTEM, user_message, max_tokens=500)
+    except APIError:
+        # README §3 fallback: a single generic bullet beats a 503.
+        return QuestionsResponse(
+            questions=[
+                "Ask your clinician how your pharmacogenomic results should "
+                "shape your current medications."
+            ]
+        )
     bullets = []
     for line in text.splitlines():
         stripped = line.strip()
@@ -216,7 +291,11 @@ def questions(req: QuestionsRequest) -> QuestionsResponse:
     return QuestionsResponse(questions=bullets[:6])
 
 
-@app.post("/api/check-meds", response_model=InteractionsResponse)
+@app.post(
+    "/api/check-meds",
+    response_model=InteractionsResponse,
+    dependencies=[Depends(rate_limit)],
+)
 def check_meds(req: InteractionsRequest) -> InteractionsResponse:
     pheno_lines = "\n".join(f"- {p.gene}: {p.phenotype}" for p in req.phenotypes)
     user_message = (
@@ -225,7 +304,13 @@ def check_meds(req: InteractionsRequest) -> InteractionsResponse:
         f"Current medications: {', '.join(req.medications)}\n\n"
         "Return the JSON object as specified."
     )
-    text = _call_claude(INTERACTIONS_SYSTEM, user_message, max_tokens=2000)
+    # 900 tokens is enough for 3 short JSON arrays per §9 ("handful of high-
+    # confidence examples"). Keeps demo latency tight; 2000 was overkill.
+    try:
+        text = _call_claude(INTERACTIONS_SYSTEM, user_message, max_tokens=900)
+    except APIError:
+        # README §3 fallback: empty interactions render as "no flags" client-side.
+        return InteractionsResponse()
     extracted = _extract_json(text)
     if not extracted:
         # Refusal or unparseable — return empty result; client renders "no flags".

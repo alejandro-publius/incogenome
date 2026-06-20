@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DoseDNA — Pharmacogenomics, in your browser</title>
+  <style>
+    :root {
+      --bg: #0b0f17;
+      --card: #11171f;
+      --card-soft: #141b25;
+      --border: #1d2533;
+      --border-soft: #182030;
+      --text: #e7ecf3;
+      --dim: #8d97a7;
+      --dimmer: #5d6678;
+      --accent: #52d273;
+      --accent-soft: rgba(82, 210, 115, 0.12);
+      --warn: #ffb454;
+      --warn-soft: rgba(255, 180, 84, 0.12);
+      --alarm: #ff5f6d;
+      --alarm-soft: rgba(255, 95, 109, 0.12);
+      --gray: #5d6678;
+      --gray-soft: rgba(141, 151, 167, 0.12);
+      --radius: 14px;
+      --radius-sm: 8px;
+      --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI",
+              Roboto, "Helvetica Neue", Arial, sans-serif;
+      --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      font-size: 15px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(1200px 600px at 80% -10%, rgba(82, 210, 115, 0.06), transparent 60%),
+        radial-gradient(900px 500px at -10% 10%, rgba(82, 130, 210, 0.05), transparent 60%),
+        var(--bg);
+    }
+
+    .wrap {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 56px 24px 120px;
+    }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      margin-bottom: 40px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--accent), #3aa8d8);
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      font-size: 14px;
+      color: #0b0f17;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-name {
+      font-weight: 600;
+      font-size: 17px;
+      letter-spacing: -0.01em;
+    }
+
+    h1 {
+      font-size: 40px;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      font-weight: 700;
+      margin: 0 0 14px;
+    }
+
+    .subhead {
+      font-size: 17px;
+      color: var(--dim);
+      margin: 0 0 20px;
+      max-width: 620px;
+    }
+
+    .hero-pills {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 500;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid rgba(82, 210, 115, 0.25);
+    }
+
+    .pill .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 8px var(--accent);
+    }
+
+    .pill.neutral {
+      background: var(--gray-soft);
+      color: var(--dim);
+      border-color: var(--border);
+    }
+    .pill.neutral .dot { background: var(--dim); box-shadow: none; }
+
+    /* ---------- Sections / cards ---------- */
+    section.card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 26px;
+      margin-bottom: 18px;
+    }
+
+    .step-head {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+
+    .step-num {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--dimmer);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin: 0;
+    }
+
+    .step-desc {
+      color: var(--dim);
+      font-size: 14px;
+      margin: 4px 0 18px;
+    }
+
+    /* ---------- Form controls ---------- */
+    label.field-label {
+      display: block;
+      font-size: 13px;
+      color: var(--dim);
+      margin-bottom: 8px;
+    }
+
+    .row {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    input[type="file"],
+    input[type="text"] {
+      background: var(--card-soft);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: var(--font);
+      font-size: 14px;
+      padding: 10px 12px;
+      border-radius: var(--radius-sm);
+      outline: none;
+      transition: border-color 0.15s ease, background 0.15s ease;
+    }
+    input[type="text"] { flex: 1; min-width: 240px; }
+    input[type="text"]::placeholder { color: var(--dimmer); }
+    input[type="file"]:hover,
+    input[type="text"]:hover { border-color: #2a3447; }
+    input[type="file"]:focus,
+    input[type="text"]:focus {
+      border-color: var(--accent);
+      background: var(--card);
+    }
+
+    input[type="file"]::file-selector-button {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 6px 12px;
+      border-radius: 6px;
+      margin-right: 12px;
+      cursor: pointer;
+      font-family: var(--font);
+      font-size: 13px;
+      transition: background 0.15s ease;
+    }
+    input[type="file"]::file-selector-button:hover {
+      background: var(--border-soft);
+    }
+
+    button {
+      font-family: var(--font);
+      font-size: 14px;
+      font-weight: 500;
+      padding: 9px 16px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: background 0.15s ease, border-color 0.15s ease, opacity 0.15s ease, transform 0.05s ease;
+      letter-spacing: -0.005em;
+    }
+    button:active:not(:disabled) { transform: translateY(1px); }
+
+    button.primary {
+      background: var(--accent);
+      color: #07120c;
+      border: 1px solid var(--accent);
+    }
+    button.primary:hover:not(:disabled) { background: #66dd84; border-color: #66dd84; }
+
+    button.secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    button.secondary:hover:not(:disabled) {
+      background: var(--border-soft);
+      border-color: #2a3447;
+    }
+
+    button:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+
+    /* ---------- Status text ---------- */
+    .status {
+      font-size: 13px;
+      color: var(--dim);
+      margin-top: 14px;
+      font-family: var(--mono);
+      min-height: 1.2em;
+    }
+    .status.ok { color: var(--accent); }
+    .status.warn { color: var(--warn); }
+    .status.err { color: var(--alarm); }
+
+    .file-help {
+      font-size: 13px;
+      color: var(--dimmer);
+      margin-top: 14px;
+    }
+    .file-help code {
+      font-family: var(--mono);
+      font-size: 12px;
+      background: var(--card-soft);
+      border: 1px solid var(--border);
+      padding: 1px 6px;
+      border-radius: 4px;
+      color: var(--dim);
+    }
+
+    /* ---------- Empty states ---------- */
+    .empty {
+      color: var(--dimmer);
+      font-size: 14px;
+      padding: 18px 4px;
+      text-align: left;
+    }
+
+    /* ---------- Results: gene cards (injected by main.js) ---------- */
+    #results {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .gene-card {
+      background: var(--card-soft);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 18px 20px;
+    }
+
+    .gene-card header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .gene-card header h3 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .gene-card header .gene-meta {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--dim);
+    }
+
+    .phenotype {
+      font-size: 13px;
+      color: var(--dim);
+      margin-bottom: 14px;
+    }
+    .phenotype strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .drugs {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .drug {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 12px;
+      border-radius: 6px;
+      background: var(--card);
+      border: 1px solid var(--border-soft);
+      border-left: 3px solid var(--gray);
+    }
+    .drug.flag-green  { border-left-color: var(--accent); }
+    .drug.flag-amber  { border-left-color: var(--warn); }
+    .drug.flag-red    { border-left-color: var(--alarm); }
+    .drug.flag-gray   { border-left-color: var(--gray); }
+
+    .drug .drug-name {
+      font-weight: 500;
+      font-size: 14px;
+    }
+    .drug .drug-note {
+      font-size: 13px;
+      color: var(--dim);
+      margin-top: 2px;
+    }
+    .drug .drug-main { flex: 1; min-width: 0; }
+
+    .coverage-state {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      background: var(--gray-soft);
+      color: var(--dim);
+      border: 1px solid var(--border);
+      white-space: nowrap;
+    }
+    .coverage-state.confident {
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-color: rgba(82, 210, 115, 0.25);
+    }
+    .coverage-state.partial {
+      background: var(--warn-soft);
+      color: var(--warn);
+      border-color: rgba(255, 180, 84, 0.25);
+    }
+    .coverage-state.not-callable {
+      background: var(--gray-soft);
+      color: var(--dim);
+      border-color: var(--border);
+    }
+
+    .explain-btn {
+      background: transparent;
+      color: var(--dim);
+      border: 1px solid var(--border);
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.15s ease, color 0.15s ease;
+      white-space: nowrap;
+    }
+    .explain-btn:hover:not(:disabled) {
+      background: var(--border-soft);
+      color: var(--text);
+    }
+
+    .explanation {
+      margin-top: 10px;
+      padding: 12px 14px;
+      background: var(--bg);
+      border: 1px solid var(--border-soft);
+      border-radius: 6px;
+      font-size: 13px;
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .explanation.loading {
+      color: var(--dim);
+      font-style: italic;
+    }
+
+    /* ---------- Meds results / interactions ---------- */
+    #meds-results {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .interaction {
+      padding: 12px 14px;
+      border-radius: var(--radius-sm);
+      background: var(--card-soft);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gray);
+      font-size: 14px;
+    }
+    .interaction .int-title {
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+    .interaction .int-body {
+      color: var(--dim);
+      font-size: 13px;
+    }
+    .interaction.sev-info    { border-left-color: var(--dim); }
+    .interaction.sev-caution { border-left-color: var(--warn); }
+    .interaction.sev-avoid   { border-left-color: var(--alarm); }
+
+    .interaction .sev-chip {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 999px;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+    .sev-info .sev-chip    { background: var(--gray-soft); color: var(--dim); }
+    .sev-caution .sev-chip { background: var(--warn-soft); color: var(--warn); }
+    .sev-avoid .sev-chip   { background: var(--alarm-soft); color: var(--alarm); }
+
+    .ask {
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px dashed var(--border);
+      font-size: 13px;
+      color: var(--dim);
+    }
+    .ask::before {
+      content: "Ask your clinician: ";
+      color: var(--dimmer);
+      font-weight: 500;
+    }
+
+    /* ---------- Doctor questions ---------- */
+    #doctor-questions {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    #doctor-questions li {
+      padding: 10px 14px;
+      background: var(--card-soft);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      color: var(--text);
+      position: relative;
+      padding-left: 32px;
+    }
+    #doctor-questions li::before {
+      content: "?";
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 700;
+      display: grid;
+      place-items: center;
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      margin-top: 36px;
+      padding: 22px 26px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--dimmer);
+      line-height: 1.6;
+    }
+    footer a {
+      color: var(--dim);
+      text-decoration: underline;
+      text-decoration-color: var(--border);
+      text-underline-offset: 3px;
+    }
+    footer a:hover { color: var(--text); }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 920px) {
+      .wrap { padding: 36px 20px 100px; }
+    }
+    @media (max-width: 760px) {
+      h1 { font-size: 32px; }
+      .subhead { font-size: 15px; }
+      section.card { padding: 20px; }
+    }
+    /* Privacy Console (420px wide, bottom-right) — leave breathing room on narrow widths */
+    @media (max-width: 1380px) {
+      .wrap { padding-right: 24px; }
+    }
+    @media (max-width: 760px) {
+      /* On phone-ish widths the console collapses; still pad bottom so footer clears it */
+      .wrap { padding-bottom: 160px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- ============ HERO ============ -->
+    <header class="hero">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">Dx</div>
+        <div class="brand-name">DoseDNA</div>
+      </div>
+      <h1>See how your DNA affects your medications.</h1>
+      <p class="subhead">
+        Drop in a raw 23andMe or AncestryDNA file. DoseDNA reads it entirely in
+        your browser and shows which common drugs your body processes
+        differently — without your genome ever leaving your laptop.
+      </p>
+      <div class="hero-pills">
+        <span class="pill" title="Your raw DNA is parsed locally in this browser tab.">
+          <span class="dot"></span> On-device DNA parsing
+        </span>
+        <span class="pill neutral">
+          <span class="dot"></span> Only {gene, phenotype, drug} leaves your device
+        </span>
+      </div>
+    </header>
+
+    <!-- ============ STEP 1: LOAD DNA ============ -->
+    <section class="card" aria-labelledby="step1-h">
+      <div class="step-head">
+        <span class="step-num">Step 1</span>
+        <h2 id="step1-h">Load your DNA file</h2>
+      </div>
+      <p class="step-desc">
+        Drop your raw 23andMe or AncestryDNA file. It reads in your browser —
+        nothing is uploaded.
+      </p>
+
+      <label class="field-label" for="dna-file-input">DNA file</label>
+      <div class="row">
+        <input
+          id="dna-file-input"
+          type="file"
+          accept=".txt,.tsv,.csv"
+          aria-describedby="file-help"
+        />
+        <button id="demo-load-btn" type="button" class="secondary">
+          Load sample file
+        </button>
+      </div>
+
+      <div
+        id="file-status"
+        class="status"
+        role="status"
+        aria-live="polite"
+      ></div>
+
+      <p id="file-help" class="file-help">
+        Supported formats: <code>.txt</code> <code>.tsv</code> <code>.csv</code>
+        — the raw download from 23andMe or AncestryDNA. Typically 15–25&nbsp;MB.
+      </p>
+    </section>
+
+    <!-- ============ STEP 2: RESULTS ============ -->
+    <section class="card" aria-labelledby="step2-h">
+      <div class="step-head">
+        <span class="step-num">Step 2</span>
+        <h2 id="step2-h">Your results</h2>
+      </div>
+      <p class="step-desc">
+        Per-gene phenotypes and the drugs they affect. Tap any drug for a
+        plain-language explanation.
+      </p>
+
+      <div id="results" aria-live="polite">
+        <div class="empty">Load a DNA file above to see per-gene results.</div>
+      </div>
+    </section>
+
+    <!-- ============ STEP 3: MEDICATION CHECK ============ -->
+    <section class="card" aria-labelledby="step3-h">
+      <div class="step-head">
+        <span class="step-num">Step 3</span>
+        <h2 id="step3-h">Medication check</h2>
+      </div>
+      <p class="step-desc">
+        Tell us what you take. We'll flag drug–gene conflicts, drug–drug
+        interactions, and phenoconversion (when one drug changes how your body
+        handles another).
+      </p>
+
+      <label class="field-label" for="meds-input">Your current medications</label>
+      <div class="row">
+        <input
+          id="meds-input"
+          type="text"
+          placeholder="e.g. clopidogrel, omeprazole, simvastatin"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <button id="meds-check-btn" type="button" class="primary" disabled>
+          Check interactions
+        </button>
+      </div>
+
+      <div id="meds-results" aria-live="polite">
+        <div class="empty">
+          Load your DNA above, then enter your medications to check for
+          interactions.
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STEP 4: DOCTOR QUESTIONS ============ -->
+    <section class="card" aria-labelledby="step4-h">
+      <div class="step-head">
+        <span class="step-num">Step 4</span>
+        <h2 id="step4-h">Prepare for your appointment</h2>
+      </div>
+      <p class="step-desc">
+        Generate specific questions to bring to your doctor or pharmacist,
+        based on your results and meds.
+      </p>
+
+      <button id="doctor-questions-btn" type="button" class="secondary" disabled>
+        Generate questions for my clinician
+      </button>
+
+      <ul id="doctor-questions" aria-live="polite"></ul>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer>
+      <p>
+        <strong style="color: var(--dim);">Informational only. Not medical advice.</strong>
+        Always confirm with a clinician before changing any medication.
+        Consumer DNA arrays can't reliably call all pharmacogenes (notably
+        <code style="font-family: var(--mono);">CYP2D6</code>) — we flag those
+        as <em>coverage limited</em>.
+      </p>
+      <p style="margin-top: 10px;">
+        <a href="./README.md">About DoseDNA &amp; how it works &rarr;</a>
+      </p>
+    </footer>
+  </div>
+
+  <!-- ============ INTEGRATION HOOKS ============ -->
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

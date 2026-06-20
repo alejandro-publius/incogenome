@@ -91,7 +91,7 @@ function buildPanel() {
     lineHeight: "1.5",
   });
   counter.innerHTML = `
-    <div>DNA bytes that left your device: <strong id="pc-bytes" style="color:${PALETTE.accent}">0 B</strong></div>
+    <div>Bytes tagged as DNA-shaped that left your device: <strong id="pc-bytes" style="color:${PALETTE.accent}">0 B</strong></div>
     <div style="color:${PALETTE.dim};margin-top:4px">
       Every fetch, XHR, beacon, and WebSocket from this page is logged below.
     </div>
@@ -265,20 +265,29 @@ function patchWebSocket() {
 export function installPrivacyConsole() {
   if (mounted) return;
   mounted = true;
-  const dom = buildPanel();
-  listEl = dom.list;
-  counterEl = dom.counter;
-  badgeEl = dom.badge;
 
-  patchFetch();
-  patchXHR();
-  patchSendBeacon();
-  patchWebSocket();
+  function mount() {
+    const dom = buildPanel();
+    listEl = dom.list;
+    counterEl = dom.counter;
+    badgeEl = dom.badge;
 
-  console.log(
-    "%cPrivacy Console armed. fetch / XHR / sendBeacon / WebSocket all logged.",
-    "color:#52d273;font-weight:bold",
-  );
+    patchFetch();
+    patchXHR();
+    patchSendBeacon();
+    patchWebSocket();
+
+    console.log(
+      "%cPrivacy Console armed. fetch / XHR / sendBeacon / WebSocket all logged.",
+      "color:#52d273;font-weight:bold",
+    );
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", mount);
+  } else {
+    mount();
+  }
 }
 
 export function getPrivacyLog() {

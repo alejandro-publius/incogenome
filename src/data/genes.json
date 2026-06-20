@@ -1,0 +1,105 @@
+{
+  "build": "GRCh37",
+  "_note": "Defining variants from PharmVar build-37; phenotype tables from CPIC. Confirm strand against dbSNP at build time.",
+  "genes": {
+    "CYP2C19": {
+      "method": "diplotype",
+      "default_allele": "*1",
+      "variants": [
+        { "rsid": "rs4244285", "allele": "*2", "ref": "G", "alt": "A", "file_strand": "plus", "function": "no_function" },
+        { "rsid": "rs4986893", "allele": "*3", "ref": "G", "alt": "A", "file_strand": "plus", "function": "no_function" },
+        { "rsid": "rs12248560", "allele": "*17", "ref": "C", "alt": "T", "file_strand": "plus", "function": "increased_function" }
+      ],
+      "diplotype_to_phenotype": {
+        "*1/*1": "Normal metabolizer",
+        "*1/*2": "Intermediate metabolizer",
+        "*2/*1": "Intermediate metabolizer",
+        "*1/*3": "Intermediate metabolizer",
+        "*3/*1": "Intermediate metabolizer",
+        "*1/*17": "Rapid metabolizer",
+        "*17/*1": "Rapid metabolizer",
+        "*2/*2": "Poor metabolizer",
+        "*2/*3": "Poor metabolizer",
+        "*3/*2": "Poor metabolizer",
+        "*3/*3": "Poor metabolizer",
+        "*2/*17": "Intermediate metabolizer",
+        "*17/*2": "Intermediate metabolizer",
+        "*3/*17": "Intermediate metabolizer",
+        "*17/*3": "Intermediate metabolizer",
+        "*17/*17": "Ultrarapid metabolizer"
+      },
+      "array_callable": "partial",
+      "coverage_note": "Common no-function and increased-function alleles covered; rare alleles not on consumer arrays."
+    },
+    "CYP2C9": {
+      "method": "activity_score",
+      "default_allele": "*1",
+      "variants": [
+        { "rsid": "rs1799853", "allele": "*2", "ref": "C", "alt": "T", "file_strand": "plus", "function": "decreased_function", "activity_value": 0.5 },
+        { "rsid": "rs1057910", "allele": "*3", "ref": "A", "alt": "C", "file_strand": "plus", "function": "no_function", "activity_value": 0.0 }
+      ],
+      "default_activity_value": 1.0,
+      "activity_score_to_phenotype": {
+        "2.0": "Normal metabolizer",
+        "1.5": "Intermediate metabolizer",
+        "1.0": "Intermediate metabolizer",
+        "0.5": "Poor metabolizer",
+        "0.0": "Poor metabolizer"
+      },
+      "array_callable": "partial",
+      "coverage_note": "Common decreased/no-function alleles (*2, *3) covered; rare CPIC alleles missing."
+    },
+    "VKORC1": {
+      "method": "single_snp_function",
+      "variants": [
+        { "rsid": "rs9923231", "ref": "G", "alt": "A", "file_strand": "plus", "function": "dose_sensitivity" }
+      ],
+      "single_snp_to_phenotype": {
+        "GG": "Normal sensitivity",
+        "GA": "Increased sensitivity",
+        "AG": "Increased sensitivity",
+        "AA": "High sensitivity"
+      },
+      "array_callable": "full",
+      "coverage_note": "Single warfarin-sensitivity SNP fully covered on consumer arrays."
+    },
+    "SLCO1B1": {
+      "method": "single_snp_function",
+      "variants": [
+        { "rsid": "rs4149056", "ref": "T", "alt": "C", "file_strand": "plus", "function": "decreased_function" }
+      ],
+      "single_snp_to_phenotype": {
+        "TT": "Normal function",
+        "TC": "Decreased function",
+        "CT": "Decreased function",
+        "CC": "Poor function"
+      },
+      "array_callable": "partial",
+      "coverage_note": "521T>C covered; cannot distinguish *5 from *15 from this SNP alone."
+    },
+    "TPMT": {
+      "method": "variant_count",
+      "variants": [
+        { "rsid": "rs1800462", "allele": "*2", "ref": "G", "alt": "C", "file_strand": "plus", "function": "no_function" },
+        { "rsid": "rs1800460", "allele": "*3B", "ref": "G", "alt": "A", "file_strand": "plus", "function": "no_function" },
+        { "rsid": "rs1142345", "allele": "*3C", "ref": "A", "alt": "G", "file_strand": "plus", "function": "no_function" }
+      ],
+      "variant_count_to_phenotype": {
+        "0": "Normal activity",
+        "1": "Intermediate activity",
+        "2": "Deficient activity",
+        "3": "Deficient activity",
+        "4": "Deficient activity"
+      },
+      "array_callable": "partial",
+      "coverage_note": "Common no-function alleles covered; *3A phasing ambiguous on unphased data."
+    },
+    "CYP2D6": {
+      "method": "structural_only",
+      "variants": [],
+      "fixed_phenotype": "Coverage limited",
+      "array_callable": "none",
+      "coverage_note": "Consumer arrays cannot reliably call CYP2D6 — structural variants (deletions, duplications, hybrids) are not detectable. Clinical panel required."
+    }
+  }
+}

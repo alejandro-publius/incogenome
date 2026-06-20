@@ -1,0 +1,23 @@
+{
+  "_note": "Expected phenotype output for sample_23andme.txt. Update when sample file changes.",
+  "genotypes_at_targets": {
+    "rs4244285": "GA",
+    "rs4986893": "GG",
+    "rs12248560": "CC",
+    "rs1799853": "CC",
+    "rs1057910": "AA",
+    "rs9923231": "GA",
+    "rs4149056": "TC",
+    "rs1800462": "GG",
+    "rs1800460": "GG",
+    "rs1142345": "AA"
+  },
+  "phenotypes": {
+    "CYP2C19": { "phenotype": "Intermediate metabolizer", "coverage_state": "confident" },
+    "CYP2C9":  { "phenotype": "Normal metabolizer",       "coverage_state": "confident" },
+    "VKORC1":  { "phenotype": "Increased sensitivity",    "coverage_state": "confident" },
+    "SLCO1B1": { "phenotype": "Decreased function",       "coverage_state": "confident" },
+    "TPMT":    { "phenotype": "Normal activity",          "coverage_state": "confident" },
+    "CYP2D6":  { "phenotype": "Coverage limited",         "coverage_state": "not-callable" }
+  }
+}

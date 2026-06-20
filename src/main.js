@@ -67,9 +67,13 @@ function startWorker() {
 }
 
 async function handleParsedGenotypes(genotypes) {
+  // Privacy boundary: only the COUNT of parsed SNPs is surfaced in the UI or
+  // logged anywhere. Genotype values stay inside this function's scope and
+  // flow into pgx.js (in-page) -> currentResults (gene/phenotype only).
+  // They must never appear in setStatus, console.log, fetch bodies, etc.
   setStatus(`Parsed ${Object.keys(genotypes).length} target SNPs locally.`);
   const { genotypesToResults } = await import("./pgx.js");
-  currentResults = genotypesToResults(genotypes);
+  currentResults = await genotypesToResults(genotypes);
   renderResults(currentResults);
   if (doctorBtn) doctorBtn.disabled = false;
   if (medsCheckBtn) medsCheckBtn.disabled = false;
@@ -81,18 +85,29 @@ function flagColor(flag) {
   ] || "#8d97a7";
 }
 
+const COVERAGE_LABELS = {
+  confident: "Tested",
+  partial: "Partially tested",
+  "not-callable": "Not callable from this file",
+};
+
 function renderResults(results) {
   resultsEl.innerHTML = "";
   for (const result of results) {
     const card = document.createElement("article");
     card.className = "gene-card";
+    const coverageChip = result.coverage_state
+      ? `<span class="coverage-state coverage-${result.coverage_state}">${COVERAGE_LABELS[result.coverage_state] ?? ""}</span>`
+      : "";
+    const hasDrugs = result.drugs.length > 0;
     card.innerHTML = `
       <header>
         <h3>${result.gene}</h3>
         <span class="phenotype">${result.phenotype}</span>
+        ${coverageChip}
       </header>
       <ul class="drugs"></ul>
-      <button class="explain-btn" type="button">Explain with AI</button>
+      ${hasDrugs ? '<button class="explain-btn" type="button">Explain with AI</button>' : ""}
       <p class="explanation" hidden></p>
     `;
     const drugList = card.querySelector(".drugs");
@@ -103,9 +118,11 @@ function renderResults(results) {
       li.textContent = `${d.drug}: ${d.recommendation}`;
       drugList.appendChild(li);
     }
-    const btn = card.querySelector(".explain-btn");
-    const expEl = card.querySelector(".explanation");
-    btn.addEventListener("click", () => loadExplanation(result, btn, expEl));
+    if (hasDrugs) {
+      const btn = card.querySelector(".explain-btn");
+      const expEl = card.querySelector(".explanation");
+      btn.addEventListener("click", () => loadExplanation(result, btn, expEl));
+    }
     resultsEl.appendChild(card);
   }
 }
@@ -116,11 +133,14 @@ async function loadExplanation(result, btn, expEl) {
   btn.disabled = true;
   btn.textContent = "Loading...";
   try {
-    expEl.textContent = await fetchExplanation({
+    const data = await fetchExplanation({
       gene: result.gene,
       phenotype: result.phenotype,
       drug: first.drug,
     });
+    const prefix =
+      data.source === "fallback" ? "(AI offline — showing static guidance.) " : "";
+    expEl.textContent = `${prefix}${data.explanation}`;
   } catch {
     expEl.textContent = first.recommendation;
   }
