@@ -38,6 +38,7 @@
       <h2>1. Load DNA</h2>
       <input id="dna-file-input" type="file" accept=".txt,.tsv,.csv" />
       <button id="demo-load-btn" type="button">Or load bundled sample</button>
+      <button id="mock-load-btn" type="button" style="background:#7b3ed1">Inject mock results (dev)</button>
       <div id="file-status"></div>
     </section>
 
@@ -61,5 +62,51 @@
     </section>
 
     <script type="module" src="../src/main.js"></script>
+    <script>
+      // Mock data injection so Alex can test the AI pipeline without waiting
+      // for the parser + pgx logic. Wires to the dev hook in main.js.
+      document.getElementById("mock-load-btn").addEventListener("click", () => {
+        const mock = [
+          {
+            gene: "CYP2C19",
+            phenotype: "Poor metabolizer",
+            drugs: [
+              { drug: "clopidogrel", flag: "red", recommendation: "Likely ineffective — discuss alternatives" },
+              { drug: "citalopram", flag: "amber", recommendation: "Consider lower starting dose" },
+              { drug: "omeprazole", flag: "green", recommendation: "Standard dosing" },
+            ],
+          },
+          {
+            gene: "CYP2C9",
+            phenotype: "Normal metabolizer",
+            drugs: [
+              { drug: "warfarin", flag: "green", recommendation: "Standard dosing (see VKORC1)" },
+              { drug: "ibuprofen", flag: "green", recommendation: "Standard dosing" },
+            ],
+          },
+          {
+            gene: "VKORC1",
+            phenotype: "Increased warfarin sensitivity",
+            drugs: [{ drug: "warfarin", flag: "amber", recommendation: "Lower starting dose advised" }],
+          },
+          {
+            gene: "SLCO1B1",
+            phenotype: "Decreased function",
+            drugs: [{ drug: "simvastatin", flag: "amber", recommendation: "Lower dose to reduce myopathy risk" }],
+          },
+          {
+            gene: "TPMT",
+            phenotype: "Normal activity",
+            drugs: [{ drug: "azathioprine", flag: "green", recommendation: "Standard dosing" }],
+          },
+          {
+            gene: "CYP2D6",
+            phenotype: "Coverage limited",
+            drugs: [{ drug: "codeine", flag: "gray", recommendation: "Consumer arrays cannot reliably call CYP2D6 — clinical test recommended" }],
+          },
+        ];
+        window.__INCOGENOME_INJECT_MOCK_RESULTS(mock);
+      });
+    </script>
   </body>
 </html>

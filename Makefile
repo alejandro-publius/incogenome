@@ -15,12 +15,7 @@ all:
 	@echo "  make web     # http://localhost:8000/dev/test.html"
 
 smoketest:
-	@curl -sS http://localhost:8001/ | python3 -m json.tool
-	@echo "--- /api/explain ---"
-	@curl -sS -X POST http://localhost:8001/api/explain \
-	  -H 'Content-Type: application/json' \
-	  -d '{"gene":"CYP2C19","phenotype":"Poor metabolizer","drug":"clopidogrel"}' \
-	  | python3 -m json.tool
+	@bash scripts/smoketest.sh
 
 clean:
 	find . -name __pycache__ -type d -exec rm -rf {} + 2>/dev/null || true

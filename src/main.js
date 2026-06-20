@@ -250,6 +250,17 @@ async function onLoadDemo() {
   }
 }
 
+// Dev hook: lets the dev harness inject results without going through the
+// parser worker, so Alex can test the AI pipeline before Lindsay ships pgx.js.
+// Production UI never calls this.
+window.__INCOGENOME_INJECT_MOCK_RESULTS = (results) => {
+  currentResults = results;
+  renderResults(results);
+  if (doctorBtn) doctorBtn.disabled = false;
+  if (medsCheckBtn) medsCheckBtn.disabled = false;
+  setStatus("Mock results injected (dev only). Network calls below are real.");
+};
+
 if (fileInput) fileInput.addEventListener("change", onFileChange);
 if (medsCheckBtn) {
   medsCheckBtn.disabled = true;
