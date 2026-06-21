@@ -28,10 +28,6 @@ import {
   fetchDoctorQuestions,
   fetchMedInteractions,
 } from "./explain.js";
-import { installPrivacyConsole } from "./privacyConsole.js";
-
-installPrivacyConsole();
-
 const fileInput = document.getElementById("dna-file-input");
 const statusEl = document.getElementById("file-status");
 const resultsEl = document.getElementById("results");

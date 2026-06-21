@@ -313,10 +313,7 @@
   // is identical: file bytes never leave this tab, only verified phenotype
   // labels and medication names ever reach the proxy.
 
-  import { installPrivacyConsole } from "./src/privacyConsole.js";
   import { fetchChat } from "./src/explain.js";
-
-  installPrivacyConsole();
 
   const streamEl = document.getElementById("chat-stream");
   const inputEl = document.getElementById("chat-input");

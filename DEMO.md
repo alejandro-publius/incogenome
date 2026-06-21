@@ -26,7 +26,7 @@
 
 *(Point at the phenotype chips that appear.)*
 
-> *"Zero raw DNA bytes left this laptop. The Privacy Console in the corner is logging every outbound network call live — you can open it and read each one."*
+> *"Zero raw DNA bytes left this laptop. The strip below the headline tracks it; the proxy's DNA-shape regex actively rejects any payload that looks like raw genotypes."*
 
 **0:50 – 1:40 — Ask a real question + show CPIC grounding**
 
@@ -79,7 +79,7 @@
 - Laptop charged. Power adapter at the table.
 - `make proxy` running in one terminal. `make web` in another. **Browser pre-loaded at `http://localhost:8000/`** before judges arrive.
 - Sample DNA file **already loaded** in the chat — phenotype chips visible — so judges don't watch you click through setup.
-- Privacy Console **collapsed by default** (the small "● See where my data goes" pill in the corner) — only open it when you want to make the privacy point.
+- Privacy story lives in three visible places: the strip stats under the hero, the 🛡️ decoy chip below each chat reply, and the guardrails section further down — point at whichever is closest when the question comes up.
 - If the proxy errors mid-demo: the page still renders, you can still show phenotypes and the architecture. Say *"the deterministic engine works regardless of whether the LLM is reachable."*
 
 ---

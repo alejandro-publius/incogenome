@@ -30,7 +30,7 @@ Mentor's framework — current system flaws → DoseDNA's answer:
 
 | Flaw in existing system | DoseDNA's mitigation | Mechanism |
 |---|---|---|
-| 23andMe's 7M-account 2023 breach exposed PGx data | Raw DNA never leaves the browser | Parser worker, in-page; Privacy Console patches 12+ outbound channels to prove it |
+| 23andMe's 7M-account 2023 breach exposed PGx data | Raw DNA never leaves the browser | Parser worker runs in-page; only de-identified labels (gene, phenotype, drug name) are ever sent to the proxy; the proxy's DNA-shape regex rejects any payload that looks like raw genotypes |
 | 23andMe genome database was sold to a new owner (TTAM) under bankruptcy | Architecturally impossible — we never hold the data | We have no servers, no database, no account |
 | Clinical PGx panels cost $300–2000 and require clinician order | $0, no clinician gatekeeping, runs on the user's laptop | Browser-local engine + free CPIC API |
 | PharmCAT is a Java CLI with no patient UI | Chat interface in plain English | Anthropic tool-use loop grounding every claim in CPIC's live API |

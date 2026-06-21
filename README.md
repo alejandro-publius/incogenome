@@ -102,14 +102,6 @@ question in natural English. Replies render with:
 - No live LLM reasoning — every clinical claim is grounded in a bundled,
   citable source.
 
-### Privacy Console (`src/privacyConsole.js`)
-- Patches every outbound-network primitive in the browser: fetch, XHR,
-  beacon, WebSocket, Image, Script, Iframe, Link, EventSource,
-  RTCPeerConnection, window.open, form submit, Web Workers.
-- Case-insensitive DNA-shape detection across URL, body, base64-decoded
-  payloads, and a rolling buffer for chunked-leak detection.
-- Collapsed by default behind a single "● See where my data goes" pill.
-
 ### Cover-traffic / decoy queries (`server/proxy.py`)
 - Every real chat turn spawns **5 decoy Anthropic calls** on daemon
   threads — same model, same system prompt, random `(gene, phenotype,
