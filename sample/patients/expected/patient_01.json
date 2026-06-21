@@ -1,0 +1,8 @@
+{
+  "_note": "Seeded benchmark targets for patient_01_23andme.txt. Records the gene/variant info originally embedded as GENE_ prefixes in the input file, relocated here so the input stays a clean, hint-free DNA file.",
+  "source_file": "patient_01_23andme.txt",
+  "seeded_targets": {
+    "rs4244285":  { "gene": "CYP2C19", "star": "*2",  "genotype": "AG" },
+    "rs12248560": { "gene": "CYP2C19", "star": "*17", "genotype": "GG" }
+  }
+}

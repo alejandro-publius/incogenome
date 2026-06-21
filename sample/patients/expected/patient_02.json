@@ -1,0 +1,7 @@
+{
+  "_note": "Seeded benchmark targets for patient_02_23andme.txt. Records the gene/variant info originally embedded as GENE_ prefixes in the input file, relocated here so the input stays a clean, hint-free DNA file.",
+  "source_file": "patient_02_23andme.txt",
+  "seeded_targets": {
+    "rs4149056": { "gene": "SLCO1B1", "star": "*5 (c.521T>C)", "genotype": "CC" }
+  }
+}
