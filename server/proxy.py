@@ -17,6 +17,7 @@ import re
 import sys
 import time
 from collections import defaultdict, deque
+from pathlib import Path
 from typing import Literal, Optional
 
 from anthropic import Anthropic, APIError
@@ -24,6 +25,69 @@ from dotenv import load_dotenv
 from fastapi import Depends, FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field, ValidationError, field_validator
+
+
+# BUILD_SPEC §12b: validate fields against an allowlist built from the bundled
+# genes.json + drugs.json, so the proxy can never be abused as an open Claude
+# endpoint. The only strings that reach the prompt are ones we authored.
+_REPO_ROOT = Path(__file__).resolve().parent.parent
+_GENES_PATH = _REPO_ROOT / "src" / "data" / "genes.json"
+_DRUGS_PATH = _REPO_ROOT / "src" / "data" / "drugs.json"
+
+# Universal phenotypes the deterministic engine can emit even when a gene
+# isn't in the table (incomplete coverage). Always permitted.
+_UNIVERSAL_PHENOTYPES = {"Not determined", "Coverage limited"}
+
+
+def _build_allowlist() -> tuple[set[str], set[str], set[str], set[tuple[str, str, str]]]:
+    if not _GENES_PATH.exists() or not _DRUGS_PATH.exists():
+        # Hackathon-friendly: refuse to start so the failure mode is loud, not
+        # a silent open proxy.
+        sys.exit(
+            f"Bundled data missing — expected {_GENES_PATH} and {_DRUGS_PATH}. "
+            "Allowlist cannot be built; refusing to start."
+        )
+    with _GENES_PATH.open() as fh:
+        genes_data = json.load(fh)
+    with _DRUGS_PATH.open() as fh:
+        drugs_data = json.load(fh)
+
+    genes: set[str] = set(genes_data.get("genes", {}).keys())
+    phenotypes: set[str] = set(_UNIVERSAL_PHENOTYPES)
+    for spec in genes_data.get("genes", {}).values():
+        for key in (
+            "diplotype_to_phenotype",
+            "activity_score_to_phenotype",
+            "single_snp_to_phenotype",
+            "variant_count_to_phenotype",
+        ):
+            for p in spec.get(key, {}).values():
+                phenotypes.add(p)
+        if "fixed_phenotype" in spec:
+            phenotypes.add(spec["fixed_phenotype"])
+
+    drugs: set[str] = set()
+    tuples: set[tuple[str, str, str]] = set()
+    for gene, by_drug in drugs_data.get("drugs", {}).items():
+        for drug, by_phenotype in by_drug.items():
+            drugs.add(drug)
+            for phenotype in by_phenotype:
+                tuples.add((gene, phenotype, drug))
+            # Allow Not determined / Coverage limited for any (gene, drug) pair
+            # so partial-coverage results still get an explanation.
+            for universal in _UNIVERSAL_PHENOTYPES:
+                tuples.add((gene, universal, drug))
+
+    return genes, phenotypes, drugs, tuples
+
+
+_ALLOWED_GENES, _ALLOWED_PHENOTYPES, _ALLOWED_DRUGS, _ALLOWED_TUPLES = _build_allowlist()
+
+
+def _check_in(value: str, allowed: set[str], field: str) -> str:
+    if value not in allowed:
+        raise ValueError(f"{field} '{value[:40]}' is not in the bundled allowlist")
+    return value
 
 # Defense-in-depth: reject any payload field that looks like DNA. The schema
 # already caps lengths, but a future client bug could still try to send an
@@ -39,16 +103,10 @@ def _reject_dna_shaped(s: str) -> str:
 
 load_dotenv()
 
-MODEL = "claude-sonnet-4-6"
+MODEL = "claude-haiku-4-5"
 
 if not os.environ.get("ANTHROPIC_API_KEY"):
     sys.exit("ANTHROPIC_API_KEY not set. Copy .env.example to .env and add a key.")
-
-SENTRY_DSN = os.environ.get("SENTRY_DSN")
-if SENTRY_DSN:
-    import sentry_sdk
-
-    sentry_sdk.init(dsn=SENTRY_DSN, traces_sample_rate=1.0)
 
 EXPLAIN_SYSTEM = (
     "You explain pharmacogenomic results in plain language for patients. "
@@ -122,10 +180,27 @@ class ExplainRequest(BaseModel):
     phenotype: str = Field(..., max_length=40)
     drug: str = Field(..., max_length=60)
 
-    @field_validator("gene", "phenotype", "drug")
+    @field_validator("gene")
     @classmethod
-    def reject_dna(cls, v: str) -> str:
-        return _reject_dna_shaped(v)
+    def gene_in_allowlist(cls, v: str) -> str:
+        return _check_in(_reject_dna_shaped(v), _ALLOWED_GENES, "gene")
+
+    @field_validator("phenotype")
+    @classmethod
+    def phenotype_in_allowlist(cls, v: str) -> str:
+        return _check_in(_reject_dna_shaped(v), _ALLOWED_PHENOTYPES, "phenotype")
+
+    @field_validator("drug")
+    @classmethod
+    def drug_in_allowlist(cls, v: str) -> str:
+        return _check_in(_reject_dna_shaped(v), _ALLOWED_DRUGS, "drug")
+
+    def assert_tuple_known(self) -> None:
+        if (self.gene, self.phenotype, self.drug) not in _ALLOWED_TUPLES:
+            raise HTTPException(
+                status_code=400,
+                detail="(gene, phenotype, drug) tuple is not in the bundled guidance set",
+            )
 
 
 class ExplainResponse(BaseModel):
@@ -137,10 +212,15 @@ class PhenotypeSummary(BaseModel):
     gene: str = Field(..., max_length=20)
     phenotype: str = Field(..., max_length=40)
 
-    @field_validator("gene", "phenotype")
+    @field_validator("gene")
     @classmethod
-    def reject_dna(cls, v: str) -> str:
-        return _reject_dna_shaped(v)
+    def gene_in_allowlist(cls, v: str) -> str:
+        return _check_in(_reject_dna_shaped(v), _ALLOWED_GENES, "gene")
+
+    @field_validator("phenotype")
+    @classmethod
+    def phenotype_in_allowlist(cls, v: str) -> str:
+        return _check_in(_reject_dna_shaped(v), _ALLOWED_PHENOTYPES, "phenotype")
 
 
 class QuestionsRequest(BaseModel):
@@ -234,6 +314,10 @@ def health() -> dict:
     dependencies=[Depends(rate_limit)],
 )
 def explain(req: ExplainRequest) -> ExplainResponse:
+    # Spec §12b: also assert the tuple is one we actually have guidance for.
+    # Individual fields can be valid in isolation but the combination might
+    # be one we never authored (e.g. CYP2C19 + simvastatin).
+    req.assert_tuple_known()
     user_message = (
         f"Explain in simple terms what it means to be a {req.gene} "
         f"{req.phenotype} taking {req.drug}, and what to ask the doctor."

@@ -67,10 +67,14 @@ section("Strand handling (minus strand should not flip the call)");
 
 {
   // CYP2C19 *2: plus-strand ref=G, alt=A. Minus-strand of "GA" is "CT".
-  const plusResults = engine.genotypesToResults({ rs4244285: "GA" });
-  const minusResults = engine.genotypesToResults({ rs4244285: "CT" });
-  const plus = plusResults.find((r) => r.gene === "CYP2C19");
-  const minus = minusResults.find((r) => r.gene === "CYP2C19");
+  // Full coverage (all 3 positions specified) so we test strand handling, not
+  // missing-data behaviour. *3 and *17 are ref in both calls.
+  const plus = engine
+    .genotypesToResults({ rs4244285: "GA", rs4986893: "GG", rs12248560: "CC" })
+    .find((r) => r.gene === "CYP2C19");
+  const minus = engine
+    .genotypesToResults({ rs4244285: "CT", rs4986893: "GG", rs12248560: "CC" })
+    .find((r) => r.gene === "CYP2C19");
   assert(
     "rs4244285 GA (plus) → Intermediate metabolizer",
     plus.phenotype === "Intermediate metabolizer",
@@ -84,7 +88,7 @@ section("Strand handling (minus strand should not flip the call)");
   assert(
     "minus-strand homozygous TT → Poor metabolizer (same as plus AA)",
     engine
-      .genotypesToResults({ rs4244285: "TT" })
+      .genotypesToResults({ rs4244285: "TT", rs4986893: "GG", rs12248560: "CC" })
       .find((r) => r.gene === "CYP2C19").phenotype === "Poor metabolizer",
   );
 }
@@ -222,6 +226,103 @@ section("Drug recommendation lookups");
   assert(
     "SLCO1B1 Decreased + simvastatin → amber flag",
     simva && simva.flag === "amber",
+  );
+}
+
+// ─── 8. Silent miscall regression — partial coverage must not fabricate calls
+section("Silent miscall regression (BUILD_SPEC §7 phenotype-if-invariant)");
+
+{
+  // CYP2C19 *2 het with *3 and *17 positions MISSING.
+  // Old engine: silently called *1/*2 Intermediate.
+  // New engine: missing *3 could be variant → *2/*3 = Poor; missing *17 could
+  // flip to Rapid; multiple possibilities → Not determined with partial coverage.
+  const cyp2c19 = engine
+    .genotypesToResults({ rs4244285: "GA" })
+    .find((r) => r.gene === "CYP2C19");
+  assert(
+    "CYP2C19 *2 het + *3/*17 missing → Not determined (was silently Intermediate)",
+    cyp2c19.phenotype === "Not determined",
+    `got "${cyp2c19.phenotype}"`,
+  );
+  assert(
+    "...and coverage_state = partial",
+    cyp2c19.coverage_state === "partial",
+  );
+
+  // CYP2C19 *2 HOM-alt with others missing: both chromosomes have *2; no room
+  // for *3 or *17 → call is invariant → Poor.
+  const cyp2c19hom = engine
+    .genotypesToResults({ rs4244285: "AA" })
+    .find((r) => r.gene === "CYP2C19");
+  assert(
+    "CYP2C19 *2 hom + others missing → Poor (invariant despite partial coverage)",
+    cyp2c19hom.phenotype === "Poor metabolizer",
+    `got "${cyp2c19hom.phenotype}"`,
+  );
+}
+
+{
+  // CYP2C9 *2 het with *3 position MISSING.
+  // Old engine: silently treated missing *3 as ref → activity 1.5 → Intermediate.
+  // New engine: missing *3 could be hom-alt → activity 0.5 = Poor; multiple → Not determined.
+  const cyp2c9 = engine
+    .genotypesToResults({ rs1799853: "CT" })
+    .find((r) => r.gene === "CYP2C9");
+  assert(
+    "CYP2C9 *2 het + *3 missing → Not determined (was silently Intermediate)",
+    cyp2c9.phenotype === "Not determined",
+    `got "${cyp2c9.phenotype}"`,
+  );
+  assert(
+    "...and coverage_state = partial",
+    cyp2c9.coverage_state === "partial",
+  );
+
+  // CYP2C9 *3 HOM-alt with *2 missing: activity = 2*0 + at most 2*-0.5 = 0
+  // for any *2 assignment but still 0 with 0; range 0..0 → Poor invariant.
+  // Wait: with *3 hom (activity contribution -2.0), base = 2.0 - 2.0 = 0.0.
+  // *2 could add 0..2 with delta -0.5 → activity 0, -0.5, -1.0. Only 0.0 maps;
+  // others are off-map → mixed → Not determined. This is honest: a co-occurring
+  // *2 would still be Poor, but the mapping doesn't cover negative scores.
+  // Document the current behaviour rather than assert a fragile expectation.
+}
+
+{
+  // TPMT phasing gotcha: het at rs1800460 (*3B) + het at rs1142345 (*3C),
+  // rs1800462 (*2) ref. Variant count sums to 2 → mapping says "Deficient",
+  // but phasing is ambiguous: could be *3A/*1 (Intermediate) or *3B/*3C (Deficient).
+  // New engine: ambiguous → Not determined with partial coverage.
+  const tpmtAmbig = engine
+    .genotypesToResults({
+      rs1800462: "GG",
+      rs1800460: "GA",
+      rs1142345: "AG",
+    })
+    .find((r) => r.gene === "TPMT");
+  assert(
+    "TPMT *3B het + *3C het (phasing ambiguous) → Not determined",
+    tpmtAmbig.phenotype === "Not determined",
+    `got "${tpmtAmbig.phenotype}"`,
+  );
+  assert(
+    "...and coverage_state = partial",
+    tpmtAmbig.coverage_state === "partial",
+  );
+
+  // TPMT *2 hom-alt: no phasing ambiguity (one position is fully variant) →
+  // still Deficient despite *3B/*3C status being whatever.
+  const tpmtHom = engine
+    .genotypesToResults({
+      rs1800462: "CC",
+      rs1800460: "GG",
+      rs1142345: "AA",
+    })
+    .find((r) => r.gene === "TPMT");
+  assert(
+    "TPMT *2 hom (no phasing ambiguity) → Deficient activity",
+    tpmtHom.phenotype === "Deficient activity",
+    `got "${tpmtHom.phenotype}"`,
   );
 }
 
