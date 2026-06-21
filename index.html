@@ -22,7 +22,11 @@
   .word{font-weight:500; letter-spacing:-.02em} .word b{font-weight:500;color:var(--ink)} .word .a{font-weight:800;color:var(--azure)}
   .mark{flex:none}
 
-  nav{position:sticky; top:0; z-index:30; background:rgba(244,246,251,.85); backdrop-filter:blur(10px); border-bottom:1px solid var(--line)}
+  /* Research-prototype banner: persistent, sits above the sticky nav. */
+  .research-banner{position:sticky; top:0; z-index:50; background:#fef3c7; color:#7c3f06; border-bottom:1px solid #fde68a; padding:7px 16px; text-align:center; font-size:.82rem; font-weight:500; letter-spacing:.01em}
+  .research-banner strong{font-weight:700; color:#78350f; margin-right:4px}
+
+  nav{position:sticky; top:34px; z-index:30; background:rgba(244,246,251,.85); backdrop-filter:blur(10px); border-bottom:1px solid var(--line)}
   nav .row{display:flex; align-items:center; height:68px; gap:26px}
   nav .brand{display:flex; align-items:center; gap:11px}
   nav .brand .mark{width:30px;height:30px;color:var(--azure)} nav .brand .word{font-size:1.3rem}
@@ -160,6 +164,10 @@
 
 <svg width="0" height="0" style="position:absolute"><symbol id="helix" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.3"/><path d="M9 7 C 14 9.5 14 14.5 9 17"/><path d="M15 7 C 10 9.5 10 14.5 15 17"/><line x1="10.6" y1="9.7" x2="13.4" y2="9.7"/><line x1="10.6" y1="14.3" x2="13.4" y2="14.3"/></symbol></svg>
 
+<div class="research-banner" role="alert">
+  <strong>Research prototype</strong> — informational only, not medical advice. Confirm any medication decision with a clinician or pharmacist.
+</div>
+
 <nav>
   <div class="wrap row">
     <a class="brand" href="#"><svg class="mark"><use href="#helix"/></svg><span class="word"><b>Dose</b><span class="a">DNA</span></span></a>
@@ -215,10 +223,10 @@
 
 <div class="strip">
   <div class="wrap row">
-    <span><b>0</b> DNA bytes uploaded</span>
-    <span><b>3</b> strings ever leave (only if you opt in)</span>
-    <span>Works <b>offline</b></span>
-    <span>Every claim traced to a <b>deterministic tool</b></span>
+    <span><b>0</b> raw DNA bytes uploaded</span>
+    <span>Only <b>de-identified</b> labels (gene, phenotype, drug name) reach the AI</span>
+    <span>Deterministic engine works <b>offline</b></span>
+    <span>Every claim traced to a <b>CPIC</b> tool call</span>
   </div>
 </div>
 
@@ -273,8 +281,8 @@
 
 <section class="wrap" id="privacy">
   <div class="cta-band" id="start">
-    <h2>Talk to your DNA. It never leaves the room.</h2>
-    <p>Load your 23andMe or AncestryDNA file and start a conversation. The reading happens in this tab — your genome stays on your device, full stop.</p>
+    <h2>Talk to your DNA — your raw file stays in this tab.</h2>
+    <p>Load your 23andMe or AncestryDNA file and start a conversation. The file is read in this browser tab. Only minimal de-identified summaries (gene name, metabolizer status, drug name) are sent to the AI when you ask a question — never the raw genome.</p>
     <a class="btn" href="#">Start chatting with DoseDNA</a>
     <p class="dis">Informational only — not medical advice. Confirm everything with a qualified clinician or pharmacist.</p>
   </div>
