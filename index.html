@@ -241,27 +241,27 @@
     <div class="tools">
       <div class="tcard">
         <div class="ic"><svg width="20" height="20"><use href="#helix"/></svg></div>
-        <code>get_phenotype</code>
+        <code>get_gene_status</code>
         <h3>Reads your status</h3>
-        <p>Finds the variants in your file and resolves your metabolizer type — or returns “not determined.”</p>
+        <p>Returns your metabolizer phenotype for a specific gene from the variants the engine called — or “not determined” when the file lacks the deciding read.</p>
       </div>
       <div class="tcard">
         <div class="ic"><svg width="20" height="20"><use href="#helix"/></svg></div>
-        <code>check_drug_gene</code>
-        <h3>Maps drug to risk</h3>
-        <p>Pairs a medication with the gene that handles it and the direction of the effect — too little, or too much.</p>
+        <code>lookup_cpic_recommendation</code>
+        <h3>Fetches CPIC guidance</h3>
+        <p>Queries CPIC’s live API for the verbatim recommendation, evidence classification, and implications text for your (gene, phenotype, drug) — no paraphrasing the underlying source.</p>
       </div>
       <div class="tcard">
         <div class="ic"><svg width="20" height="20"><use href="#helix"/></svg></div>
-        <code>check_phenoconversion</code>
+        <code>check_drug_interactions</code>
         <h3>Catches interactions</h3>
-        <p>Flags when another medication you take could blunt an enzyme and shift your effective status.</p>
+        <p>Runs your medication list against bundled FDA/CPIC tables for drug–drug and phenoconversion flags — inhibitors and inducers that can shift your effective phenotype.</p>
       </div>
       <div class="tcard">
         <div class="ic"><svg width="20" height="20"><use href="#helix"/></svg></div>
-        <code>add_med</code>
-        <h3>Builds your list</h3>
-        <p>Keeps the medications you mention in this session so it can reason across them — locally, never stored remotely.</p>
+        <code>suggest_clinician_questions</code>
+        <h3>Builds your question list</h3>
+        <p>Generates 4–6 concrete questions to bring to your clinician or pharmacist, grounded in your phenotypes and the meds you mentioned this session.</p>
       </div>
     </div>
   </div>
@@ -278,7 +278,7 @@
       <div class="grow"><span class="y">✓</span><div><b>Says “not determined” out loud</b><span>If your file lacks the deciding variant, it tells you — it never assumes normal.</span></div></div>
       <div class="grow"><span class="n">✕</span><div><b>Never tells you to stop a med</b><span>It hands you questions for a professional, not instructions to act on alone.</span></div></div>
       <div class="grow"><span class="y">✓</span><div><b>Shows its work</b><span>Every answer is tied to a tool call you can see — no hidden reasoning about your health.</span></div></div>
-      <div class="grow"><span class="n">✕</span><div><b>Never uploads your DNA</b><span>Only de-identified {gene, status, drug} can be sent — and only to phrase a reply, if you allow it.</span></div></div>
+      <div class="grow"><span class="n">✕</span><div><b>Never uploads your DNA</b><span>Only de-identified {gene, status, drug} ever leave this tab — and each real query is mixed with 5 decoy queries so the provider can’t identify which one is yours.</span></div></div>
     </div>
   </div>
 </section>
