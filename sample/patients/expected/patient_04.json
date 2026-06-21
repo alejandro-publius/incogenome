@@ -1,8 +1,9 @@
 {
-  "_note": "Seeded benchmark targets for patient_04_23andme.txt. Records the gene/variant info originally embedded as GENE_ prefixes in the input file, relocated here so the input stays a clean, hint-free DNA file.",
+  "_note": "Seeded benchmark targets for patient_04_23andme.txt. Records which variants were deliberately placed in the input file. Intended profile: TPMT *3B/*3B (homozygous) -> Deficient activity. Homozygous rather than compound *2/*3B because unphased array data cannot confirm a compound het (cis vs trans), so the engine would honestly return 'Not determined'. rs1800462 (*2) and rs1142345 (*3C) are reference so the engine has full TPMT coverage.",
   "source_file": "patient_04_23andme.txt",
   "seeded_targets": {
-    "rs1800460": { "gene": "TPMT", "star": "*3B", "genotype": "AG" },
-    "rs1800462": { "gene": "TPMT", "star": "*2", "genotype": "AA" }
+    "rs1800460": { "gene": "TPMT", "star": "*3B", "genotype": "AA" },
+    "rs1800462": { "gene": "TPMT", "star": "*2", "genotype": "GG", "note": "reference (no *2)" },
+    "rs1142345": { "gene": "TPMT", "star": "*3C", "genotype": "AA", "note": "reference (no *3C) — completes TPMT coverage" }
   }
 }

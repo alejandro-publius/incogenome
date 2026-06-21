@@ -1,8 +1,9 @@
 {
-  "_note": "Seeded benchmark targets for patient_01_23andme.txt. Records the gene/variant info originally embedded as GENE_ prefixes in the input file, relocated here so the input stays a clean, hint-free DNA file.",
+  "_note": "Seeded benchmark targets for patient_01_23andme.txt. Records which variants were deliberately placed in the input file. Intended profile: CYP2C19 *2/*17 -> Intermediate metabolizer. rs4986893 (*3) is set to reference (GG) so the engine has full CYP2C19 coverage and can make a confident call.",
   "source_file": "patient_01_23andme.txt",
   "seeded_targets": {
     "rs4244285":  { "gene": "CYP2C19", "star": "*2",  "genotype": "AG" },
-    "rs12248560": { "gene": "CYP2C19", "star": "*17", "genotype": "GG" }
+    "rs12248560": { "gene": "CYP2C19", "star": "*17", "genotype": "CT" },
+    "rs4986893":  { "gene": "CYP2C19", "star": "*3",  "genotype": "GG", "note": "reference (no *3) — completes CYP2C19 coverage" }
   }
 }
