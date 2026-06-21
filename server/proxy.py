@@ -18,7 +18,7 @@ import sys
 import time
 from collections import defaultdict, deque
 from pathlib import Path
-from typing import Literal, Optional
+from typing import Annotated, Literal, Optional, Union
 
 from anthropic import Anthropic, APIError
 from dotenv import load_dotenv
@@ -33,6 +33,73 @@ from pydantic import BaseModel, Field, ValidationError, field_validator
 _REPO_ROOT = Path(__file__).resolve().parent.parent
 _GENES_PATH = _REPO_ROOT / "src" / "data" / "genes.json"
 _DRUGS_PATH = _REPO_ROOT / "src" / "data" / "drugs.json"
+_EXPLANATIONS_PATH = _REPO_ROOT / "src" / "data" / "explanations.json"
+_INTERACTIONS_PATH = _REPO_ROOT / "src" / "data" / "interactions.json"
+
+# Per BUILD_SPEC §12b step 2: check the precomputed bundle before calling Claude
+# live. Bundle is optional — if scripts/precompute_explanations.py hasn't been
+# run yet, we silently fall through to the live path.
+_COVERAGE_STATES = {"confident", "partial", "not-callable"}
+
+
+def _load_explanations() -> dict[str, str]:
+    if not _EXPLANATIONS_PATH.exists():
+        return {}
+    try:
+        with _EXPLANATIONS_PATH.open() as fh:
+            data = json.load(fh)
+    except (json.JSONDecodeError, OSError):
+        return {}
+    entries = data.get("explanations", {})
+    return {k: v for k, v in entries.items() if isinstance(v, str)}
+
+
+_EXPLANATIONS = _load_explanations()
+
+
+def _load_interactions() -> dict:
+    """Load the bundled phenoconversion + drug-drug table (BUILD_SPEC §11).
+
+    Returns a dict with `phenoconversion`, `drug_drug`, and `drug_gene_extras`
+    keys. Missing or unparseable file degrades to empty lists, so the proxy
+    still starts and the interactions endpoint returns no flags rather than
+    crashing.
+    """
+    empty = {"phenoconversion": [], "drug_drug": [], "drug_gene_extras": []}
+    if not _INTERACTIONS_PATH.exists():
+        return empty
+    try:
+        with _INTERACTIONS_PATH.open() as fh:
+            data = json.load(fh)
+    except (json.JSONDecodeError, OSError):
+        return empty
+    return {
+        "phenoconversion": list(data.get("phenoconversion", []) or []),
+        "drug_drug": list(data.get("drug_drug", []) or []),
+        "drug_gene_extras": list(data.get("drug_gene_extras", []) or []),
+    }
+
+
+_INTERACTIONS = _load_interactions()
+
+
+def _load_drugs_guidance() -> dict:
+    """Load the bundled (gene, drug, phenotype) guidance table.
+
+    Used by `_handle_interactions` for the deterministic drug-gene lookup —
+    the same data `_build_allowlist` reads, but kept in its nested form
+    instead of flattened to a tuple set.
+    """
+    if not _DRUGS_PATH.exists():
+        return {}
+    try:
+        with _DRUGS_PATH.open() as fh:
+            return json.load(fh).get("drugs", {})
+    except (json.JSONDecodeError, OSError):
+        return {}
+
+
+_DRUGS_GUIDANCE = _load_drugs_guidance()
 
 # Universal phenotypes the deterministic engine can emit even when a gene
 # isn't in the table (incomplete coverage). Always permitted.
@@ -175,10 +242,32 @@ def rate_limit(request: Request) -> None:
     bucket.append(now)
 
 
-class ExplainRequest(BaseModel):
+class PhenotypeSummary(BaseModel):
+    gene: str = Field(..., max_length=20)
+    phenotype: str = Field(..., max_length=40)
+
+    @field_validator("gene")
+    @classmethod
+    def gene_in_allowlist(cls, v: str) -> str:
+        return _check_in(_reject_dna_shaped(v), _ALLOWED_GENES, "gene")
+
+    @field_validator("phenotype")
+    @classmethod
+    def phenotype_in_allowlist(cls, v: str) -> str:
+        return _check_in(_reject_dna_shaped(v), _ALLOWED_PHENOTYPES, "phenotype")
+
+
+# BUILD_SPEC §12a + FLETCHER_REVIEW.md §2: one endpoint, one validator, one
+# cache. The three legacy paths (/api/explain, /api/questions, /api/check-meds)
+# collapse into POST /api/explain with a `kind` discriminator. The request body
+# is a Pydantic discriminated union — each kind brings only the fields it needs,
+# and field validators stay load-bearing for the security boundary.
+class ExplainKindRequest(BaseModel):
+    kind: Literal["explain"]
     gene: str = Field(..., max_length=20)
     phenotype: str = Field(..., max_length=40)
     drug: str = Field(..., max_length=60)
+    coverage_state: str = Field(default="confident", max_length=20)
 
     @field_validator("gene")
     @classmethod
@@ -195,6 +284,13 @@ class ExplainRequest(BaseModel):
     def drug_in_allowlist(cls, v: str) -> str:
         return _check_in(_reject_dna_shaped(v), _ALLOWED_DRUGS, "drug")
 
+    @field_validator("coverage_state")
+    @classmethod
+    def coverage_in_allowlist(cls, v: str) -> str:
+        if v not in _COVERAGE_STATES:
+            raise ValueError(f"coverage_state '{v[:20]}' is not a known state")
+        return v
+
     def assert_tuple_known(self) -> None:
         if (self.gene, self.phenotype, self.drug) not in _ALLOWED_TUPLES:
             raise HTTPException(
@@ -203,36 +299,14 @@ class ExplainRequest(BaseModel):
             )
 
 
-class ExplainResponse(BaseModel):
-    explanation: str
-    source: Literal["claude", "fallback"]
-
-
-class PhenotypeSummary(BaseModel):
-    gene: str = Field(..., max_length=20)
-    phenotype: str = Field(..., max_length=40)
-
-    @field_validator("gene")
-    @classmethod
-    def gene_in_allowlist(cls, v: str) -> str:
-        return _check_in(_reject_dna_shaped(v), _ALLOWED_GENES, "gene")
-
-    @field_validator("phenotype")
-    @classmethod
-    def phenotype_in_allowlist(cls, v: str) -> str:
-        return _check_in(_reject_dna_shaped(v), _ALLOWED_PHENOTYPES, "phenotype")
-
-
-class QuestionsRequest(BaseModel):
+class QuestionsKindRequest(BaseModel):
+    kind: Literal["questions"]
     phenotypes: list[PhenotypeSummary] = Field(..., max_length=20)
     medications: list[str] = Field(default_factory=list, max_length=30)
 
 
-class QuestionsResponse(BaseModel):
-    questions: list[str]
-
-
-class InteractionsRequest(BaseModel):
+class InteractionsKindRequest(BaseModel):
+    kind: Literal["interactions"]
     phenotypes: list[PhenotypeSummary] = Field(..., max_length=20)
     medications: list[str] = Field(..., min_length=1, max_length=30)
 
@@ -242,6 +316,21 @@ class InteractionsRequest(BaseModel):
         for med in v:
             _reject_dna_shaped(med)
         return v
+
+
+ExplainEndpointRequest = Annotated[
+    Union[ExplainKindRequest, QuestionsKindRequest, InteractionsKindRequest],
+    Field(discriminator="kind"),
+]
+
+
+class ExplainResponse(BaseModel):
+    explanation: str
+    source: Literal["bundle", "claude", "fallback"]
+
+
+class QuestionsResponse(BaseModel):
+    questions: list[str]
 
 
 SEVERITY_MAP = {
@@ -308,16 +397,20 @@ def health() -> dict:
     return {"ok": True, "model": MODEL}
 
 
-@app.post(
-    "/api/explain",
-    response_model=ExplainResponse,
-    dependencies=[Depends(rate_limit)],
-)
-def explain(req: ExplainRequest) -> ExplainResponse:
+def _handle_explain(req: ExplainKindRequest) -> ExplainResponse:
     # Spec §12b: also assert the tuple is one we actually have guidance for.
     # Individual fields can be valid in isolation but the combination might
     # be one we never authored (e.g. CYP2C19 + simvastatin).
     req.assert_tuple_known()
+
+    # Spec §12b step 2: bundle lookup first. A precomputed hit is the happy
+    # path; a live Claude call is the rare fallback. Key shape matches
+    # scripts/precompute_explanations.py.
+    bundle_key = f"{req.gene}|{req.phenotype}|{req.drug}|{req.coverage_state}"
+    cached = _EXPLANATIONS.get(bundle_key)
+    if cached:
+        return ExplainResponse(explanation=cached, source="bundle")
+
     user_message = (
         f"Explain in simple terms what it means to be a {req.gene} "
         f"{req.phenotype} taking {req.drug}, and what to ask the doctor."
@@ -335,12 +428,7 @@ def explain(req: ExplainRequest) -> ExplainResponse:
     return ExplainResponse(explanation=text, source="claude")
 
 
-@app.post(
-    "/api/questions",
-    response_model=QuestionsResponse,
-    dependencies=[Depends(rate_limit)],
-)
-def questions(req: QuestionsRequest) -> QuestionsResponse:
+def _handle_questions(req: QuestionsKindRequest) -> QuestionsResponse:
     pheno_lines = "\n".join(f"- {p.gene}: {p.phenotype}" for p in req.phenotypes)
     meds = ", ".join(req.medications) if req.medications else "(none provided)"
     user_message = (
@@ -375,31 +463,149 @@ def questions(req: QuestionsRequest) -> QuestionsResponse:
     return QuestionsResponse(questions=bullets[:6])
 
 
+# Map drugs.json color flags onto Flag.severity. Green is skipped entirely —
+# the interactions panel surfaces concerns, not confirmations. Gray ("we
+# couldn't determine your status") is worth surfacing as info so the user
+# knows to raise it with a clinician.
+_COLOR_TO_SEVERITY = {
+    "red": "avoid",
+    "amber": "caution",
+    "gray": "info",
+}
+
+
+def _normalize_drug(name: str) -> str:
+    """Match medications case-insensitively against the bundled tables."""
+    return name.strip().lower()
+
+
+def _handle_interactions(req: InteractionsKindRequest) -> InteractionsResponse:
+    """Deterministic interactions engine (BUILD_SPEC §1.5, §11).
+
+    No Claude call. The three categories are looked up against bundled
+    tables (`drugs.json` for drug-gene, `interactions.json` for drug-drug
+    and phenoconversion) so the clinical content is auditable. Claude's
+    only role in this product is paraphrasing canonical text — and that
+    happens in `_handle_explain`, not here.
+    """
+    meds_normalized = [_normalize_drug(m) for m in req.medications]
+    meds_set = set(meds_normalized)
+
+    drug_gene_flags: list[Flag] = []
+    drug_drug_flags: list[Flag] = []
+    phenoconv_flags: list[Flag] = []
+
+    # --- (1) Drug-gene: every (phenotype, med) where we have canonical
+    # guidance in drugs.json. Skip green; surface amber/red/gray.
+    seen_drug_gene: set[tuple[str, str, str]] = set()
+    for pheno in req.phenotypes:
+        by_drug = _DRUGS_GUIDANCE.get(pheno.gene, {})
+        for med_norm, med_display in zip(meds_normalized, req.medications):
+            row = by_drug.get(med_norm)
+            if not row:
+                continue
+            guidance = row.get(pheno.phenotype)
+            if not guidance:
+                continue
+            color = (guidance.get("flag") or "").lower()
+            severity = _COLOR_TO_SEVERITY.get(color)
+            if not severity:
+                continue  # green or unknown — nothing to flag
+            key = (pheno.gene, pheno.phenotype, med_norm)
+            if key in seen_drug_gene:
+                continue
+            seen_drug_gene.add(key)
+            drug_gene_flags.append(
+                Flag(
+                    flag=f"{pheno.gene} {pheno.phenotype} + {med_display}",
+                    severity=severity,
+                    explanation=guidance.get("recommendation", ""),
+                    ask_clinician=(
+                        f"How should my {pheno.gene} {pheno.phenotype} result "
+                        f"shape how I take {med_display}?"
+                    ),
+                )
+            )
+
+    # --- (2) Drug-drug: both drugs of the pair must be in the user's list.
+    for entry in _INTERACTIONS.get("drug_drug", []):
+        pair = entry.get("drugs") or []
+        if len(pair) < 2:
+            continue
+        pair_norm = [_normalize_drug(d) for d in pair]
+        if not all(d in meds_set for d in pair_norm):
+            continue
+        drug_drug_flags.append(
+            Flag(
+                flag=" + ".join(pair),
+                severity=entry.get("severity", "caution"),
+                explanation=entry.get("summary", ""),
+                ask_clinician=(
+                    f"Is the {' + '.join(pair)} combination safe for me, or "
+                    "should one of them be changed?"
+                ),
+            )
+        )
+
+    # --- (3) Phenoconversion: the user takes an inhibitor/inducer drug, and
+    # their phenotype for the affected gene is one the shift applies to. The
+    # CYP2D6 case is the load-bearing one — coverage is limited, so a
+    # drug-induced flip is the part we *can* honestly flag.
+    pheno_by_gene = {p.gene: p.phenotype for p in req.phenotypes}
+    for entry in _INTERACTIONS.get("phenoconversion", []):
+        drug_norm = _normalize_drug(entry.get("drug", ""))
+        if drug_norm not in meds_set:
+            continue
+        gene = entry.get("affects_gene")
+        if not gene:
+            continue
+        current_pheno = pheno_by_gene.get(gene)
+        applicable = set(entry.get("applicable_from_phenotypes") or [])
+        # If we have no phenotype for this gene at all (gene wasn't called or
+        # user didn't submit it), still flag — phenoconversion matters most
+        # when the genetic status is unknown (BUILD_SPEC §11, CYP2D6 case).
+        if current_pheno is not None and applicable and current_pheno not in applicable:
+            continue
+        effect = entry.get("effect", "modulates")
+        magnitude = entry.get("magnitude", "")
+        magnitude_label = f"{magnitude} " if magnitude else ""
+        flag_label = (
+            f"{entry.get('drug', drug_norm)} is a {magnitude_label}{gene} {effect}"
+        )
+        phenoconv_flags.append(
+            Flag(
+                flag=flag_label,
+                severity="caution",
+                explanation=entry.get("summary", ""),
+                ask_clinician=(
+                    f"Could {entry.get('drug', drug_norm)} be changing how my "
+                    f"body handles {gene} drugs while I'm on it?"
+                ),
+            )
+        )
+
+    return InteractionsResponse(
+        drug_gene=drug_gene_flags,
+        drug_drug=drug_drug_flags,
+        phenoconversion=phenoconv_flags,
+    )
+
+
+# BUILD_SPEC §12a says one endpoint. /api/questions and /api/check-meds are
+# gone; both behaviors live here under kind="questions" / kind="interactions".
+# response_model is None because the response shape is per-kind — FastAPI still
+# serializes the returned Pydantic model correctly.
 @app.post(
-    "/api/check-meds",
-    response_model=InteractionsResponse,
+    "/api/explain",
+    response_model=None,
     dependencies=[Depends(rate_limit)],
 )
-def check_meds(req: InteractionsRequest) -> InteractionsResponse:
-    pheno_lines = "\n".join(f"- {p.gene}: {p.phenotype}" for p in req.phenotypes)
-    user_message = (
-        "Pharmacogenomic phenotypes:\n"
-        f"{pheno_lines}\n\n"
-        f"Current medications: {', '.join(req.medications)}\n\n"
-        "Return the JSON object as specified."
-    )
-    # 900 tokens is enough for 3 short JSON arrays per §9 ("handful of high-
-    # confidence examples"). Keeps demo latency tight; 2000 was overkill.
-    try:
-        text = _call_claude(INTERACTIONS_SYSTEM, user_message, max_tokens=900)
-    except APIError:
-        # README §3 fallback: empty interactions render as "no flags" client-side.
-        return InteractionsResponse()
-    extracted = _extract_json(text)
-    if not extracted:
-        # Refusal or unparseable — return empty result; client renders "no flags".
-        return InteractionsResponse()
-    try:
-        return InteractionsResponse(**json.loads(extracted))
-    except (ValueError, ValidationError):
-        return InteractionsResponse()
+def explain(req: ExplainEndpointRequest):
+    if isinstance(req, ExplainKindRequest):
+        return _handle_explain(req)
+    if isinstance(req, QuestionsKindRequest):
+        return _handle_questions(req)
+    if isinstance(req, InteractionsKindRequest):
+        return _handle_interactions(req)
+    # Discriminated union should make this unreachable, but be loud if not.
+    raise HTTPException(status_code=400, detail="unknown kind")

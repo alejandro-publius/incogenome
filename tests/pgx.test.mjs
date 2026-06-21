@@ -326,6 +326,235 @@ section("Silent miscall regression (BUILD_SPEC §7 phenotype-if-invariant)");
   );
 }
 
+// ─── 9. Per-drug flag colors for synthetic phenotype-pinning genotypes ───────
+// Most of the 76 (gene, drug, phenotype) tuples in drugs.json had zero per-tuple
+// coverage before this block. Each case below pins a phenotype with a synthetic
+// genotype and asserts the resulting drug-row flags. If one of these flips a
+// flag color it would be visible to judges on stage.
+section("Per-drug flag colors for synthetic phenotype-pinning genotypes");
+
+function drugFlag(results, gene, drug) {
+  const g = results.find((r) => r.gene === gene);
+  if (!g) return null;
+  const d = g.drugs.find((x) => x.drug === drug);
+  return d ? d.flag : null;
+}
+
+function drugRow(results, gene, drug) {
+  const g = results.find((r) => r.gene === gene);
+  if (!g) return null;
+  return g.drugs.find((x) => x.drug === drug) || null;
+}
+
+// Case 1: CYP2C19 Poor metabolizer (*2/*2)
+{
+  const results = engine.genotypesToResults({
+    rs4244285: "AA",
+    rs4986893: "GG",
+    rs12248560: "CC",
+  });
+  assert(
+    "CYP2C19 PM → clopidogrel red",
+    drugFlag(results, "CYP2C19", "clopidogrel") === "red",
+    `got "${drugFlag(results, "CYP2C19", "clopidogrel")}"`,
+  );
+  assert(
+    "CYP2C19 PM → omeprazole green",
+    drugFlag(results, "CYP2C19", "omeprazole") === "green",
+    `got "${drugFlag(results, "CYP2C19", "omeprazole")}"`,
+  );
+  assert(
+    "CYP2C19 PM → citalopram red",
+    drugFlag(results, "CYP2C19", "citalopram") === "red",
+    `got "${drugFlag(results, "CYP2C19", "citalopram")}"`,
+  );
+  assert(
+    "CYP2C19 PM → escitalopram red",
+    drugFlag(results, "CYP2C19", "escitalopram") === "red",
+    `got "${drugFlag(results, "CYP2C19", "escitalopram")}"`,
+  );
+  assert(
+    "CYP2C19 PM → voriconazole amber",
+    drugFlag(results, "CYP2C19", "voriconazole") === "amber",
+    `got "${drugFlag(results, "CYP2C19", "voriconazole")}"`,
+  );
+}
+
+// Case 2: CYP2C19 Ultrarapid metabolizer (*17/*17)
+{
+  const results = engine.genotypesToResults({
+    rs4244285: "GG",
+    rs4986893: "GG",
+    rs12248560: "TT",
+  });
+  assert(
+    "CYP2C19 UM → clopidogrel green",
+    drugFlag(results, "CYP2C19", "clopidogrel") === "green",
+    `got "${drugFlag(results, "CYP2C19", "clopidogrel")}"`,
+  );
+  assert(
+    "CYP2C19 UM → omeprazole amber",
+    drugFlag(results, "CYP2C19", "omeprazole") === "amber",
+    `got "${drugFlag(results, "CYP2C19", "omeprazole")}"`,
+  );
+  assert(
+    "CYP2C19 UM → voriconazole red",
+    drugFlag(results, "CYP2C19", "voriconazole") === "red",
+    `got "${drugFlag(results, "CYP2C19", "voriconazole")}"`,
+  );
+}
+
+// Case 3: CYP2C9 Poor + VKORC1 High sensitivity (warfarin dual-gene)
+// rs1057910:"CC" → *3/*3, activity 0.0 → CYP2C9 Poor
+// rs9923231:"AA" → VKORC1 High sensitivity
+// rs1799853:"CC" → CYP2C9 *2 reference
+{
+  const results = engine.genotypesToResults({
+    rs1057910: "CC",
+    rs9923231: "AA",
+    rs1799853: "CC",
+  });
+  assert(
+    "CYP2C9 Poor + VKORC1 High → CYP2C9 warfarin red",
+    drugFlag(results, "CYP2C9", "warfarin") === "red",
+    `got "${drugFlag(results, "CYP2C9", "warfarin")}"`,
+  );
+  assert(
+    "CYP2C9 Poor + VKORC1 High → VKORC1 warfarin red",
+    drugFlag(results, "VKORC1", "warfarin") === "red",
+    `got "${drugFlag(results, "VKORC1", "warfarin")}"`,
+  );
+}
+
+// Case 4: CYP2C9 Intermediate metabolizer (activity 1.5)
+// rs1799853:"CT" (*2 het) + rs1057910:"AA" (*3 ref) → 2.0 - 0.5 = 1.5
+{
+  const results = engine.genotypesToResults({
+    rs1799853: "CT",
+    rs1057910: "AA",
+  });
+  assert(
+    "CYP2C9 IM → warfarin amber",
+    drugFlag(results, "CYP2C9", "warfarin") === "amber",
+    `got "${drugFlag(results, "CYP2C9", "warfarin")}"`,
+  );
+  assert(
+    "CYP2C9 IM → ibuprofen amber",
+    drugFlag(results, "CYP2C9", "ibuprofen") === "amber",
+    `got "${drugFlag(results, "CYP2C9", "ibuprofen")}"`,
+  );
+  assert(
+    "CYP2C9 IM → phenytoin amber",
+    drugFlag(results, "CYP2C9", "phenytoin") === "amber",
+    `got "${drugFlag(results, "CYP2C9", "phenytoin")}"`,
+  );
+}
+
+// Case 5: SLCO1B1 Poor function (521 C/C homozygous)
+{
+  const results = engine.genotypesToResults({ rs4149056: "CC" });
+  assert(
+    "SLCO1B1 Poor function → simvastatin red",
+    drugFlag(results, "SLCO1B1", "simvastatin") === "red",
+    `got "${drugFlag(results, "SLCO1B1", "simvastatin")}"`,
+  );
+  assert(
+    "SLCO1B1 Poor function → atorvastatin amber",
+    drugFlag(results, "SLCO1B1", "atorvastatin") === "amber",
+    `got "${drugFlag(results, "SLCO1B1", "atorvastatin")}"`,
+  );
+  assert(
+    "SLCO1B1 Poor function → rosuvastatin amber",
+    drugFlag(results, "SLCO1B1", "rosuvastatin") === "amber",
+    `got "${drugFlag(results, "SLCO1B1", "rosuvastatin")}"`,
+  );
+}
+
+// Case 6: TPMT Deficient activity (*2 hom-alt — same construction the earlier
+// test uses, asserted here against per-drug flags rather than gene phenotype)
+{
+  const results = engine.genotypesToResults({
+    rs1800462: "CC",
+    rs1800460: "GG",
+    rs1142345: "AA",
+  });
+  assert(
+    "TPMT Deficient → azathioprine red",
+    drugFlag(results, "TPMT", "azathioprine") === "red",
+    `got "${drugFlag(results, "TPMT", "azathioprine")}"`,
+  );
+  assert(
+    "TPMT Deficient → mercaptopurine red",
+    drugFlag(results, "TPMT", "mercaptopurine") === "red",
+    `got "${drugFlag(results, "TPMT", "mercaptopurine")}"`,
+  );
+  assert(
+    "TPMT Deficient → thioguanine red",
+    drugFlag(results, "TPMT", "thioguanine") === "red",
+    `got "${drugFlag(results, "TPMT", "thioguanine")}"`,
+  );
+}
+
+// Case 7: TPMT Intermediate activity (single het at rs1142345 = *3C)
+// hetCount=1, homCount=0 → no phasing ambiguity → variant_count=1 → Intermediate.
+{
+  const results = engine.genotypesToResults({
+    rs1800462: "GG",
+    rs1800460: "GG",
+    rs1142345: "AG",
+  });
+  assert(
+    "TPMT Intermediate (single *3C het) → azathioprine amber",
+    drugFlag(results, "TPMT", "azathioprine") === "amber",
+    `got "${drugFlag(results, "TPMT", "azathioprine")}"`,
+  );
+  assert(
+    "TPMT Intermediate (single *3C het) → mercaptopurine amber",
+    drugFlag(results, "TPMT", "mercaptopurine") === "amber",
+    `got "${drugFlag(results, "TPMT", "mercaptopurine")}"`,
+  );
+  assert(
+    "TPMT Intermediate (single *3C het) → thioguanine amber",
+    drugFlag(results, "TPMT", "thioguanine") === "amber",
+    `got "${drugFlag(results, "TPMT", "thioguanine")}"`,
+  );
+}
+
+// Case 8: CYP2D6 is structural-only — always "Coverage limited" → all three
+// flagship CYP2D6 drugs surface gray. Codeine carries the FDA pediatric
+// ultrarapid-metabolizer warning verbatim from drugs.json.
+{
+  const results = engine.genotypesToResults({});
+  assert(
+    "CYP2D6 → codeine gray",
+    drugFlag(results, "CYP2D6", "codeine") === "gray",
+    `got "${drugFlag(results, "CYP2D6", "codeine")}"`,
+  );
+  assert(
+    "CYP2D6 → tramadol gray",
+    drugFlag(results, "CYP2D6", "tramadol") === "gray",
+    `got "${drugFlag(results, "CYP2D6", "tramadol")}"`,
+  );
+  assert(
+    "CYP2D6 → tamoxifen gray",
+    drugFlag(results, "CYP2D6", "tamoxifen") === "gray",
+    `got "${drugFlag(results, "CYP2D6", "tamoxifen")}"`,
+  );
+  const codeine = drugRow(results, "CYP2D6", "codeine");
+  assert(
+    "CYP2D6 codeine recommendation mentions FDA black box warning",
+    codeine &&
+      codeine.recommendation.includes("FDA black box warning") &&
+      codeine.recommendation.includes("ultrarapid"),
+    codeine ? `got: ${codeine.recommendation}` : "codeine row missing",
+  );
+  assert(
+    "CYP2D6 codeine recommendation mentions children (pediatric warning)",
+    codeine && codeine.recommendation.includes("children"),
+    codeine ? `got: ${codeine.recommendation}` : "codeine row missing",
+  );
+}
+
 // ─── Summary ─────────────────────────────────────────────────────────────────
 process.stdout.write(`\n${pass} passed, ${fail} failed\n`);
 if (fail > 0) {

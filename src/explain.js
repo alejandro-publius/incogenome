@@ -37,17 +37,24 @@ async function postJson(path, body) {
 
 /**
  * Request a plain-language explanation from the proxy.
- * @returns {Promise<{explanation: string, source: "claude" | "fallback"}>}
- *   `source` is "fallback" when the proxy could not reach Claude and returned
- *   bundled static guidance; the UI uses this to label the response.
+ * @returns {Promise<{explanation: string, source: "bundle" | "claude" | "fallback"}>}
+ *   `source` distinguishes a precomputed cache hit ("bundle") from a live
+ *   Claude call ("claude") from a Claude-unreachable static fallback
+ *   ("fallback"). UI labels the third one.
  */
-export async function fetchExplanation({ gene, phenotype, drug }) {
-  const data = await postJson("/api/explain", { gene, phenotype, drug });
+// BUILD_SPEC §12a: one proxy endpoint. The previous /api/questions and
+// /api/check-meds paths were collapsed into /api/explain; the server now
+// discriminates on `kind` ("explain" | "questions" | "interactions").
+export async function fetchExplanation({ gene, phenotype, drug, coverageState }) {
+  const body = { kind: "explain", gene, phenotype, drug };
+  if (coverageState) body.coverage_state = coverageState;
+  const data = await postJson("/api/explain", body);
   return { explanation: data.explanation, source: data.source };
 }
 
 export async function fetchDoctorQuestions({ phenotypes, medications }) {
-  const data = await postJson("/api/questions", {
+  const data = await postJson("/api/explain", {
+    kind: "questions",
     phenotypes,
     medications: medications ?? [],
   });
@@ -55,5 +62,9 @@ export async function fetchDoctorQuestions({ phenotypes, medications }) {
 }
 
 export async function fetchMedInteractions({ phenotypes, medications }) {
-  return postJson("/api/check-meds", { phenotypes, medications });
+  return postJson("/api/explain", {
+    kind: "interactions",
+    phenotypes,
+    medications,
+  });
 }

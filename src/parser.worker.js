@@ -144,6 +144,19 @@ function parse(fileText) {
 
     let genotype;
     if (ancestryStyle || cols.length === 5) {
+      // ─── AncestryDNA branch ──────────────────────────────────────────────
+      // PENDING REAL-FILE VALIDATION: implemented strictly from BUILD_SPEC §9
+      // ("rsid<TAB>chromosome<TAB>position<TAB>allele1<TAB>allele2"). The spec
+      // tags this with `[CONFIRM AT BUILD against a real Ancestry file]`. We
+      // do NOT have a real AncestryDNA export to test against; if a real file
+      // turns out to have an unexpected quirk (extra column, different
+      // no-call sentinel, etc.) update this branch and the tests in
+      // tests/parser.test.mjs accordingly. Do not invent format quirks here.
+      //
+      // No-calls per spec are handled downstream by isValidGenotype():
+      //   "00" (Ancestry per-allele no-call → concat "00"), "DD"/"II" (indel
+      //   markers), or any non-ACGT letter all fail validation and contribute
+      //   to "not determined," never to "normal."
       // rsid, chromosome, position, allele1, allele2
       if (cols.length < 5) {
         no_call_count++;

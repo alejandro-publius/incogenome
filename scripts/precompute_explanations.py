@@ -301,20 +301,99 @@ def build_batch_request(
 
 # --- Post-validation (denylist) -----------------------------------------------
 
-# Per BUILD_SPEC §13 step 3 + §15.
+# Per BUILD_SPEC §13 step 3 + §15. Hardened in response to red-team escapes:
+# * Greek mu (U+03BC) vs micro-sign (U+00B5) — both must match.
+# * Bare imperatives ("Stop taking warfarin immediately.") had no `you` anchor.
+# * Decimal doses ("0.5 ml", "2.5 mg") were missed because the old regex
+#   stopped after the leading integer.
+# * Brand-name leakage (Prilosec/Plavix/Coumadin/...) was invisible because
+#   drugs.json only carries generics.
+# * Drug-class tokens (PPI/SSRI/statin/NSAID/...) leaked phenotype-level
+#   prescribing guidance the model isn't supposed to give.
+
 DENY_DOSE_RE = re.compile(
-    r"\b\d+\s?(mg|mcg|µg|ml|units?|tablets?|caps?)\b",
+    r"\b(\d+(?:[.,]\d+)?|one|two|three|four|five|six|seven|eight|nine|ten|"
+    r"twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety|hundred)"
+    r"[\s\-  ]*"
+    r"(mg|mcg|[µμ]g|ml|mL|g|grams?|kg|iu|units?|tabs?|tablets?|caps?|"
+    r"capsules?|drops?|puffs?|lozenges?|patch(?:es)?|"
+    r"milligrams?|micrograms?|milliliters?)\b",
     re.IGNORECASE,
 )
+
 DENY_IMPERATIVE_RE = re.compile(
-    r"\byou\s+(should|must|need\s+to|have\s+to)\s+"
-    r"(take|stop|start|increase|decrease)\b",
-    re.IGNORECASE,
+    # Form 1: sentence-initial bare imperative (with optional politeness prefix).
+    r"(?:^|(?<=[.!?]\s))(?:please\s+|kindly\s+)?"
+    r"(take|stop|start|increase|decrease|reduce|lower|raise|"
+    r"double|halve|skip|switch|avoid|discontinue|hold|cut\s+back)\b"
+    r"|"
+    # Form 2: modal-anchored imperative ("you should/must/...", also "we",
+    # "your doctor/clinician/pharmacist"). The 'd-better contraction is
+    # matched both as "you'd better" (no space before 'd) and "you had better".
+    r"\b(?:you|we|your\s+(?:doctor|clinician|pharmacist))"
+    r"(?:\s+|'d\s+)"
+    r"(should|must|need\s+to|have\s+to|ought\s+to|may\s+want\s+to|"
+    r"better|had\s+better|are\s+supposed\s+to)\s+\w+"
+    r"|"
+    # Form 3: recommend-verb wrappers.
+    r"\b(I|we|your\s+(?:doctor|clinician|pharmacist))\s+"
+    r"(recommend|advise|suggest|urge)\b",
+    re.IGNORECASE | re.MULTILINE,
 )
+
 DENY_CLINICAL_CLAIM_RE = re.compile(
-    r"\b(diagnose|cure|treat\s+for)\b",
+    r"\b(diagnose[sd]?|cure[sd]?|prevent[sd]?|alleviate[sd]?|heal[sd]?|"
+    r"reverse[sd]?|fix(?:es|ed)?|manage[sd]?|cause[sd]?|"
+    r"protect[sd]?\s+(?:against|from)|treat(?:s|ed|ing)?)\b",
     re.IGNORECASE,
 )
+
+# Brand-name -> generic alias map. Keys are regex patterns (case-insensitive),
+# values are the generic name. If a brand appears in text and its generic is
+# not the input drug, the text fails. drugs.json carries only generics, so
+# without this the model could substitute "Prilosec" for "omeprazole" and
+# slip through.
+BRAND_TO_GENERIC = {
+    "prilosec": "omeprazole",
+    "plavix": "clopidogrel",
+    "coumadin": "warfarin",
+    "jantoven": "warfarin",
+    "zocor": "simvastatin",
+    "lipitor": "atorvastatin",
+    "crestor": "rosuvastatin",
+    "celexa": "citalopram",
+    "lexapro": "escitalopram",
+    "vfend": "voriconazole",
+    "ultram": "tramadol",
+    "imuran": "azathioprine",
+    "purinethol": "mercaptopurine",
+    "tabloid": "thioguanine",
+    "advil": "ibuprofen",
+    "motrin": "ibuprofen",
+    "dilantin": "phenytoin",
+    "tylenol\\s+with\\s+codeine": "codeine",
+    "nolvadex": "tamoxifen",
+}
+
+# Drug-class tokens. Flagged unconditionally — explanations should describe
+# the patient's phenotype, not name a class. False positives flow to
+# REVIEW_PATH (human review), not the production bundle.
+DRUG_CLASS_TOKENS = [
+    "ppi", "ppis", "ssri", "ssris", "snri", "snris", "nsaid", "nsaids",
+    "statin", "statins", "anticoagulant", "anticoagulants", "thienopyridine",
+    "thienopyridines", "thiopurine", "thiopurines", "opioid", "opioids",
+]
+
+# Precompiled for speed; each brand pattern bracketed with word boundaries.
+_BRAND_PATTERNS = [
+    (re.compile(r"\b" + pat + r"\b", re.IGNORECASE), generic)
+    for pat, generic in BRAND_TO_GENERIC.items()
+]
+_CLASS_PATTERN = re.compile(
+    r"\b(" + "|".join(re.escape(t) for t in DRUG_CLASS_TOKENS) + r")\b",
+    re.IGNORECASE,
+)
+
 
 # Known drug names from drugs.json. We treat each drug as forbidden in any
 # explanation whose input drug is something else. Built once at module load.
@@ -349,13 +428,13 @@ def validate_explanation(
 
     m = DENY_IMPERATIVE_RE.search(text)
     if m:
-        return "contains imperative dosing: " + m.group(0)
+        return "contains imperative dosing: " + m.group(0).strip()
 
     m = DENY_CLINICAL_CLAIM_RE.search(text)
     if m:
         return "contains clinical claim: " + m.group(0)
 
-    # Drug-name leakage: any known drug other than the input drug.
+    # Drug-name leakage: any known generic other than the input drug.
     lowered = text.lower()
     input_drug_lc = drug.lower()
     for other in known_drugs:
@@ -365,6 +444,17 @@ def validate_explanation(
         pattern = r"\b" + re.escape(other) + r"\b"
         if re.search(pattern, lowered):
             return "mentions other drug: " + other
+
+    # Brand-name leakage: any brand whose generic is not the input drug.
+    for brand_re, generic in _BRAND_PATTERNS:
+        bm = brand_re.search(text)
+        if bm and generic != input_drug_lc:
+            return "mentions brand name: " + bm.group(0)
+
+    # Drug-class leakage: flagged unconditionally.
+    cm = _CLASS_PATTERN.search(text)
+    if cm:
+        return "mentions drug class: " + cm.group(0)
 
     return None
 

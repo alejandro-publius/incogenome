@@ -1,0 +1,126 @@
+{
+  "version": "1",
+  "_note": "Deterministic interaction table consulted by the proxy (BUILD_SPEC §1.5, §11). Quality over coverage: every entry has a citable source. Informational only — not a substitute for a clinician or pharmacist.",
+  "source_notes": "phenoconversion entries reference FDA prescribing labels, CPIC guidelines, and the DPWG (Dutch Pharmacogenetics Working Group) Aug 2018 update; drug_drug entries reference FDA black-box / labeled warnings and CPIC guidelines. Each entry's `evidence` field names the specific source. Magnitude classifications follow the FDA Drug Development and Drug Interactions classification (strong = >=5x AUC increase for substrate; moderate = 2-5x).",
+  "phenoconversion": [
+    {
+      "drug": "fluvoxamine",
+      "affects_gene": "CYP2C19",
+      "effect": "inhibitor",
+      "magnitude": "strong",
+      "phenotype_shift": "normal_to_intermediate_or_poor",
+      "applicable_from_phenotypes": ["Ultrarapid metabolizer", "Rapid metabolizer", "Normal metabolizer", "Intermediate metabolizer"],
+      "evidence": "FDA fluvoxamine label (Luvox PI, Section 7); FDA Drug Development and Drug Interactions classifies fluvoxamine as a strong CYP2C19 inhibitor.",
+      "summary": "Fluvoxamine is a strong CYP2C19 inhibitor. While you take it, your effective CYP2C19 activity behaves closer to an intermediate or poor metabolizer, even if your DNA says otherwise. CYP2C19 substrates (e.g. clopidogrel, citalopram, escitalopram, omeprazole, voriconazole) may be affected. Ask your pharmacist whether any of your meds need a temporary adjustment."
+    },
+    {
+      "drug": "fluconazole",
+      "affects_gene": "CYP2C19",
+      "effect": "inhibitor",
+      "magnitude": "strong",
+      "phenotype_shift": "normal_to_intermediate_or_poor",
+      "applicable_from_phenotypes": ["Ultrarapid metabolizer", "Rapid metabolizer", "Normal metabolizer", "Intermediate metabolizer"],
+      "evidence": "FDA fluconazole label (Diflucan PI, Drug Interactions); FDA classifies fluconazole as a strong CYP2C19 inhibitor and a moderate CYP3A4 inhibitor.",
+      "summary": "Fluconazole strongly inhibits CYP2C19. While you take it, CYP2C19 substrates (e.g. clopidogrel, citalopram, escitalopram, omeprazole, voriconazole) may behave as though you were a slower metabolizer. Ask your pharmacist whether any of your meds need adjustment during the antifungal course."
+    },
+    {
+      "drug": "paroxetine",
+      "affects_gene": "CYP2D6",
+      "effect": "inhibitor",
+      "magnitude": "strong",
+      "phenotype_shift": "normal_to_poor",
+      "applicable_from_phenotypes": ["Ultrarapid metabolizer", "Normal metabolizer", "Intermediate metabolizer", "Coverage limited", "Not determined"],
+      "evidence": "FDA paroxetine label (Paxil PI, Drug Interactions); DPWG August 2018 update; FDA Drug Development and Drug Interactions classifies paroxetine as a strong CYP2D6 inhibitor.",
+      "summary": "Paroxetine is a strong CYP2D6 inhibitor. While you take it, your effective CYP2D6 activity behaves like a poor metabolizer regardless of your DNA. CYP2D6 prodrugs (codeine, tramadol, tamoxifen) may not activate, and CYP2D6 substrates can build up. Worth flagging here precisely because the genetic CYP2D6 status from a consumer DNA file is unreliable."
+    },
+    {
+      "drug": "fluoxetine",
+      "affects_gene": "CYP2D6",
+      "effect": "inhibitor",
+      "magnitude": "strong",
+      "phenotype_shift": "normal_to_poor",
+      "applicable_from_phenotypes": ["Ultrarapid metabolizer", "Normal metabolizer", "Intermediate metabolizer", "Coverage limited", "Not determined"],
+      "evidence": "FDA fluoxetine label (Prozac PI, Drug Interactions); DPWG August 2018 update; FDA Drug Development and Drug Interactions classifies fluoxetine as a strong CYP2D6 inhibitor (effect persists weeks after stopping due to long half-life of norfluoxetine).",
+      "summary": "Fluoxetine is a strong CYP2D6 inhibitor — and because its active metabolite has a long half-life, the inhibition lingers for weeks after stopping. CYP2D6 prodrugs like codeine and tramadol may not activate, and CYP2D6 substrates can build up. Ask your pharmacist about any CYP2D6-affected meds during and shortly after a fluoxetine course."
+    },
+    {
+      "drug": "bupropion",
+      "affects_gene": "CYP2D6",
+      "effect": "inhibitor",
+      "magnitude": "strong",
+      "phenotype_shift": "normal_to_poor",
+      "applicable_from_phenotypes": ["Ultrarapid metabolizer", "Normal metabolizer", "Intermediate metabolizer", "Coverage limited", "Not determined"],
+      "evidence": "FDA bupropion label (Wellbutrin PI, Drug Interactions); FDA Drug Development and Drug Interactions classifies bupropion as a strong CYP2D6 inhibitor.",
+      "summary": "Bupropion is a strong CYP2D6 inhibitor. While you take it, your effective CYP2D6 activity behaves like a poor metabolizer. CYP2D6 prodrugs (codeine, tramadol) may not activate, and CYP2D6 substrates can accumulate. Ask your pharmacist if any of your meds run through CYP2D6."
+    },
+    {
+      "drug": "terbinafine",
+      "affects_gene": "CYP2D6",
+      "effect": "inhibitor",
+      "magnitude": "strong",
+      "phenotype_shift": "normal_to_poor",
+      "applicable_from_phenotypes": ["Ultrarapid metabolizer", "Normal metabolizer", "Intermediate metabolizer", "Coverage limited", "Not determined"],
+      "evidence": "FDA terbinafine label (Lamisil PI, Drug Interactions); FDA Drug Development and Drug Interactions classifies terbinafine as a strong CYP2D6 inhibitor.",
+      "summary": "Oral terbinafine strongly inhibits CYP2D6, and the effect persists for weeks after the course ends because of its long tissue half-life. CYP2D6 prodrugs (codeine, tramadol) may not activate, and CYP2D6 substrates can accumulate. Mention any CYP2D6-affected meds to your pharmacist before starting an antifungal course."
+    },
+    {
+      "drug": "rifampin",
+      "affects_gene": "CYP2C19",
+      "effect": "inducer",
+      "magnitude": "strong",
+      "phenotype_shift": "normal_to_ultrarapid",
+      "applicable_from_phenotypes": ["Normal metabolizer", "Intermediate metabolizer", "Poor metabolizer"],
+      "evidence": "FDA rifampin label (Rifadin PI, Drug Interactions); FDA Drug Development and Drug Interactions classifies rifampin as a strong inducer of CYP2C19, CYP2C9, and CYP3A4.",
+      "summary": "Rifampin is a strong enzyme inducer — it speeds up CYP2C19 (and CYP2C9, CYP3A4). CYP2C19 substrates (e.g. clopidogrel, citalopram, omeprazole, voriconazole) may be cleared faster than typical and could be less effective. The induction effect builds over about a week and persists about two weeks after stopping."
+    },
+    {
+      "drug": "amiodarone",
+      "affects_gene": "CYP2C9",
+      "effect": "inhibitor",
+      "magnitude": "moderate",
+      "phenotype_shift": "normal_to_intermediate",
+      "applicable_from_phenotypes": ["Normal metabolizer", "Intermediate metabolizer"],
+      "evidence": "FDA amiodarone label (Cordarone PI, Drug Interactions, with explicit warfarin warning); CPIC warfarin guideline (Johnson et al., Clin Pharmacol Ther 2017) notes amiodarone-induced CYP2C9 inhibition.",
+      "summary": "Amiodarone moderately inhibits CYP2C9 (and several other CYPs). For CYP2C9 substrates like warfarin, this can mean higher drug levels and higher bleeding risk — the FDA label explicitly recommends reducing warfarin dose when amiodarone is added. Ask your prescriber about INR monitoring."
+    }
+  ],
+  "drug_drug": [
+    {
+      "drugs": ["clopidogrel", "omeprazole"],
+      "severity": "caution",
+      "summary": "Omeprazole inhibits CYP2C19, the enzyme that converts clopidogrel into its active form. Even with a normal CYP2C19 genotype, this combination can blunt clopidogrel's anti-clotting effect. FDA labeling recommends avoiding omeprazole and esomeprazole with clopidogrel; pantoprazole is generally preferred when a PPI is needed.",
+      "evidence": "FDA Drug Safety Communication, 2009 and FDA clopidogrel (Plavix) label, Drug Interactions section. Reaffirmed by the 2011 ACCF/ACG/AHA expert consensus document on antiplatelet/PPI use."
+    },
+    {
+      "drugs": ["warfarin", "amiodarone"],
+      "severity": "avoid",
+      "summary": "Amiodarone inhibits CYP2C9 and other enzymes that clear warfarin, raising INR and bleeding risk. The FDA warfarin label specifically calls out amiodarone and typically recommends reducing the warfarin dose by roughly one-third to one-half when amiodarone is added, with close INR monitoring.",
+      "evidence": "FDA warfarin (Coumadin) label, Drug Interactions section; CPIC warfarin guideline (Johnson et al., Clin Pharmacol Ther 2017)."
+    },
+    {
+      "drugs": ["warfarin", "ibuprofen"],
+      "severity": "caution",
+      "summary": "NSAIDs like ibuprofen raise bleeding risk on top of warfarin through several mechanisms (antiplatelet effect, gastric irritation, and protein binding displacement). The FDA warfarin label warns against routine NSAID co-use; acetaminophen is usually preferred for pain control on warfarin.",
+      "evidence": "FDA warfarin (Coumadin) label, Drug Interactions and Warnings sections; FDA ibuprofen label."
+    },
+    {
+      "drugs": ["simvastatin", "clarithromycin"],
+      "severity": "avoid",
+      "summary": "Clarithromycin strongly inhibits CYP3A4, which clears simvastatin. Co-administration sharply raises the risk of severe muscle injury (myopathy, rhabdomyolysis). The FDA simvastatin label contraindicates concurrent use; pausing simvastatin during the antibiotic course or using azithromycin instead is typical.",
+      "evidence": "FDA simvastatin (Zocor) label, Contraindications section; FDA Drug Safety Communication (2011 / 2012)."
+    },
+    {
+      "drugs": ["tramadol", "fluoxetine"],
+      "severity": "caution",
+      "summary": "Two issues stacked: fluoxetine strongly inhibits CYP2D6, so it blunts tramadol's conversion to its active opioid metabolite (less pain relief); and both drugs raise serotonin, increasing the risk of serotonin syndrome. The FDA tramadol label specifically warns about concurrent serotonergic drugs.",
+      "evidence": "FDA tramadol (Ultram) label, Warnings and Drug Interactions sections; FDA fluoxetine label."
+    },
+    {
+      "drugs": ["azathioprine", "allopurinol"],
+      "severity": "avoid",
+      "summary": "Allopurinol blocks xanthine oxidase, the enzyme that degrades the active metabolites of azathioprine and mercaptopurine. Without dose reduction this combination can cause severe bone marrow suppression. The FDA azathioprine label recommends reducing the azathioprine dose to roughly one-quarter to one-third when allopurinol is co-prescribed.",
+      "evidence": "FDA azathioprine (Imuran) label, Drug Interactions section; FDA allopurinol label; CPIC TPMT/NUDT15 guideline (Relling et al., Clin Pharmacol Ther 2019)."
+    }
+  ],
+  "drug_gene_extras": []
+}

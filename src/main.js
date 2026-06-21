@@ -137,6 +137,7 @@ async function loadExplanation(result, btn, expEl) {
       gene: result.gene,
       phenotype: result.phenotype,
       drug: first.drug,
+      coverageState: result.coverage_state,
     });
     const prefix =
       data.source === "fallback" ? "(AI offline — showing static guidance.) " : "";
@@ -273,13 +274,17 @@ async function onLoadDemo() {
 // Dev hook: lets the dev harness inject results without going through the
 // parser worker, so Alex can test the AI pipeline before Lindsay ships pgx.js.
 // Production UI never calls this.
-window.__DOSEDNA_INJECT_MOCK_RESULTS = (results) => {
-  currentResults = results;
-  renderResults(results);
-  if (doctorBtn) doctorBtn.disabled = false;
-  if (medsCheckBtn) medsCheckBtn.disabled = false;
-  setStatus("Mock results injected (dev only). Network calls below are real.");
-};
+// Gated on __DOSEDNA_DEV so the global is never attached in production builds,
+// preventing devtools/extensions/iframes from spoofing rendered gene cards.
+if (globalThis.__DOSEDNA_DEV === true) {
+  window.__DOSEDNA_INJECT_MOCK_RESULTS = (results) => {
+    currentResults = results;
+    renderResults(results);
+    if (doctorBtn) doctorBtn.disabled = false;
+    if (medsCheckBtn) medsCheckBtn.disabled = false;
+    setStatus("Mock results injected (dev only). Network calls below are real.");
+  };
+}
 
 if (fileInput) fileInput.addEventListener("change", onFileChange);
 if (medsCheckBtn) {

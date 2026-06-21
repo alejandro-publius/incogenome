@@ -1,4 +1,4 @@
-.PHONY: install proxy web all clean smoketest test pgx-test
+.PHONY: install proxy web all clean smoketest test pgx-test parser-test getrm
 
 install:
 	cd server && pip install -r requirements.txt
@@ -17,12 +17,19 @@ all:
 pgx-test:
 	@node tests/pgx.test.mjs
 
+parser-test:
+	@node tests/parser.test.mjs
+
+getrm:
+	@node tests/getrm.test.mjs
+
 smoketest:
 	@bash scripts/smoketest.sh
 
 test: pgx-test
 	@echo
 	@echo "Run 'make smoketest' separately while 'make proxy' is up."
+	@echo "Run 'make getrm' separately for CDC GeT-RM known-answer fixtures."
 
 clean:
 	find . -name __pycache__ -type d -exec rm -rf {} + 2>/dev/null || true
