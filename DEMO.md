@@ -15,12 +15,12 @@ Judging Sunday 4–6pm. Demos are 5 min max. Rehearse twice before going up.
 "Our entire pitch is that your DNA never leaves your device. Most demos would just tell you that. Instead — open the Privacy Console." *(Click the corner panel.)* "Every network call this page makes is logged here in real time. Watch this counter labelled 'DNA bytes that left your device.' It says zero. It will stay zero, no matter what I do next. If it ever ticks up, our entire product is a lie."
 
 **1:00 – 2:30 — Core flow**
-1. "Here's a 23andMe file I downloaded this morning." *(Drag in `sample_23andme.txt`.)*
+1. "Here's a 23andMe file I downloaded this morning." *(Click "Load sample file".)*
 2. "It's reading on-device — you can watch it in your network tab too." *(Show parsed SNP count.)*
 3. "Now we see the per-gene results. Green means standard dose, amber means caution, red means avoid." *(Tap a card.)*
 4. "But genes alone aren't the story. The real risk is when your meds interact with your DNA. Watch." *(Type `clopidogrel, omeprazole` into the meds box.)*
 5. "Phenoconversion: omeprazole inhibits the same enzyme that processes clopidogrel. Even if your DNA says you metabolize clopidogrel normally, this combination might mean it won't work for you. That's the kind of reasoning your pharmacist would do — we're putting it in your pocket."
-6. "And here's a button you press before your next appointment." *(Click 'Prepare questions for my doctor.')* "Six specific questions, generated in plain language, that turn this report into a productive conversation."
+6. "And here's a button you press before your next appointment." *(Click 'Generate questions for my clinician.')* "Six specific questions, generated in plain language, that turn this report into a productive conversation."
 
 **2:30 – 3:30 — The privacy moment (the closer)**
 "Throughout that whole demo, look at the Privacy Console. The only thing that left this laptop was three words: gene, phenotype, drug. No DNA. No genotype. No ID. Open the panel — read the actual payloads. Verify it yourself. We didn't claim privacy; we made it auditable."

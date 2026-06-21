@@ -242,7 +242,7 @@ async function onDoctorQuestions() {
     doctorListEl.appendChild(li);
   }
   doctorBtn.disabled = false;
-  doctorBtn.textContent = "Prepare questions for my doctor";
+  doctorBtn.textContent = "Generate questions for my clinician";
 }
 
 function onFileChange(event) {
