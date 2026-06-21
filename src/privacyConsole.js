@@ -235,8 +235,8 @@ function buildPanel() {
     userSelect: "none",
     transition: "transform 0.15s ease, box-shadow 0.15s ease",
   });
-  badge.title = "Click to see privacy monitor details";
-  badge.textContent = "● DNA stays here";
+  badge.title = "Click to see exactly what does (and doesn't) leave your device.";
+  badge.textContent = "● See where my data goes";
 
   document.body.append(root, badge);
 
