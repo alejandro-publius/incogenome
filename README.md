@@ -21,6 +21,11 @@ Built for [AI Hackathon 2026 at Berkeley](https://hackberkeley.org),
 Live preview (landing page only, chat requires the local proxy):
 [alejandro-publius.github.io/dosedna](https://alejandro-publius.github.io/dosedna/)
 
+For the competitive landscape and where DoseDNA fits in the existing PGx
+market, see **[MARKET_LANDSCAPE.md](MARKET_LANDSCAPE.md)** — cited
+comparison vs. 23andMe Health (and its 2023 breach + 2025 bankruptcy),
+Genomind, OneOme, PharmCAT, and vanilla LLMs.
+
 ---
 
 ## What's built
