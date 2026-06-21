@@ -711,9 +711,20 @@ class ChatToolCall(BaseModel):
     input: dict
 
 
+class CpicEvidence(BaseModel):
+    """A structured surface of a CPIC lookup that fired during a chat turn.
+    The UI renders these as colored evidence-strength chips below the reply
+    (Strong → green, Moderate → amber, Optional → gray)."""
+    gene: str
+    drug: str
+    phenotype: str
+    classification: str  # "Strong" / "Moderate" / "Optional" / "No Recommendation"
+
+
 class ChatResponse(BaseModel):
     reply: str
     tool_trace: list[ChatToolCall] = Field(default_factory=list)
+    cpic_evidence: list[CpicEvidence] = Field(default_factory=list)
     source: Literal["claude", "fallback"]
 
 
@@ -951,6 +962,7 @@ def _execute_chat_tool(
     tool_input: dict,
     req: "ChatKindRequest",
     pheno_by_gene: dict[str, str],
+    cpic_evidence: Optional[list] = None,
 ) -> str:
     """Run one chat tool. Returns a plain-text result string for the model.
 
@@ -958,6 +970,10 @@ def _execute_chat_tool(
     they return a polite error that the model can recover from. Tool inputs
     cannot bypass the security boundary (allowlists, DNA-shape reject), since
     every gene/drug is validated against the bundled set before it's used.
+
+    When a CPIC lookup succeeds, a structured record (gene/drug/phenotype/
+    classification) is appended to `cpic_evidence` for the UI to render as
+    an evidence-strength chip below the assistant reply.
     """
     if name == "get_gene_status":
         gene = (tool_input.get("gene") or "").strip()
@@ -1017,6 +1033,13 @@ def _execute_chat_tool(
             return f"Unknown phenotype '{raw_phenotype}'."
         cpic = _cpic_lookup(gene, drug, raw_phenotype)
         if cpic:
+            if cpic_evidence is not None:
+                cpic_evidence.append({
+                    "gene": gene,
+                    "drug": drug,
+                    "phenotype": cpic["cpic_phenotype"],
+                    "classification": cpic.get("classification") or "Unknown",
+                })
             return (
                 f"CPIC live lookup (source: api.cpicpgx.org/v1/recommendation):\n"
                 f"Gene: {gene}\n"
@@ -1139,6 +1162,7 @@ def _handle_chat(req: ChatKindRequest) -> ChatResponse:
     messages.append({"role": "user", "content": augmented_user_message})
 
     tool_trace: list[ChatToolCall] = []
+    cpic_evidence_raw: list[dict] = []
     MAX_ITERATIONS = 6
 
     for _ in range(MAX_ITERATIONS):
@@ -1158,6 +1182,7 @@ def _handle_chat(req: ChatKindRequest) -> ChatResponse:
                     "in the main app — please try again in a moment."
                 ),
                 tool_trace=tool_trace,
+                cpic_evidence=[CpicEvidence(**c) for c in cpic_evidence_raw],
                 source="fallback",
             )
 
@@ -1168,6 +1193,7 @@ def _handle_chat(req: ChatKindRequest) -> ChatResponse:
             return ChatResponse(
                 reply=text or "I don't have a response for that.",
                 tool_trace=tool_trace,
+                cpic_evidence=[CpicEvidence(**c) for c in cpic_evidence_raw],
                 source="claude",
             )
 
@@ -1185,7 +1211,7 @@ def _handle_chat(req: ChatKindRequest) -> ChatResponse:
             block_input = dict(block.input) if hasattr(block, "input") else {}
             tool_trace.append(ChatToolCall(tool=block.name, input=block_input))
             result_text = _execute_chat_tool(
-                block.name, block_input, req, pheno_by_gene
+                block.name, block_input, req, pheno_by_gene, cpic_evidence_raw
             )
             tool_result_blocks.append(
                 {
@@ -1202,6 +1228,7 @@ def _handle_chat(req: ChatKindRequest) -> ChatResponse:
             "narrower, like 'what does my CYP2C19 status mean for clopidogrel?'"
         ),
         tool_trace=tool_trace,
+        cpic_evidence=[CpicEvidence(**c) for c in cpic_evidence_raw],
         source="claude",
     )
 
