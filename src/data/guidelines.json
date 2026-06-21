@@ -1,0 +1,32 @@
+[
+  {
+    "id": 100410,
+    "name": "CYP2C19 and Voriconazole",
+    "url": "https://www.clinpgx.org/guideline/PA166251456",
+    "version": 70
+  },
+  {
+    "id": 100411,
+    "name": "CYP2C19 and Clopidogrel",
+    "url": "https://www.clinpgx.org/guideline/PA166251443",
+    "version": 70
+  },
+  {
+    "id": 100413,
+    "name": "CYP2D6, CYP2C19, CYP2B6, SLC6A4, HTR2A and Serotonin Reuptake Inhibitor Antidepressants",
+    "url": "https://www.clinpgx.org/guideline/PA166251452",
+    "version": 24
+  },
+  {
+    "id": 100414,
+    "name": "CYP2D6, CYP2C19 and Tricyclic Antidepressants",
+    "url": "https://www.clinpgx.org/guideline/PA166251445",
+    "version": 70
+  },
+  {
+    "id": 110076,
+    "name": "CYP2C19 and Proton Pump Inhibitors",
+    "url": "https://www.clinpgx.org/guideline/PA166251441",
+    "version": 67
+  }
+]

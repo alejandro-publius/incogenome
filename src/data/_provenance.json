@@ -1,0 +1,17 @@
+{
+  "source": "CPIC API",
+  "api": "https://api.cpicpgx.org/v1",
+  "gene": "CYP2C19",
+  "geneDataVersion": 455,
+  "geneUrl": "https://cpicpgx.org/gene/cyp2c19/",
+  "fetchedAt": "2026-06-21T06:00:59.770Z",
+  "rowCounts": {
+    "allele_functionality": 39,
+    "allele_definition": 39,
+    "diplotype_phenotype": 666,
+    "gene_drug_pairs": 27,
+    "recommendations": 1180,
+    "guidelines": 5
+  },
+  "note": "Raw CPIC tables. Curated app KB is derived from these by tools/build_kb.mjs."
+}

@@ -1,0 +1,191 @@
+[
+  {
+    "drug": "amitriptyline",
+    "drugid": "RxNorm:704",
+    "cpicLevel": "A",
+    "pgxTesting": null,
+    "guidelineid": 100414
+  },
+  {
+    "drug": "citalopram",
+    "drugid": "RxNorm:2556",
+    "cpicLevel": "A",
+    "pgxTesting": "Actionable PGx",
+    "guidelineid": 100413
+  },
+  {
+    "drug": "clopidogrel",
+    "drugid": "RxNorm:32968",
+    "cpicLevel": "A",
+    "pgxTesting": "Actionable PGx",
+    "guidelineid": 100411
+  },
+  {
+    "drug": "escitalopram",
+    "drugid": "RxNorm:321988",
+    "cpicLevel": "A",
+    "pgxTesting": "Informative PGx",
+    "guidelineid": 100413
+  },
+  {
+    "drug": "lansoprazole",
+    "drugid": "RxNorm:17128",
+    "cpicLevel": "A",
+    "pgxTesting": "Informative PGx",
+    "guidelineid": 110076
+  },
+  {
+    "drug": "omeprazole",
+    "drugid": "RxNorm:7646",
+    "cpicLevel": "A",
+    "pgxTesting": "Informative PGx",
+    "guidelineid": 110076
+  },
+  {
+    "drug": "pantoprazole",
+    "drugid": "RxNorm:40790",
+    "cpicLevel": "A",
+    "pgxTesting": "Actionable PGx",
+    "guidelineid": 110076
+  },
+  {
+    "drug": "sertraline",
+    "drugid": "RxNorm:36437",
+    "cpicLevel": "A",
+    "pgxTesting": null,
+    "guidelineid": 100413
+  },
+  {
+    "drug": "voriconazole",
+    "drugid": "RxNorm:121243",
+    "cpicLevel": "A",
+    "pgxTesting": "Informative PGx",
+    "guidelineid": 100410
+  },
+  {
+    "drug": "brivaracetam",
+    "drugid": "RxNorm:1739745",
+    "cpicLevel": "B",
+    "pgxTesting": "Actionable PGx",
+    "guidelineid": null
+  },
+  {
+    "drug": "clomipramine",
+    "drugid": "RxNorm:2597",
+    "cpicLevel": "B",
+    "pgxTesting": null,
+    "guidelineid": 100414
+  },
+  {
+    "drug": "dexlansoprazole",
+    "drugid": "RxNorm:816346",
+    "cpicLevel": "B",
+    "pgxTesting": "Informative PGx",
+    "guidelineid": 110076
+  },
+  {
+    "drug": "doxepin",
+    "drugid": "RxNorm:3638",
+    "cpicLevel": "B",
+    "pgxTesting": "Informative PGx",
+    "guidelineid": 100414
+  },
+  {
+    "drug": "imipramine",
+    "drugid": "RxNorm:5691",
+    "cpicLevel": "B",
+    "pgxTesting": null,
+    "guidelineid": 100414
+  },
+  {
+    "drug": "trimipramine",
+    "drugid": "RxNorm:10834",
+    "cpicLevel": "B",
+    "pgxTesting": null,
+    "guidelineid": 100414
+  },
+  {
+    "drug": "carisoprodol",
+    "drugid": "RxNorm:2101",
+    "cpicLevel": "B/C",
+    "pgxTesting": "Actionable PGx",
+    "guidelineid": null
+  },
+  {
+    "drug": "clobazam",
+    "drugid": "RxNorm:21241",
+    "cpicLevel": "B/C",
+    "pgxTesting": "Actionable PGx",
+    "guidelineid": null
+  },
+  {
+    "drug": "diazepam",
+    "drugid": "RxNorm:3322",
+    "cpicLevel": "B/C",
+    "pgxTesting": "Informative PGx",
+    "guidelineid": null
+  },
+  {
+    "drug": "duloxetine",
+    "drugid": "RxNorm:72625",
+    "cpicLevel": "C",
+    "pgxTesting": null,
+    "guidelineid": 100413
+  },
+  {
+    "drug": "esomeprazole",
+    "drugid": "RxNorm:283742",
+    "cpicLevel": "C",
+    "pgxTesting": "No Clinical PGx",
+    "guidelineid": 110076
+  },
+  {
+    "drug": "flibanserin",
+    "drugid": "RxNorm:1665509",
+    "cpicLevel": "C",
+    "pgxTesting": "Actionable PGx",
+    "guidelineid": null
+  },
+  {
+    "drug": "fluoxetine",
+    "drugid": "RxNorm:4493",
+    "cpicLevel": "C",
+    "pgxTesting": null,
+    "guidelineid": 100413
+  },
+  {
+    "drug": "fluvoxamine",
+    "drugid": "RxNorm:42355",
+    "cpicLevel": "C",
+    "pgxTesting": null,
+    "guidelineid": 100413
+  },
+  {
+    "drug": "paroxetine",
+    "drugid": "RxNorm:32937",
+    "cpicLevel": "C",
+    "pgxTesting": null,
+    "guidelineid": 100413
+  },
+  {
+    "drug": "rabeprazole",
+    "drugid": "RxNorm:114979",
+    "cpicLevel": "C",
+    "pgxTesting": "Informative PGx",
+    "guidelineid": 110076
+  },
+  {
+    "drug": "venlafaxine",
+    "drugid": "RxNorm:39786",
+    "cpicLevel": "C",
+    "pgxTesting": null,
+    "guidelineid": 100413
+  },
+  {
+    "drug": "vortioxetine",
+    "drugid": "RxNorm:1455099",
+    "cpicLevel": "C",
+    "pgxTesting": null,
+    "guidelineid": 100413
+  }
+]

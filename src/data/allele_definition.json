@@ -1,0 +1,965 @@
+[
+  {
+    "allele": "*41",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs57700608",
+        "position": 94780544,
+        "name": "17839A>G",
+        "variantAllele": "G"
+      },
+      {
+        "rsid": "rs3758581",
+        "position": 94842866,
+        "name": "80161A>G",
+        "variantAllele": "G"
+      }
+    ]
+  },
+  {
+    "allele": "*34",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs367543002",
+        "position": 94762712,
+        "name": "7C>T",
+        "variantAllele": "T"
+      },
+      {
+        "rsid": "rs367543003",
+        "position": 94762715,
+        "name": "10T>C",
+        "variantAllele": "C"
+      }
+    ]
+  },
+  {
+    "allele": "*42",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": true,
+    "variants": []
+  },
+  {
+    "allele": "*26",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs375781227",
+        "position": 94781944,
+        "name": "19239G>A",
+        "variantAllele": "A"
+      },
+      {
+        "rsid": "rs3758581",
+        "position": 94842866,
+        "name": "80161A>G",
+        "variantAllele": "G"
+      }
+    ]
+  },
+  {
+    "allele": "*28",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs17882687",
+        "position": 94762760,
+        "name": "55A>C",
+        "variantAllele": "C"
+      },
+      {
+        "rsid": "rs3758581",
+        "position": 94842866,
+        "name": "80161A>G",
+        "variantAllele": "G"
+      },
+      {
+        "rsid": "rs113934938",
+        "position": 94842995,
+        "name": "80290G>A",
+        "variantAllele": "A"
+      }
+    ]
+  },
+  {
+    "allele": "*1",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs3758581",
+        "position": 94842866,
+        "name": "80161A>G",
+        "variantAllele": "G"
+      }
+    ]
+  },
+  {
+    "allele": "*40",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs367543002",
+        "position": 94762712,
+        "name": "7C>T",
+        "variantAllele": "T"
+      },
+      {
+        "rsid": "rs367543003",
+        "position": 94762715,
+        "name": "10T>C",
+        "variantAllele": "C"
+      },
+      {
+        "rsid": "rs3758581",
+        "position": 94842866,
+        "name": "80161A>G",
+        "variantAllele": "G"
+      }
+    ]
+  },
+  {
+    "allele": "*11",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs58973490",
+        "position": 94775507,
+        "name": "12802G>A",
+        "variantAllele": "A"
+      },
+      {
+        "rsid": "rs3758581",
+        "position": 94842866,
+        "name": "80161A>G",
+        "variantAllele": "G"
+      }
+    ]
+  },
+  {
+    "allele": "*25",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs3758581",
+        "position": 94842866,
+        "name": "80161A>G",
+        "variantAllele": "G"
+      },
+      {
+        "rsid": "rs118203759",
+        "position": 94852785,
+        "name": "90080C>G",
+        "variantAllele": "G"
+      }
+    ]
+  },
+  {
+    "allele": "*13",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs3758581",
+        "position": 94842866,
+        "name": "80161A>G",
+        "variantAllele": "G"
+      },
+      {
+        "rsid": "rs17879685",
+        "position": 94849995,
+        "name": "87290C>T",
+        "variantAllele": "T"
+      }
+    ]
+  },
+  {
+    "allele": "*39",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs17882687",
+        "position": 94762760,
+        "name": "55A>C",
+        "variantAllele": "C"
+      },
+      {
+        "rsid": "rs17885179",
+        "position": 94775423,
+        "name": "12718A>C",
+        "variantAllele": "C"
+      },
+      {
+        "rsid": "rs3758581",
+        "position": 94842866,
+        "name": "80161A>G",
+        "variantAllele": "G"
+      }
+    ]
+  },
+  {
+    "allele": "*15",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs17882687",
+        "position": 94762760,
+        "name": "55A>C",
+        "variantAllele": "C"
+      },
+      {
+        "rsid": "rs3758581",
+        "position": 94842866,
+        "name": "80161A>G",
+        "variantAllele": "G"
+      }
+    ]
+  },
+  {
+    "allele": "*4",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs12248560",
+        "position": 94761900,
+        "name": "-806C>T",
+        "variantAllele": "Y"
+      },
+      {
+        "rsid": "rs28399504",
+        "position": 94762706,
+        "name": "1A>G",
+        "variantAllele": "G"
+      },
+      {
+        "rsid": "rs3758581",
+        "position": 94842866,
+        "name": "80161A>G",
+        "variantAllele": "G"
+      }
+    ]
+  },
+  {
+    "allele": "*18",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs138142612",
+        "position": 94842861,
+        "name": "80156G>A",
+        "variantAllele": "A"
+      },
+      {
+        "rsid": "rs3758581",
+        "position": 94842866,
+        "name": "80161A>G",
+        "variantAllele": "G"
+      }
+    ]
+  },
+  {
+    "allele": "*19",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs1564657013",
+        "position": 94762856,
+        "name": "151A>G",
+        "variantAllele": "G"
+      },
+      {
+        "rsid": "rs3758581",
+        "position": 94842866,
+        "name": "80161A>G",
+        "variantAllele": "G"
+      }
+    ]
+  },
+  {
+    "allele": "*6",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs72552267",
+        "position": 94775453,
+        "name": "12748G>A",
+        "variantAllele": "A"
+      },
+      {
+        "rsid": "rs3758581",
+        "position": 94842866,
+        "name": "80161A>G",
+        "variantAllele": "G"
+      }
+    ]
+  },
+  {
+    "allele": "*9",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs17884712",
+        "position": 94775489,
+        "name": "12784G>A",
+        "variantAllele": "A"
+      },
+      {
+        "rsid": "rs3758581",
+        "position": 94842866,
+        "name": "80161A>G",
+        "variantAllele": "G"
+      }
+    ]
+  },
+  {
+    "allele": "*17",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs12248560",
+        "position": 94761900,
+        "name": "-806C>T",
+        "variantAllele": "T"
+      },
+      {
+        "rsid": "rs3758581",
+        "position": 94842866,
+        "name": "80161A>G",
+        "variantAllele": "G"
+      }
+    ]
+  },
+  {
+    "allele": "*22",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs140278421",
+        "position": 94780574,
+        "name": "17869G>C",
+        "variantAllele": "C"
+      },
+      {
+        "rsid": "rs3758581",
+        "position": 94842866,
+        "name": "80161A>G",
+        "variantAllele": "G"
+      }
+    ]
+  },
+  {
+    "allele": "*24",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs3758581",
+        "position": 94842866,
+        "name": "80161A>G",
+        "variantAllele": "G"
+      },
+      {
+        "rsid": "rs118203757",
+        "position": 94842879,
+        "name": "80174G>A",
+        "variantAllele": "A"
+      }
+    ]
+  },
+  {
+    "allele": "*3",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs4986893",
+        "position": 94780653,
+        "name": "17948G>A",
+        "variantAllele": "A"
+      },
+      {
+        "rsid": "rs3758581",
+        "position": 94842866,
+        "name": "80161A>G",
+        "variantAllele": "G"
+      }
+    ]
+  },
+  {
+    "allele": "*5",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs3758581",
+        "position": 94842866,
+        "name": "80161A>G",
+        "variantAllele": "G"
+      },
+      {
+        "rsid": "rs56337013",
+        "position": 94852738,
+        "name": "90033C>T",
+        "variantAllele": "T"
+      }
+    ]
+  },
+  {
+    "allele": "*7",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs72558186",
+        "position": 94781999,
+        "name": "19294T>A",
+        "variantAllele": "A"
+      },
+      {
+        "rsid": "rs3758581",
+        "position": 94842866,
+        "name": "80161A>G",
+        "variantAllele": "G"
+      }
+    ]
+  },
+  {
+    "allele": "*37",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": true,
+    "variants": []
+  },
+  {
+    "allele": "*2",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs12769205",
+        "position": 94775367,
+        "name": "12662A>G",
+        "variantAllele": "G"
+      },
+      {
+        "rsid": "rs58973490",
+        "position": 94775507,
+        "name": "12802G>A",
+        "variantAllele": "R"
+      },
+      {
+        "rsid": "rs4244285",
+        "position": 94781859,
+        "name": "19154G>A",
+        "variantAllele": "A"
+      },
+      {
+        "rsid": "rs3758581",
+        "position": 94842866,
+        "name": "80161A>G",
+        "variantAllele": "G"
+      }
+    ]
+  },
+  {
+    "allele": "*23",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs118203756",
+        "position": 94775160,
+        "name": "12455G>C",
+        "variantAllele": "C"
+      },
+      {
+        "rsid": "rs3758581",
+        "position": 94842866,
+        "name": "80161A>G",
+        "variantAllele": "G"
+      }
+    ]
+  },
+  {
+    "allele": "*35",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs17882687",
+        "position": 94762760,
+        "name": "55A>C",
+        "variantAllele": "M"
+      },
+      {
+        "rsid": "rs12769205",
+        "position": 94775367,
+        "name": "12662A>G",
+        "variantAllele": "G"
+      },
+      {
+        "rsid": "rs3758581",
+        "position": 94842866,
+        "name": "80161A>G",
+        "variantAllele": "G"
+      }
+    ]
+  },
+  {
+    "allele": "*16",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs192154563",
+        "position": 94852765,
+        "name": "90060C>T",
+        "variantAllele": "T"
+      }
+    ]
+  },
+  {
+    "allele": "*14",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs55752064",
+        "position": 94762755,
+        "name": "50T>C",
+        "variantAllele": "C"
+      },
+      {
+        "rsid": "rs3758581",
+        "position": 94842866,
+        "name": "80161A>G",
+        "variantAllele": "G"
+      }
+    ]
+  },
+  {
+    "allele": "*10",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs6413438",
+        "position": 94781858,
+        "name": "19153C>T",
+        "variantAllele": "T"
+      },
+      {
+        "rsid": "rs3758581",
+        "position": 94842866,
+        "name": "80161A>G",
+        "variantAllele": "G"
+      }
+    ]
+  },
+  {
+    "allele": "*12",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs3758581",
+        "position": 94842866,
+        "name": "80161A>G",
+        "variantAllele": "G"
+      },
+      {
+        "rsid": "rs55640102",
+        "position": 94852914,
+        "name": "90209A>C",
+        "variantAllele": "C"
+      }
+    ]
+  },
+  {
+    "allele": "*38",
+    "pharmvarid": null,
+    "isReference": true,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs12248560",
+        "position": 94761900,
+        "name": "-806C>T",
+        "variantAllele": "C"
+      },
+      {
+        "rsid": "rs28399504",
+        "position": 94762706,
+        "name": "1A>G",
+        "variantAllele": "A"
+      },
+      {
+        "rsid": "rs367543002",
+        "position": 94762712,
+        "name": "7C>T",
+        "variantAllele": "C"
+      },
+      {
+        "rsid": "rs367543003",
+        "position": 94762715,
+        "name": "10T>C",
+        "variantAllele": "T"
+      },
+      {
+        "rsid": "rs55752064",
+        "position": 94762755,
+        "name": "50T>C",
+        "variantAllele": "T"
+      },
+      {
+        "rsid": "rs17882687",
+        "position": 94762760,
+        "name": "55A>C",
+        "variantAllele": "A"
+      },
+      {
+        "rsid": "rs1564656981",
+        "position": 94762788,
+        "name": "83A>T",
+        "variantAllele": "A"
+      },
+      {
+        "rsid": "rs1564657013",
+        "position": 94762856,
+        "name": "151A>G",
+        "variantAllele": "A"
+      },
+      {
+        "rsid": "rs145328984",
+        "position": 94775106,
+        "name": "12401C>T",
+        "variantAllele": "C"
+      },
+      {
+        "rsid": "rs1564660997",
+        "position": 94775121,
+        "name": "12416C>T",
+        "variantAllele": "C"
+      },
+      {
+        "rsid": "rs118203756",
+        "position": 94775160,
+        "name": "12455G>C",
+        "variantAllele": "G"
+      },
+      {
+        "rsid": "rs1288601658",
+        "position": 94775185,
+        "name": "12480A>G",
+        "variantAllele": "A"
+      },
+      {
+        "rsid": "rs12769205",
+        "position": 94775367,
+        "name": "12662A>G",
+        "variantAllele": "A"
+      },
+      {
+        "rsid": "rs41291556",
+        "position": 94775416,
+        "name": "12711T>C",
+        "variantAllele": "T"
+      },
+      {
+        "rsid": "rs17885179",
+        "position": 94775423,
+        "name": "12718A>C",
+        "variantAllele": "A"
+      },
+      {
+        "rsid": "rs72552267",
+        "position": 94775453,
+        "name": "12748G>A",
+        "variantAllele": "G"
+      },
+      {
+        "rsid": "rs17884712",
+        "position": 94775489,
+        "name": "12784G>A",
+        "variantAllele": "G"
+      },
+      {
+        "rsid": "rs58973490",
+        "position": 94775507,
+        "name": "12802G>A",
+        "variantAllele": "G"
+      },
+      {
+        "rsid": "rs57700608",
+        "position": 94780544,
+        "name": "17839A>G",
+        "variantAllele": "A"
+      },
+      {
+        "rsid": "rs140278421",
+        "position": 94780574,
+        "name": "17869G>C",
+        "variantAllele": "G"
+      },
+      {
+        "rsid": "rs370803989",
+        "position": 94780579,
+        "name": "17874G>A",
+        "variantAllele": "G"
+      },
+      {
+        "rsid": "rs4986893",
+        "position": 94780653,
+        "name": "17948G>A",
+        "variantAllele": "G"
+      },
+      {
+        "rsid": "rs6413438",
+        "position": 94781858,
+        "name": "19153C>T",
+        "variantAllele": "C"
+      },
+      {
+        "rsid": "rs4244285",
+        "position": 94781859,
+        "name": "19154G>A",
+        "variantAllele": "G"
+      },
+      {
+        "rsid": "rs375781227",
+        "position": 94781944,
+        "name": "19239G>A",
+        "variantAllele": "G"
+      },
+      {
+        "rsid": "rs72558186",
+        "position": 94781999,
+        "name": "19294T>A",
+        "variantAllele": "T"
+      },
+      {
+        "rsid": "rs138142612",
+        "position": 94842861,
+        "name": "80156G>A",
+        "variantAllele": "G"
+      },
+      {
+        "rsid": "rs3758581",
+        "position": 94842866,
+        "name": "80161A>G",
+        "variantAllele": "A"
+      },
+      {
+        "rsid": "rs118203757",
+        "position": 94842879,
+        "name": "80174G>A",
+        "variantAllele": "G"
+      },
+      {
+        "rsid": "rs113934938",
+        "position": 94842995,
+        "name": "80290G>A",
+        "variantAllele": "G"
+      },
+      {
+        "rsid": "rs17879685",
+        "position": 94849995,
+        "name": "87290C>T",
+        "variantAllele": "C"
+      },
+      {
+        "rsid": "rs56337013",
+        "position": 94852738,
+        "name": "90033C>T",
+        "variantAllele": "C"
+      },
+      {
+        "rsid": "rs192154563",
+        "position": 94852765,
+        "name": "90060C>T",
+        "variantAllele": "C"
+      },
+      {
+        "rsid": "rs118203759",
+        "position": 94852785,
+        "name": "90080C>G",
+        "variantAllele": "C"
+      },
+      {
+        "rsid": "rs55640102",
+        "position": 94852914,
+        "name": "90209A>C",
+        "variantAllele": "A"
+      }
+    ]
+  },
+  {
+    "allele": "*8",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs41291556",
+        "position": 94775416,
+        "name": "12711T>C",
+        "variantAllele": "C"
+      },
+      {
+        "rsid": "rs3758581",
+        "position": 94842866,
+        "name": "80161A>G",
+        "variantAllele": "G"
+      }
+    ]
+  },
+  {
+    "allele": "*31",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs1564660997",
+        "position": 94775121,
+        "name": "12416C>T",
+        "variantAllele": "T"
+      },
+      {
+        "rsid": "rs3758581",
+        "position": 94842866,
+        "name": "80161A>G",
+        "variantAllele": "G"
+      }
+    ]
+  },
+  {
+    "allele": "*36",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": true,
+    "variants": []
+  },
+  {
+    "allele": "*29",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs1564656981",
+        "position": 94762788,
+        "name": "83A>T",
+        "variantAllele": "T"
+      },
+      {
+        "rsid": "rs3758581",
+        "position": 94842866,
+        "name": "80161A>G",
+        "variantAllele": "G"
+      }
+    ]
+  },
+  {
+    "allele": "*30",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs145328984",
+        "position": 94775106,
+        "name": "12401C>T",
+        "variantAllele": "T"
+      }
+    ]
+  },
+  {
+    "allele": "*32",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs1288601658",
+        "position": 94775185,
+        "name": "12480A>G",
+        "variantAllele": "G"
+      },
+      {
+        "rsid": "rs3758581",
+        "position": 94842866,
+        "name": "80161A>G",
+        "variantAllele": "G"
+      }
+    ]
+  },
+  {
+    "allele": "*33",
+    "pharmvarid": null,
+    "isReference": false,
+    "structuralVariant": false,
+    "variants": [
+      {
+        "rsid": "rs370803989",
+        "position": 94780579,
+        "name": "17874G>A",
+        "variantAllele": "A"
+      },
+      {
+        "rsid": "rs3758581",
+        "position": 94842866,
+        "name": "80161A>G",
+        "variantAllele": "G"
+      }
+    ]
+  }
+]

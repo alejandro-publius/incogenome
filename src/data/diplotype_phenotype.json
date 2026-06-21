@@ -1,0 +1,5996 @@
+[
+  {
+    "diplotype": "*17/*17",
+    "generesult": "Ultrarapid Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Ultrarapid Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*1/*17",
+    "generesult": "Rapid Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Rapid Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*11/*17",
+    "generesult": "Rapid Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Rapid Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*13/*17",
+    "generesult": "Rapid Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Rapid Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*15/*17",
+    "generesult": "Rapid Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Rapid Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*17/*18",
+    "generesult": "Rapid Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Rapid Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*17/*28",
+    "generesult": "Rapid Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Rapid Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*17/*38",
+    "generesult": "Rapid Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Rapid Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*1/*1",
+    "generesult": "Normal Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Normal Metabolizer"
+    },
+    "ehrpriority": "Normal/Routine/Low Risk"
+  },
+  {
+    "diplotype": "*11/*11",
+    "generesult": "Normal Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Normal Metabolizer"
+    },
+    "ehrpriority": "Normal/Routine/Low Risk"
+  },
+  {
+    "diplotype": "*13/*13",
+    "generesult": "Normal Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Normal Metabolizer"
+    },
+    "ehrpriority": "Normal/Routine/Low Risk"
+  },
+  {
+    "diplotype": "*15/*15",
+    "generesult": "Normal Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Normal Metabolizer"
+    },
+    "ehrpriority": "Normal/Routine/Low Risk"
+  },
+  {
+    "diplotype": "*18/*18",
+    "generesult": "Normal Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Normal Metabolizer"
+    },
+    "ehrpriority": "Normal/Routine/Low Risk"
+  },
+  {
+    "diplotype": "*28/*28",
+    "generesult": "Normal Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Normal Metabolizer"
+    },
+    "ehrpriority": "Normal/Routine/Low Risk"
+  },
+  {
+    "diplotype": "*38/*38",
+    "generesult": "Normal Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Normal Metabolizer"
+    },
+    "ehrpriority": "Normal/Routine/Low Risk"
+  },
+  {
+    "diplotype": "*1/*11",
+    "generesult": "Normal Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Normal Metabolizer"
+    },
+    "ehrpriority": "Normal/Routine/Low Risk"
+  },
+  {
+    "diplotype": "*1/*13",
+    "generesult": "Normal Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Normal Metabolizer"
+    },
+    "ehrpriority": "Normal/Routine/Low Risk"
+  },
+  {
+    "diplotype": "*1/*15",
+    "generesult": "Normal Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Normal Metabolizer"
+    },
+    "ehrpriority": "Normal/Routine/Low Risk"
+  },
+  {
+    "diplotype": "*1/*18",
+    "generesult": "Normal Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Normal Metabolizer"
+    },
+    "ehrpriority": "Normal/Routine/Low Risk"
+  },
+  {
+    "diplotype": "*1/*28",
+    "generesult": "Normal Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Normal Metabolizer"
+    },
+    "ehrpriority": "Normal/Routine/Low Risk"
+  },
+  {
+    "diplotype": "*1/*38",
+    "generesult": "Normal Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Normal Metabolizer"
+    },
+    "ehrpriority": "Normal/Routine/Low Risk"
+  },
+  {
+    "diplotype": "*11/*13",
+    "generesult": "Normal Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Normal Metabolizer"
+    },
+    "ehrpriority": "Normal/Routine/Low Risk"
+  },
+  {
+    "diplotype": "*11/*15",
+    "generesult": "Normal Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Normal Metabolizer"
+    },
+    "ehrpriority": "Normal/Routine/Low Risk"
+  },
+  {
+    "diplotype": "*11/*18",
+    "generesult": "Normal Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Normal Metabolizer"
+    },
+    "ehrpriority": "Normal/Routine/Low Risk"
+  },
+  {
+    "diplotype": "*11/*28",
+    "generesult": "Normal Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Normal Metabolizer"
+    },
+    "ehrpriority": "Normal/Routine/Low Risk"
+  },
+  {
+    "diplotype": "*11/*38",
+    "generesult": "Normal Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Normal Metabolizer"
+    },
+    "ehrpriority": "Normal/Routine/Low Risk"
+  },
+  {
+    "diplotype": "*13/*15",
+    "generesult": "Normal Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Normal Metabolizer"
+    },
+    "ehrpriority": "Normal/Routine/Low Risk"
+  },
+  {
+    "diplotype": "*13/*18",
+    "generesult": "Normal Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Normal Metabolizer"
+    },
+    "ehrpriority": "Normal/Routine/Low Risk"
+  },
+  {
+    "diplotype": "*13/*28",
+    "generesult": "Normal Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Normal Metabolizer"
+    },
+    "ehrpriority": "Normal/Routine/Low Risk"
+  },
+  {
+    "diplotype": "*13/*38",
+    "generesult": "Normal Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Normal Metabolizer"
+    },
+    "ehrpriority": "Normal/Routine/Low Risk"
+  },
+  {
+    "diplotype": "*15/*18",
+    "generesult": "Normal Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Normal Metabolizer"
+    },
+    "ehrpriority": "Normal/Routine/Low Risk"
+  },
+  {
+    "diplotype": "*15/*28",
+    "generesult": "Normal Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Normal Metabolizer"
+    },
+    "ehrpriority": "Normal/Routine/Low Risk"
+  },
+  {
+    "diplotype": "*15/*38",
+    "generesult": "Normal Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Normal Metabolizer"
+    },
+    "ehrpriority": "Normal/Routine/Low Risk"
+  },
+  {
+    "diplotype": "*18/*28",
+    "generesult": "Normal Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Normal Metabolizer"
+    },
+    "ehrpriority": "Normal/Routine/Low Risk"
+  },
+  {
+    "diplotype": "*18/*38",
+    "generesult": "Normal Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Normal Metabolizer"
+    },
+    "ehrpriority": "Normal/Routine/Low Risk"
+  },
+  {
+    "diplotype": "*28/*38",
+    "generesult": "Normal Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Normal Metabolizer"
+    },
+    "ehrpriority": "Normal/Routine/Low Risk"
+  },
+  {
+    "diplotype": "*1/*10",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*1/*16",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*1/*19",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*1/*25",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*1/*26",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*1/*9",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*10/*11",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*10/*13",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*10/*15",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*10/*18",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*10/*28",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*10/*38",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*11/*16",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*11/*19",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*11/*25",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*11/*26",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*13/*16",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*13/*19",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*13/*25",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*13/*26",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*15/*16",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*15/*19",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*15/*25",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*15/*26",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*16/*18",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*16/*28",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*16/*38",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*18/*19",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*18/*25",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*18/*26",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*19/*28",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*19/*38",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*25/*28",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*25/*38",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*26/*28",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*26/*38",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*9/*11",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*9/*13",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*9/*15",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*9/*18",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*9/*28",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*9/*38",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*10/*17",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*16/*17",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*17/*19",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*17/*25",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*17/*26",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*9/*17",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*10/*10",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*16/*16",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*19/*19",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*25/*25",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*26/*26",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*9/*9",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*10/*16",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*10/*19",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*10/*25",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*10/*26",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*16/*19",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*16/*25",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*16/*26",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*19/*25",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*19/*26",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*25/*26",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*9/*10",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*9/*16",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*9/*19",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*9/*25",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*9/*26",
+    "generesult": "Likely Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*1/*2",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*1/*22",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*1/*24",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*1/*3",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*1/*35",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*1/*36",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*1/*37",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*1/*4",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*1/*5",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*1/*6",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*1/*7",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*1/*8",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*11/*22",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*11/*24",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*11/*35",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*11/*36",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*11/*37",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*13/*22",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*13/*24",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*13/*35",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*13/*36",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*13/*37",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*15/*22",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*15/*24",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*15/*35",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*15/*36",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*15/*37",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*18/*22",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*18/*24",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*18/*35",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*18/*36",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*18/*37",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*2/*11",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*2/*13",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*2/*15",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*2/*18",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*2/*28",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*2/*38",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*22/*28",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*22/*38",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*24/*28",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*24/*38",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*28/*35",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*28/*36",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*28/*37",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*3/*11",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*3/*13",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*3/*15",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*3/*18",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*3/*28",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*3/*38",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*35/*38",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*36/*38",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*37/*38",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*4/*11",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*4/*13",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*4/*15",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*4/*18",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*4/*28",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*4/*38",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*5/*11",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*5/*13",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*5/*15",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*5/*18",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*5/*28",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*5/*38",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*6/*11",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*6/*13",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*6/*15",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*6/*18",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*6/*28",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*6/*38",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*7/*11",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*7/*13",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*7/*15",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*7/*18",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*7/*28",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*7/*38",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*8/*11",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*8/*13",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*8/*15",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*8/*18",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*8/*28",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*8/*38",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*17/*22",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*17/*24",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*17/*35",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*17/*36",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*17/*37",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*2/*17",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*3/*17",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*4/*17",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*5/*17",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*6/*17",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*7/*17",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*8/*17",
+    "generesult": "Intermediate Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Intermediate Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*10/*22",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*10/*24",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*10/*35",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*10/*36",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*10/*37",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*16/*22",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*16/*24",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*16/*35",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*16/*36",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*16/*37",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*19/*22",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*19/*24",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*19/*35",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*19/*36",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*19/*37",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*2/*10",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*2/*16",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*2/*19",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*2/*25",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*2/*26",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*2/*9",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*22/*25",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*22/*26",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*24/*25",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*24/*26",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*25/*35",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*25/*36",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*25/*37",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*26/*35",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*26/*36",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*26/*37",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*3/*10",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*3/*16",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*3/*19",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*3/*25",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*3/*26",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*3/*9",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*4/*10",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*4/*16",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*4/*19",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*4/*25",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*4/*26",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*4/*9",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*5/*10",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*5/*16",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*5/*19",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*5/*25",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*5/*26",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*5/*9",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*6/*10",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*6/*16",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*6/*19",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*6/*25",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*6/*26",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*6/*9",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*7/*10",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*7/*16",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*7/*19",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*7/*25",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*7/*26",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*7/*9",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*8/*10",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*8/*16",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*8/*19",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*8/*25",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*8/*26",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*8/*9",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*9/*22",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*9/*24",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*9/*35",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*9/*36",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*9/*37",
+    "generesult": "Likely Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Likely Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*2/*2",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*22/*22",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*24/*24",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*3/*3",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*35/*35",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*36/*36",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*37/*37",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*4/*4",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*5/*5",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*6/*6",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*7/*7",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*8/*8",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*2/*22",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*2/*24",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*2/*3",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*2/*35",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*2/*36",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*2/*37",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*2/*4",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*2/*5",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*2/*6",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*2/*7",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*2/*8",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*22/*24",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*22/*35",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*22/*36",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*22/*37",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*24/*35",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*24/*36",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*24/*37",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*3/*22",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*3/*24",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*3/*35",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*3/*36",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*3/*37",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*3/*4",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*3/*5",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*3/*6",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*3/*7",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*3/*8",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*35/*36",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*35/*37",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*36/*37",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*4/*22",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*4/*24",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*4/*35",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*4/*36",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*4/*37",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*4/*5",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*4/*6",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*4/*7",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*4/*8",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*5/*22",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*5/*24",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*5/*35",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*5/*36",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*5/*37",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*5/*6",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*5/*7",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*5/*8",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*6/*22",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*6/*24",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*6/*35",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*6/*36",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*6/*37",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*6/*7",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*6/*8",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*7/*22",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*7/*24",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*7/*35",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*7/*36",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*7/*37",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*7/*8",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*8/*22",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*8/*24",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*8/*35",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*8/*36",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*8/*37",
+    "generesult": "Poor Metabolizer",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Poor Metabolizer"
+    },
+    "ehrpriority": "Abnormal/Priority/High Risk"
+  },
+  {
+    "diplotype": "*12/*12",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*14/*14",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*23/*23",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*29/*29",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*30/*30",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*31/*31",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*32/*32",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*33/*33",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*34/*34",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*39/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*12/*14",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*12/*23",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*12/*29",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*12/*30",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*12/*31",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*12/*32",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*12/*33",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*12/*34",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*12/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*14/*23",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*14/*29",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*14/*30",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*14/*31",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*14/*32",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*14/*33",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*14/*34",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*14/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*23/*29",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*23/*30",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*23/*31",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*23/*32",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*23/*33",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*23/*34",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*23/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*29/*30",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*29/*31",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*29/*32",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*29/*33",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*29/*34",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*29/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*30/*31",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*30/*32",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*30/*33",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*30/*34",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*30/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*31/*32",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*31/*33",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*31/*34",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*31/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*32/*33",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*32/*34",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*32/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*33/*34",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*33/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*34/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*12/*17",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*14/*17",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*17/*23",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*17/*29",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*17/*30",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*17/*31",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*17/*32",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*17/*33",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*17/*34",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*17/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*1/*12",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*1/*14",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*1/*23",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*1/*29",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*1/*30",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*1/*31",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*1/*32",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*1/*33",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*1/*34",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*1/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*11/*12",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*11/*14",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*11/*23",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*11/*29",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*11/*30",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*11/*31",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*11/*32",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*11/*33",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*11/*34",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*11/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*12/*13",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*12/*15",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*12/*18",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*12/*28",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*12/*38",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*13/*14",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*13/*23",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*13/*29",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*13/*30",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*13/*31",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*13/*32",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*13/*33",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*13/*34",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*13/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*14/*15",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*14/*18",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*14/*28",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*14/*38",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*15/*23",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*15/*29",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*15/*30",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*15/*31",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*15/*32",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*15/*33",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*15/*34",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*15/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*18/*23",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*18/*29",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*18/*30",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*18/*31",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*18/*32",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*18/*33",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*18/*34",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*18/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*23/*28",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*23/*38",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*28/*29",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*28/*30",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*28/*31",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*28/*32",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*28/*33",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*28/*34",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*28/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*29/*38",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*30/*38",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*31/*38",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*32/*38",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*33/*38",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*34/*38",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*38/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*10/*12",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*10/*14",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*10/*23",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*10/*29",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*10/*30",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*10/*31",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*10/*32",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*10/*33",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*10/*34",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*10/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*12/*16",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*12/*19",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*12/*25",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*12/*26",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*14/*16",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*14/*19",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*14/*25",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*14/*26",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*16/*23",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*16/*29",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*16/*30",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*16/*31",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*16/*32",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*16/*33",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*16/*34",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*16/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*19/*23",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*19/*29",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*19/*30",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*19/*31",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*19/*32",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*19/*33",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*19/*34",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*19/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*23/*25",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*23/*26",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*25/*29",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*25/*30",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*25/*31",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*25/*32",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*25/*33",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*25/*34",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*25/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*26/*29",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*26/*30",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*26/*31",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*26/*32",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*26/*33",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*26/*34",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*26/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*9/*12",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*9/*14",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*9/*23",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*9/*29",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*9/*30",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*9/*31",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*9/*32",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*9/*33",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*9/*34",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*9/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*12/*22",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*12/*24",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*12/*35",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*12/*36",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*12/*37",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*14/*22",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*14/*24",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*14/*35",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*14/*36",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*14/*37",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*2/*12",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*2/*14",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*2/*23",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*2/*29",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*2/*30",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*2/*31",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*2/*32",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*2/*33",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*2/*34",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*2/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*22/*23",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*22/*29",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*22/*30",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*22/*31",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*22/*32",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*22/*33",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*22/*34",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*22/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*23/*24",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*23/*35",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*23/*36",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*23/*37",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*24/*29",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*24/*30",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*24/*31",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*24/*32",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*24/*33",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*24/*34",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*24/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*29/*35",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*29/*36",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*29/*37",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*3/*12",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*3/*14",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*3/*23",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*3/*29",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*3/*30",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*3/*31",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*3/*32",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*3/*33",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*3/*34",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*3/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*30/*35",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*30/*36",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*30/*37",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*31/*35",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*31/*36",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*31/*37",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*32/*35",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*32/*36",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*32/*37",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*33/*35",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*33/*36",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*33/*37",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*34/*35",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*34/*36",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*34/*37",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*35/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*36/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*37/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*4/*12",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*4/*14",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*4/*23",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*4/*29",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*4/*30",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*4/*31",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*4/*32",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*4/*33",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*4/*34",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*4/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*5/*12",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*5/*14",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*5/*23",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*5/*29",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*5/*30",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*5/*31",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*5/*32",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*5/*33",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*5/*34",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*5/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*6/*12",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*6/*14",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*6/*23",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*6/*29",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*6/*30",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*6/*31",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*6/*32",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*6/*33",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*6/*34",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*6/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*7/*12",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*7/*14",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*7/*23",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*7/*29",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*7/*30",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*7/*31",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*7/*32",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*7/*33",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*7/*34",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*7/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*8/*12",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*8/*14",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*8/*23",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*8/*29",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*8/*30",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*8/*31",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*8/*32",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*8/*33",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*8/*34",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  },
+  {
+    "diplotype": "*8/*39",
+    "generesult": "Indeterminate",
+    "totalactivityscore": "n/a",
+    "lookupkey": {
+      "CYP2C19": "Indeterminate"
+    },
+    "ehrpriority": "none"
+  }
+]

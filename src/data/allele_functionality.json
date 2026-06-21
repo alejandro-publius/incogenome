@@ -1,0 +1,314 @@
+[
+  {
+    "name": "*37",
+    "clinicalfunctionalstatus": "No function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Limited",
+    "findings": "CYP2C19*37 is assigned no function based on limited evidence. CYP2C19*37 is a partial deletion of the CYP2C19 gene and was identified by interrogation of multiple databases of clinical chromosomal microarray data (31260137). Therefore, because a partial gene deletion is not expected to result in a functional protein, consensus among experts was no function based on limited evidence as it was determined the phenotypes containing this allele would be clinically distinct from phenotypes comprising normal function and decreased function alleles."
+  },
+  {
+    "name": "*8",
+    "clinicalfunctionalstatus": "No function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Limited",
+    "findings": "CYP2C19*8 is assigned no function based on limited evidence in a heterozygous subject and in vitro studies. CYP2C19*8 was first described in a subject demonstrating decreased metabolism of mephenytoin based on urine metabolite concentrations. This correlated with an in vitro study which found CYP2C19*8 had decreased enzyme activity compared to wildtype with mephenytoin and tolbutamide substrates (10411572). Two additional in vitro studies using different cell systems found CYP2C19*8 had nondetectable enzyme activity with mephenytoin, omeprazole, and clopidogrel substrates (21325430, 25001882). Another study found CYP2C19*8 exhibited significantly reduced catalytic activities compared with CYP2C19*1 across multiple substrates and distinct function from other decreased function alleles (21692664). Therefore, consensus among experts was no function based on limited evidence as it was determined the phenotypes containing this allele would be clinically distinct from phenotypes comprising normal function and decreased function alleles."
+  },
+  {
+    "name": "*26",
+    "clinicalfunctionalstatus": "Decreased function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Limited",
+    "findings": "CYP2C19*26 is assigned decreased function based on limited evidence in a heterozygous subject and in vitro studies. CYP2C19*26 was first described in a subject also carrying the CYP2C19*2 allele and demonstrated decreased omeprazole metabolism compared to wildtype and CYP2C19 *1/*2 or CYP2C19*1/*3 subjects based on the plasma metabolite ratio. This result was correlated with an in vitro study which showed CYP2C19*26 demonstrated decreased intrinsic clearance compared to wildtype with mephenytoin and omeprazole substrates (19661214). An additional in vitro study using a different cell system similarly found CYP2C19*26 demonstrated decreased intrinsic clearance compared to wildtype with mephenytoin and clopidogrel substrates (25001882). Therefore, consensus among experts was decreased function based on limited evidence as it was determined the phenotypes containing this allele would be clinically distinct from phenotypes comprising normal function alleles."
+  },
+  {
+    "name": "*13",
+    "clinicalfunctionalstatus": "Normal function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Limited",
+    "findings": "CYP2C19*13 is assigned normal function based on limited evidence. Three in vitro studies using different cell systems found CYP2C19*13 demonstrated similar enzyme activity compared to wildtype with mephenytoin, omeprazole, clopidogrel and other substrates (12464799, 21325430, 25001882, 21692664). Therefore, consensus among experts was normal function based on limited evidence as it was determined the phenotypes containing this allele would be clinically similar to phenotypes comprising normal function alleles."
+  },
+  {
+    "name": "*42",
+    "clinicalfunctionalstatus": null,
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": null,
+    "findings": null
+  },
+  {
+    "name": "*15",
+    "clinicalfunctionalstatus": "Normal function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Limited",
+    "findings": "CYP2C19*15 is assigned normal function based on limited evidence. Two in vitro studies using different cell systems found CYP2C19*15 demonstrated similar enzyme activity compared to wildtype with mephenytoin and omeprazole substrates (21325430, 25001882). Therefore, consensus among experts was normal function based on limited evidence as it was determined the phenotypes containing this allele would be clinically similar to phenotypes comprising normal function alleles."
+  },
+  {
+    "name": "*40",
+    "clinicalfunctionalstatus": null,
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": null,
+    "findings": null
+  },
+  {
+    "name": "*41",
+    "clinicalfunctionalstatus": null,
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": null,
+    "findings": null
+  },
+  {
+    "name": "*36",
+    "clinicalfunctionalstatus": "No function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Limited",
+    "findings": "CYP2C19*36 is assigned no function based on limited evidence. CYP2C19*36 is a complete deletion of the CYP2C19 gene and was identified by interrogation of multiple databases of clinical chromosomal microarray data (31260137). Therefore, because a gene deletion would not result in protein formation, consensus among experts was no function based on limited evidence as it was determined the phenotypes containing this allele would be clinically distinct from phenotypes comprising normal function and decreased function alleles."
+  },
+  {
+    "name": "*39",
+    "clinicalfunctionalstatus": "Uncertain function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Inadequate",
+    "findings": "CYP2C19*39 is assigned uncertain function due to inadequate data. Currently, there is no published evidence describing the function of the CYP2C19*39 allele. One in vitro study for 12718A>C (E122A) determined the metabolic activities towards CEC(3-cyano-7-ethoxycoumarin) O-deethylation and concluded decreased function for this variant (21692664) and another study found the Clint for S-mephenytoin is not significantly different and for omeprazole decreased to 0.27 fold compared to no variant (21325430). Consensus was not achieved among experts as data were sparse and not consistent among substrates. Therefore, uncertain function was assigned."
+  },
+  {
+    "name": "*11",
+    "clinicalfunctionalstatus": "Normal function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Limited",
+    "findings": "CYP2C19*11 is assigned normal function based on limited evidence. Three in vitro studies using different cell systems found CYP2C19*11 demonstrated similar enzyme activity compared to wildtype with mephenytoin, omeprazole, clopidogrel and other substrates (12464799, 21325430, 25001882, 21692664). Therefore, consensus among experts was normal function based on limited evidence as it was determined the phenotypes containing this allele would be clinically similar to phenotypes comprising normal function alleles."
+  },
+  {
+    "name": "*32",
+    "clinicalfunctionalstatus": "Uncertain function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Inadequate",
+    "findings": "CYP2C19*32 is assigned uncertain function due to inadequate evidence. In vitro studies found CYP2C19*32 demonstrated enzyme activity ranging from decreased to similar activity compared to wildtype with various substrates (26153442, 30464555, 29098786). Consensus was not achieved among experts and therefore uncertain function was assigned."
+  },
+  {
+    "name": "*22",
+    "clinicalfunctionalstatus": "No function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Limited",
+    "findings": "CYP2C19*22 is assigned no function based on limited in vitro and computational evidence. An in vitro study found CYP2C19*22 had 8% enzyme activity compared to wildtype with a clopidogrel substrate and nondetectable enzyme activity compared to wildtype with a mephenytoin substrate (25001882). Crystal structure analysis shows the Arg186Pro substitution in CYP2C19*22 disrupts hydrogen bonds and alters protein structure resulting in decreased heme affinity and ultimately enzyme activity (19164093). Therefore, consensus among experts was no function based on limited evidence as it was determined the phenotypes containing this allele would be clinically distinct from phenotypes comprising normal function and decreased function alleles."
+  },
+  {
+    "name": "*24",
+    "clinicalfunctionalstatus": "No function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Limited",
+    "findings": "CYP2C19*24 is assigned no function based on limited evidence. In vitro studies found CYP2C19*24 demonstrated nondetectable enzyme activity compared to wildtype with mephenytoin, clopidogrel, and omeprazole substrates (25001882, 27578295, 31713493). Additionally, CYP2C19*24 had less holoprotein compared to wildtype suggesting the protein is less stable resulting in little to no enzyme activity (27578295). Therefore, consensus among experts was no function based on limited evidence as it was determined the phenotypes containing this allele would be clinically distinct from phenotypes comprising normal function and decreased function alleles."
+  },
+  {
+    "name": "*18",
+    "clinicalfunctionalstatus": "Normal function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Limited",
+    "findings": "CYP2C19*18 is assigned normal function based on limited evidence. Four in vitro studies found CYP2C19*18 demonstrated similar intrinsic clearance compared to wildtype with mephenytoin, omeprazole, and clopidogrel substrates (17455109, 18312490, 25001882, 21325430). Therefore, consensus among experts was normal function based on limited evidence as it was determined the phenotypes containing this allele would be clinically similar to phenotypes comprising normal function alleles."
+  },
+  {
+    "name": "*30",
+    "clinicalfunctionalstatus": "Uncertain function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Inadequate",
+    "findings": "CYP2C19*30 is assigned uncertain function due to inadequate evidence. In vitro studies found CYP2C19*30 demonstrated decreased enzyme activity compared to wildtype with mephenytoin, omeprazole, voriconazole, and nebivolol substrates (26153442, 30464555, 29098786). Consensus was not achieved among experts as data were sparse. Therefore, uncertain function was assigned."
+  },
+  {
+    "name": "*1",
+    "clinicalfunctionalstatus": "Normal function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Definitve",
+    "findings": "CYP2C19*1 is assigned normal function based on definitive evidence. CYP2C19*1 has been studied for more than 20 years and is the most frequently observed allele (7487078, 32602114). CYP2C19*1 has repeatedly demonstrated normal function with numerous substrates and its association with normal function is well-established (22027650, 29325448, 33237321)."
+  },
+  {
+    "name": "*10",
+    "clinicalfunctionalstatus": "Decreased function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Limited",
+    "findings": "CYP2C19*10 is assigned decreased function based on limited evidence.Six in vitro studies using different cell systems found CYP2C19*10 demonstrated decreased enzyme activity compared to wildtype with mephenytoin, omeprazole, and clopidogrel substrates (12464799, 19661214, 21325430, 25001882, 24945780). Another study found CYP2C19*10 exhibited significantly reduced catalytic activities compared with CYP2C19*1 across multiple substrates (21692664). Therefore, consensus among experts was decreased function based on limited evidence as it was determined the phenotypes containing this allele would be clinically distinct from phenotypes comprising normal function alleles."
+  },
+  {
+    "name": "*25",
+    "clinicalfunctionalstatus": "Decreased function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Limited",
+    "findings": "CYP2C19*25 is assigned decreased function based on limited in vitro and computational evidence. An in vitro study found CYP2C19*25 had decreased intrinsic clearance compared to wildtype with clopidogrel and mephenytoin, and omeprazole substrates (25001882, 31713493). A computational analysis of the Phe448Leu amino acid substitution in CYP2C19*25 predicted the change as deleterious. An examination of the structure showed the amino acid substitution, which is important for the heme-binding region, could disrupt the hydrophobic pocket in the region (19636337). Therefore, consensus among experts was decreased function based on limited evidence as it was determined the phenotypes containing this allele would be clinically distinct from phenotypes comprising normal function alleles."
+  },
+  {
+    "name": "*31",
+    "clinicalfunctionalstatus": "Uncertain function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Inadequate",
+    "findings": "CYP2C19*31 is assigned uncertain function due to inadequate evidence. In vitro studies found CYP2C19*31 demonstrated decreased enzyme activity compared to wildtype with mephenytoin, omeprazole, voriconazole, and nebivolol substrates (26153442, 30464555, 29098786). Consensus was not achieved among experts as data were sparse and not consistent among substrates. Therefore, uncertain function was assigned."
+  },
+  {
+    "name": "*19",
+    "clinicalfunctionalstatus": "Decreased function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Limited",
+    "findings": "CYP2C19*19 is assigned decreased function based on limited evidence. In vitro studies found CYP2C19*19 had decreased intrinsic clearance compared to wildtype with mephenytoin, omeprazole, and clopidogrel substrates (17455109, 21325430, 25001882). Although two in vitro studies found CYP2C19*19 demonstrated similar intrinsic clearance compared to wildtype with omeprazole and mephenytoin, the experts did not find these results convincing as CYP2C19*19 also demonstrated higher Km values compared to wildtype in these studies, suggesting CYP2C19*19 has decreased substrate affinity (18312490, 21325430). Additionally, decreased intrinsic clearance compared to wildtype with these two substrates was previously reported as mentioned above. Another study found CYP2C19*19 exhibited significantly reduced catalytic activities compared with CYP2C19*1 across multiple substrates (21692664).Therefore, consensus among experts was decreased function based on limited evidence as it was determined the phenotypes containing this allele would be clinically distinct from phenotypes comprising normal function alleles."
+  },
+  {
+    "name": "*4",
+    "clinicalfunctionalstatus": "No function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Limited",
+    "findings": "CYP2C19*4 is assigned no function based on limited evidence in heterozygous subjects and an in vitro study. Two subjects with CYP2C19 *2/*4 genotype demonstrated decreased mephenytoin metabolism compared to wildtype subjects based on urine metabolite concentrations. This correlated with the in vitro experiment which found CYP2C19*4 protein was not expressed but mRNA levels were similar to wildtype indicating CYP2C19*4, which is defined by a SNP in the initiation codon, is not properly translated (9435198). Thus, the CYP2C19*4 defining SNP would result in a nonfunctional protein, even in the presence of a SNP associated with increased enzyme function (21358751). Therefore, consensus among experts was no function based on limited evidence as it was determined the phenotypes containing this allele would be clinically distinct from phenotypes comprising normal function and decreased function alleles."
+  },
+  {
+    "name": "*6",
+    "clinicalfunctionalstatus": "No function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Limited",
+    "findings": "CYP2C19*6 is assigned no function based on limited evidence in a heterozygous subject and in vitro studies. CYP2C19*6 was first described in a subject demonstrating decreased mephenytoin metabolism based on urine metabolite concentrations. This correlated with an in vitro study which found CYP2C19*6 had nondetectable enzyme activity with mephenytoin and tolbutamide substrates (9732415). Two additional in vitro studies using different cell systems found CYP2C19*6 had nondetectable enzyme activity with mephenytoin, omeprazole, and clopidogrel substrates (21325430, 25001882). Therefore, consensus among experts was no function based on limited evidence as it was determined the phenotypes containing this allele would be clinically distinct from phenotypes comprising normal function and decreased function alleles."
+  },
+  {
+    "name": "*5",
+    "clinicalfunctionalstatus": "No function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Moderate",
+    "findings": "CYP2C19*5 is assigned no function based on moderate evidence in heterozygous subjects and in vitro studies. CYP2C19*5 was first described in a subject demonstrating decreased mephenytoin metabolism compared to wildtype subjects and similar mephenytoin metabolism compared to CYP2C19 *2/*2, CYP2C19 *2/*3, and CYP2C19 *3/*3 subjects based on S/R mephenytoin ratio in urine metabolites (9103550) . One CYP2C19*2/*5 subject similarly demonstrated decreased phenytoin metabolism based on S/R mephenytoin ratio in urine metabolites. This result was correlated with an in vitro study which showed CYP2C19*5 had a 40% decrease in enzyme expression, 0.4% enzyme activity with a mephenytoin substrate, and nondetectable enzyme activity with a tolbutamide substrate compared to wildtype (10022751). Two additional in vitro studies using different cell systems found CYP2C19*5 had nondetectable enzyme activity with mephenytoin, omeprazole, and clopidogrel substrates (21325430, 25001882). CYP2C19.5B showed no activity towards CEC (3-cyano-7-ethoxycoumarin) O-deethylation (21692664). Therefore, consensus among experts was no function based on moderate evidence."
+  },
+  {
+    "name": "*17",
+    "clinicalfunctionalstatus": "Increased function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Definitive",
+    "findings": "CYP2C19*17 is assigned increased function based on strong evidence in homozygous and heterozygous subjects. Subjects with CYP2C19 *1/*17 and CYP2C19 *17/*17 genotype demonstrated increased omeprazole metabolism compared to wildtype subjects based on plasma metabolite measurements. The predicted AUC of omeprazole in CYP2C19*17/*17 patients was 63% of the predicted AUC in wildtype subjects. Additionally, in a separate population, CYP2C19*17/*17 subjects demonstrated increased mephenytoin metabolism compared to wildtype and CYP2C19 *1/*17 subjects. A murine study found increased gene transcription of CYP2C19*17 likely results in the observed increased enzyme activity (16413245). CYP2C19 *17/*17 patients taking escitalopram had 42% serum escitalopram concentrations compared to wildtype (17625515). Also, in adolescents with generalized anxiety disorder, patients with *4/*17 or *17/*17 had lower AUC/CMAX compared to normal (*1/*1) and poor metabolizers and expected differences in the ratios of s-citalopram to its metabolite, desmethylcitalopram (PMID 32857933). Additionally, CYP2C19 *1/*17 and *17/*17 carriers in naturalistically studied depressed adults had 10% and 20% lower serum concentration compared to CYP2C19 NMs (29325448). In healthy adults, *17/*17 was associated with lower sertraline AUC vs normal metabolizers (29136336), although in a separate study involving more than 1200 patients, the CYP2C19*17 allele was associated with 8% lower serum concentration compared to NMs (31649299). CYP2C19 *17/*17 patients taking clopidogrel had lower ADP induced platelet aggregation likely as a result of increased clopidogrel metabolism to its active metabolite compared to wildtype and CYP2C19 *1/*17 patients (20083681). Therefore, consensus among experts was increased function based on strong evidence."
+  },
+  {
+    "name": "*38",
+    "clinicalfunctionalstatus": "Normal function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Definitve",
+    "findings": "CYP2C19*38 is assigned normal function based on definitive evidence. CYP2C19*38 was originally catalogued as CYP2C19*1.001 (i.e. CYP2C19*1A) (2009263). Due to the standardized nomenclature system this allele received its own star designation and is now catalogued as CYP2C19*38 (32602114). Therefore, because CYP2C19*38 does not contain any single nucleotide polymorphisms and the new star designation was a result of nomenclature standardization, consensus among experts was normal function."
+  },
+  {
+    "name": "*14",
+    "clinicalfunctionalstatus": "Uncertain function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Inadequate",
+    "findings": "CYP2C19*14 is assigned uncertain function due to inadequate evidence. CYP2C19*14 demonstrated similar enzyme activity compared to wildtype with mephenytoin, omeprazole, and other substrates (21325430, 21692664). In a separate in vitro study CYP2C19*14 demonstrated decreased activity compared to wildtype with mephenytoin and clopidogrel substrates (25001882). Therefore, consensus among experts was not achieved and uncertain function was assigned."
+  },
+  {
+    "name": "*35",
+    "clinicalfunctionalstatus": "No function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Limited",
+    "findings": "CYP2C19*35 is assigned no function based on limited evidence. CYP2C19*35 is defined by a splicing defect resulting in a truncated protein (26021325). This splicing defect is also found in CYP2C19*2 which definitively has no function. Although subjects with CYP2C19 *1/*35 did not demonstrate significantly decreased enzyme activity compared to wildtype based on urine metabolites after mephenytoin 100mg once (26021325), the experts did not find this result convincing due to the small sample size. Therefore, consensus among experts was no function based on limited evidence as it was determined the phenotypes containing this allele would be clinically distinct from phenotypes comprising normal function and decreased function alleles."
+  },
+  {
+    "name": "*28",
+    "clinicalfunctionalstatus": "Normal function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Limited",
+    "findings": "CYP2C19*28 is assigned normal function based on limited in vitro and computational evidence. An in vitro study found CYP2C19*28 had similar intrinsic clearance compared to wildtype with a mephenytoin substrate (25001882). A computational analysis including splice site, mFold and nonsynonymous mutation analysis, did not find a deleterious impact on enzyme function (20712527). Although CYP2C19*28 was found to have increased intrinsic clearance compared to wildtype with a clopidogrel substrate in vitro (25001882), the experts did not find this result convincing as computational analysis and in vitro data with mephenytoin did not support increased function. Therefore, consensus among experts was normal function based on limited evidence as it was determined the phenotypes containing this allele would be clinically similar to phenotypes comprising normal function alleles."
+  },
+  {
+    "name": "*33",
+    "clinicalfunctionalstatus": "Uncertain function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Inadequate",
+    "findings": "CYP2C19*33 is assigned uncertain function due to inadequate evidence. In vitro studies found CYP2C19*33 demonstrated decreased enzyme activity compared to wildtype with mephenytoin, omeprazole, and voriconazole substrates (26153442, 30464555, 29098786). Consensus was not achieved among experts as data were sparse and not consistent among substrates. Therefore, uncertain function was assigned"
+  },
+  {
+    "name": "*7",
+    "clinicalfunctionalstatus": "No function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Limited",
+    "findings": "CYP2C19*7 is assigned no function based on limited evidence in a heterozygous subject. CYP2C19*7 is defined by a splicing defect and was described in a subject demonstrating decreased metabolism of mephenytoin based on urine metabolite concentrations after three separate phenotyping studies (10411572). Therefore, consensus among experts was no function based on limited evidence as it was determined the phenotypes containing this allele would be clinically distinct from phenotypes comprising normal function and decreased function alleles."
+  },
+  {
+    "name": "*16",
+    "clinicalfunctionalstatus": "Decreased function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Limited",
+    "findings": "CYP2C19*16 is assigned normal function based on limited evidence. A subject with CYP2C19 *2/*16 genotype demonstrated decreased mephobarbital excretion compared to heterozygous CYP2C19 *2 or CYP2C19*3 subjects but greater mephobarbital excretion compared to subjects carrying two no function alleles based on urine metabolites after a 200mg dose (15499191). Two in vitro studies using different cell systems found CYP2C19*16 had nondetectable or decreased enzyme activity compared to wildtype with mephenytoin, omeprazole, and clopidogrel substrates (25001882, 21325430). Another study found CYP2C19*16 exhibited significantly reduced catalytic activities compared with CYP2C19*1 across multiple substrates (21692664).Therefore, consensus among experts was decreased function based on limited evidence as it was determined the phenotypes containing this allele would be clinically distinct from phenotypes comprising normal function alleles."
+  },
+  {
+    "name": "*34",
+    "clinicalfunctionalstatus": "Uncertain function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Inadequate",
+    "findings": "CYP2C19*34 is assigned uncertain function due to inadequate evidence. CYP2C19*34 was identified in a patient heterozygous for the CYP2C19*2 allele who experienced adverse effects with venlafaxine and a supratherapeutic nortriptyline level. CYP2C19 enzyme function was not adequately assessed as CYP2D6 is involved in metabolism of antidepressants such as nortriptyline and this patient was a CYP2D6 intermediate metabolizer (23799451). Therefore, consensus among experts was uncertain function due to inadequate evidence."
+  },
+  {
+    "name": "*3",
+    "clinicalfunctionalstatus": "No function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Definitve",
+    "findings": "CYP2C19*3 is assigned no function based on definitive evidence. CYP2C19*3 has been studied for more than 20 years and its association with impaired function is well-established (7969038, 9103550, 22027650). CYP2C19*3 is defined by an early stop codon resulting in a truncated protein lacking a heme binding region and a majority of the substrate binding region, making it a nonfunctional protein. CYP2C19*3 was first identified in a homozygous subject demonstrating decreased mephenytoin metabolism and was subsequently identified in six additional subjects demonstrating decreased mephenytoin metabolism (7969038)."
+  },
+  {
+    "name": "*9",
+    "clinicalfunctionalstatus": "Decreased function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Limited",
+    "findings": "CYP2C19*9 is assigned decreased function based on limited evidence. Three in vitro studies using different cell systems found CYP2C19*9 demonstrated decreased enzyme activity compared to wildtype with mephenytoin, omeprazole, and clopidogrel substrates (12464799, 21325430, 25001882). Another study found CYP2C19*9 exhibited significantly reduced catalytic activities compared with CYP2C19*1 across multiple substrates (21692664).Therefore, consensus among experts was decreased function based on limited evidence as it was determined the phenotypes containing this allele would be clinically distinct from phenotypes comprising normal function alleles."
+  },
+  {
+    "name": "*12",
+    "clinicalfunctionalstatus": "Uncertain function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Inadequate",
+    "findings": "CYP2C19*12 is assigned uncertain function due to inadequate evidence. In one in vitro study CYP2C19*12 was poorly expressed and enzyme activity could not be assessed with a mephenytoin substrate (12464799). CYP2C19*12 is defined by the conversion of the stop codon to cysteine, and it is unclear if this protein is unstable in vivo. Therefore, consensus among experts was not achieved and uncertain function was assigned."
+  },
+  {
+    "name": "*23",
+    "clinicalfunctionalstatus": "Uncertain function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Inadequate",
+    "findings": "CYP2C19*23 is assigned uncertain function due to inadequate evidence. In vitro studies found CYP2C19*23 demonstrated enzyme activity ranging from decreased to increased compared to wildtype with various substrates (25001882, 27578295, 30464555, 31713493). Therefore, consensus among experts was uncertain function due to inadequate evidence."
+  },
+  {
+    "name": "*29",
+    "clinicalfunctionalstatus": "Uncertain function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Inadequate",
+    "findings": "CYP2C19*29 is assigned uncertain function due to inadequate evidence. In vitro studies found CYP2C19*29 demonstrated modest decreased enzyme activity compared to wildtype with mephenytoin, omeprazole, and voriconazole substrates (26153442, 30464555). One in vitro study found increased clearance relative to wild-type for nebivolol (29098786). Consensus was not achieved among experts as data were sparse and conflicting and it was not convincing the magnitude of decreased activity was clinically significant. Therefore, uncertain function was assigned."
+  },
+  {
+    "name": "*2",
+    "clinicalfunctionalstatus": "No function",
+    "activityvalue": null,
+    "functionalstatus": null,
+    "strength": "Definitve",
+    "findings": "CYP2C19*2 is assigned no function based on definitive evidence. CYP2C19*2 has been studied for more than 20 years and its association with impaired function is well-established (8195181, 22027650). CYP2C19*2 is defined by splicing defects resulting in a truncated protein lacking a heme binding region, making it a nonfunctional protein. CYP2C19*2 was first identified in a homozygous subject demonstrating decreased mephenytoin metabolism and was subsequently identified in seventeen additional subjects demonstrating decreased mephenytoin metabolism (8195181). Therefore, consensus among experts was no function based on definitive evidence."
+  }
+]
