@@ -16,6 +16,8 @@ import os
 import re
 import sys
 import time
+import urllib.parse
+import urllib.request
 from collections import defaultdict, deque
 from pathlib import Path
 from typing import Annotated, Literal, Optional, Union
@@ -245,9 +247,110 @@ CHAT_SYSTEM = (
     "- The user's raw DNA never leaves their device. You only ever see "
     "verified CPIC-style phenotype labels (e.g. 'CYP2C19 Intermediate "
     "metabolizer') and medication names.\n\n"
+    "Workflow for any drug-specific question:\n"
+    "1. Call `get_gene_status` to confirm the user's phenotype for the "
+    "relevant gene (if you don't already know it from the context).\n"
+    "2. Call `lookup_cpic_recommendation` with that exact phenotype to "
+    "fetch CPIC's verbatim text from api.cpicpgx.org — this is the "
+    "authoritative source.\n"
+    "3. Paraphrase the CPIC implications and recommendation into plain "
+    "language. Don't quote whole sentences — translate them. Preserve the "
+    "*direction* of the recommendation (use, avoid, alternative) and "
+    "name the alternative drugs CPIC suggests if any.\n"
+    "4. Mention the evidence classification CPIC returned (Strong, "
+    "Moderate, Optional) so the user understands how firm the guidance is.\n"
+    "Fall back to `get_drug_guidance` only if the live CPIC lookup misses.\n\n"
     "Keep replies under 150 words. End each reply with one concrete question "
     "the user could ask their clinician or pharmacist."
 )
+
+# ── Live CPIC API ─────────────────────────────────────────────────────────────
+# Run-time lookup against api.cpicpgx.org. CPIC publishes the authoritative
+# clinical recommendation for every (gene, drug, phenotype) tuple they cover;
+# we let the chat agent fetch the verbatim text and then paraphrase it. The
+# bundled drugs.json stays as the fast / offline fallback.
+CPIC_API_BASE = "https://api.cpicpgx.org/v1"
+CPIC_TIMEOUT_S = 6.0
+
+# Drugid (RxNorm) lookups are stable; cache forever in-memory. Bool False
+# sentinel means "we looked and CPIC has no entry for this drug name."
+_CPIC_DRUGID_CACHE: dict[str, Optional[str]] = {}
+_CPIC_RECS_CACHE: dict[str, list[dict]] = {}
+
+
+def _cpic_get_json(url: str) -> Optional[object]:
+    try:
+        req = urllib.request.Request(url, headers={"Accept": "application/json"})
+        with urllib.request.urlopen(req, timeout=CPIC_TIMEOUT_S) as resp:
+            return json.loads(resp.read())
+    except Exception:
+        return None
+
+
+def _cpic_drugid(drug_name: str) -> Optional[str]:
+    key = drug_name.lower().strip()
+    if key in _CPIC_DRUGID_CACHE:
+        return _CPIC_DRUGID_CACHE[key]
+    url = (
+        f"{CPIC_API_BASE}/drug?name=eq.{urllib.parse.quote(key)}"
+        "&select=drugid&limit=1"
+    )
+    data = _cpic_get_json(url)
+    drugid: Optional[str] = None
+    if isinstance(data, list) and data:
+        drugid = data[0].get("drugid") if isinstance(data[0], dict) else None
+    _CPIC_DRUGID_CACHE[key] = drugid
+    return drugid
+
+
+def _cpic_lookup(gene: str, drug: str, phenotype: str) -> Optional[dict]:
+    """Fetch (and cache) CPIC's recommendation for (gene, drug, phenotype).
+
+    Returns a dict with the verbatim CPIC text fields, or None on miss /
+    network failure. Case-insensitive match on the phenotype string against
+    CPIC's own labels (CPIC's casing differs slightly from ours; matching
+    case-insensitively avoids a fragile mapping table).
+    """
+    drugid = _cpic_drugid(drug)
+    if not drugid:
+        return None
+    cache_key = f"{drugid}"
+    recs = _CPIC_RECS_CACHE.get(cache_key)
+    if recs is None:
+        url = (
+            f"{CPIC_API_BASE}/recommendation"
+            f"?drugid=eq.{urllib.parse.quote(drugid)}"
+            "&select=phenotypes,implications,drugrecommendation,classification,population"
+            "&limit=200"
+        )
+        data = _cpic_get_json(url)
+        if not isinstance(data, list):
+            return None
+        recs = data
+        _CPIC_RECS_CACHE[cache_key] = recs
+    pheno_lc = phenotype.lower().strip()
+    gene_uc = gene.upper().strip()
+    for rec in recs:
+        if not isinstance(rec, dict):
+            continue
+        phenos = rec.get("phenotypes") or {}
+        gene_pheno = phenos.get(gene_uc)
+        if not gene_pheno:
+            continue
+        if gene_pheno.lower().strip() != pheno_lc:
+            continue
+        return {
+            "cpic_phenotype": gene_pheno,
+            "implications": (rec.get("implications") or {}).get(gene_uc, ""),
+            "drugrecommendation": rec.get("drugrecommendation", ""),
+            "classification": rec.get("classification", ""),
+            "population": rec.get("population", "general"),
+            "source_url": (
+                f"{CPIC_API_BASE}/recommendation?drugid=eq.{drugid}"
+            ),
+        }
+    return None
+
 
 CHAT_TOOLS = [
     {
@@ -272,11 +375,13 @@ CHAT_TOOLS = [
     {
         "name": "get_drug_guidance",
         "description": (
-            "Look up the canonical CPIC/FDA guidance for a specific drug at the "
+            "Look up the bundled CPIC/FDA guidance for a specific drug at the "
             "user's current phenotype for the relevant gene. Returns the "
             "flag color (green/amber/red/gray), the bundled recommendation "
-            "text, and its source. Use this before commenting on any specific "
-            "drug; never paraphrase guidance you haven't looked up."
+            "text, and its source. Fast path. Use this before commenting on "
+            "any specific drug; never paraphrase guidance you haven't "
+            "looked up. Prefer `lookup_cpic_recommendation` when you want "
+            "the authoritative CPIC text verbatim."
         ),
         "input_schema": {
             "type": "object",
@@ -285,6 +390,36 @@ CHAT_TOOLS = [
                 "drug": {"type": "string"},
             },
             "required": ["gene", "drug"],
+        },
+    },
+    {
+        "name": "lookup_cpic_recommendation",
+        "description": (
+            "Fetch the LIVE CPIC recommendation from api.cpicpgx.org for a "
+            "specific (gene, drug, phenotype) combination. Returns CPIC's "
+            "verbatim clinical implications text, CPIC's actual drug "
+            "recommendation, and CPIC's evidence-strength classification "
+            "(Strong / Moderate / Optional / No Recommendation). Use this "
+            "as the primary tool whenever the user asks about a specific "
+            "medication — paraphrase the verbatim CPIC text into plain "
+            "language without changing the medical meaning. Falls back to "
+            "the bundled guidance if the CPIC API is unreachable."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "gene": {"type": "string"},
+                "drug": {"type": "string"},
+                "phenotype": {
+                    "type": "string",
+                    "description": (
+                        "The user's phenotype for this gene exactly as "
+                        "returned by get_gene_status — e.g. 'Intermediate "
+                        "metabolizer', 'Poor metabolizer'."
+                    ),
+                },
+            },
+            "required": ["gene", "drug", "phenotype"],
         },
     },
     {
@@ -812,6 +947,43 @@ def _execute_chat_tool(
             f"Flag: {row.get('flag', 'unknown')}\n"
             f"Recommendation: {row.get('recommendation', '')}\n"
             f"Source: {row.get('source', 'CPIC')}"
+        )
+
+    if name == "lookup_cpic_recommendation":
+        gene = (tool_input.get("gene") or "").strip()
+        raw_drug = (tool_input.get("drug") or "").strip()
+        drug = _ALLOWED_DRUGS_LC.get(raw_drug.lower(), raw_drug)
+        raw_phenotype = (tool_input.get("phenotype") or "").strip()
+        if gene not in _ALLOWED_GENES:
+            return f"Unknown gene '{gene}'."
+        if raw_phenotype not in _ALLOWED_PHENOTYPES:
+            return f"Unknown phenotype '{raw_phenotype}'."
+        cpic = _cpic_lookup(gene, drug, raw_phenotype)
+        if cpic:
+            return (
+                f"CPIC live lookup (source: api.cpicpgx.org/v1/recommendation):\n"
+                f"Gene: {gene}\n"
+                f"CPIC phenotype: {cpic['cpic_phenotype']}\n"
+                f"Drug: {drug}\n"
+                f"Population: {cpic['population']}\n"
+                f"Implications (CPIC verbatim): {cpic['implications']}\n"
+                f"Recommendation (CPIC verbatim): {cpic['drugrecommendation']}\n"
+                f"Evidence classification: {cpic['classification']}"
+            )
+        row = _DRUGS_GUIDANCE.get(gene, {}).get(drug, {}).get(raw_phenotype)
+        if not row:
+            return (
+                f"CPIC API returned no match for {gene} + {drug} + "
+                f"{raw_phenotype}, and no bundled fallback exists for this "
+                "combination. Tell the user this specific combination isn't "
+                "in CPIC's authored set."
+            )
+        return (
+            f"CPIC API miss or unreachable; falling back to bundled "
+            f"guidance for {gene} {raw_phenotype} + {drug}:\n"
+            f"Flag: {row.get('flag', 'unknown')}\n"
+            f"Recommendation: {row.get('recommendation', '')}\n"
+            f"Source: {row.get('source', 'CPIC (bundled)')}"
         )
 
     if name == "check_drug_interactions":
