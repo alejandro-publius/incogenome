@@ -6,23 +6,30 @@
   <title>DoseDNA — Pharmacogenomics, in your browser</title>
   <style>
     :root {
-      --bg: #0b0f17;
-      --card: #11171f;
-      --card-soft: #141b25;
-      --border: #1d2533;
-      --border-soft: #182030;
-      --text: #e7ecf3;
-      --dim: #8d97a7;
-      --dimmer: #5d6678;
-      --accent: #52d273;
-      --accent-soft: rgba(82, 210, 115, 0.12);
-      --warn: #ffb454;
-      --warn-soft: rgba(255, 180, 84, 0.12);
-      --alarm: #ff5f6d;
-      --alarm-soft: rgba(255, 95, 109, 0.12);
-      --gray: #5d6678;
-      --gray-soft: rgba(141, 151, 167, 0.12);
-      --radius: 14px;
+      /* Light palette — design system adapted from Varsha's prototype. */
+      --bg: #f4f7fa;
+      --card: #ffffff;
+      --card-soft: #fafbfc;
+      --border: #e2e8f0;
+      --border-soft: #eef2f6;
+      --text: #1c2434;
+      --dim: #637381;
+      --dimmer: #94a3b8;
+      --accent: #0052cc;
+      --accent-hover: #0041a3;
+      --accent-soft: #ebf3ff;
+      --warn: #b45309;
+      --warn-soft: #fef3c7;
+      --alarm: #b91c1c;
+      --alarm-soft: #fef2f2;
+      --gray: #94a3b8;
+      --gray-soft: #f1f5f9;
+      /* Professional muted disclaimer treatment. */
+      --disclaimer-bg: #f8fafc;
+      --disclaimer-border: #cbd5e1;
+      --disclaimer-text: #334155;
+      --disclaimer-accent: #0284c7;
+      --radius: 12px;
       --radius-sm: 8px;
       --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI",
               Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -45,10 +52,7 @@
 
     body {
       min-height: 100vh;
-      background:
-        radial-gradient(1200px 600px at 80% -10%, rgba(82, 210, 115, 0.06), transparent 60%),
-        radial-gradient(900px 500px at -10% 10%, rgba(82, 130, 210, 0.05), transparent 60%),
-        var(--bg);
+      background: var(--bg);
     }
 
     .wrap {
@@ -73,12 +77,12 @@
       width: 36px;
       height: 36px;
       border-radius: 10px;
-      background: linear-gradient(135deg, var(--accent), #3aa8d8);
+      background: linear-gradient(135deg, var(--accent), #0284c7);
       display: grid;
       place-items: center;
       font-weight: 700;
       font-size: 14px;
-      color: #0b0f17;
+      color: #ffffff;
       letter-spacing: -0.02em;
     }
 
@@ -120,7 +124,7 @@
       font-weight: 500;
       background: var(--accent-soft);
       color: var(--accent);
-      border: 1px solid rgba(82, 210, 115, 0.25);
+      border: 1px solid rgba(0, 82, 204, 0.25);
     }
 
     .pill .dot {
@@ -137,6 +141,28 @@
       border-color: var(--border);
     }
     .pill.neutral .dot { background: var(--dim); box-shadow: none; }
+
+    /* ---------- Disclaimer (medical app honesty pattern) ---------- */
+    .disclaimer-box {
+      background: var(--disclaimer-bg);
+      border: 1px solid var(--disclaimer-border);
+      border-left: 4px solid var(--disclaimer-accent);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 0 0 24px;
+      font-size: 14px;
+      color: var(--disclaimer-text);
+      line-height: 1.6;
+    }
+    .disclaimer-box strong {
+      display: block;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: var(--disclaimer-accent);
+    }
 
     /* ---------- Sections / cards ---------- */
     section.card {
@@ -205,7 +231,7 @@
     input[type="text"] { flex: 1; min-width: 240px; }
     input[type="text"]::placeholder { color: var(--dimmer); }
     input[type="file"]:hover,
-    input[type="text"]:hover { border-color: #2a3447; }
+    input[type="text"]:hover { border-color: #94a3b8; }
     input[type="file"]:focus,
     input[type="text"]:focus {
       border-color: var(--accent);
@@ -242,10 +268,11 @@
 
     button.primary {
       background: var(--accent);
-      color: #07120c;
+      color: #ffffff;
       border: 1px solid var(--accent);
+      box-shadow: 0 2px 4px rgba(0, 82, 204, 0.12);
     }
-    button.primary:hover:not(:disabled) { background: #66dd84; border-color: #66dd84; }
+    button.primary:hover:not(:disabled) { background: var(--accent-hover); border-color: var(--accent-hover); }
 
     button.secondary {
       background: transparent;
@@ -254,7 +281,7 @@
     }
     button.secondary:hover:not(:disabled) {
       background: var(--border-soft);
-      border-color: #2a3447;
+      border-color: #94a3b8;
     }
 
     button:disabled {
@@ -393,12 +420,12 @@
     .coverage-state.confident {
       background: var(--accent-soft);
       color: var(--accent);
-      border-color: rgba(82, 210, 115, 0.25);
+      border-color: rgba(0, 82, 204, 0.25);
     }
     .coverage-state.partial {
       background: var(--warn-soft);
       color: var(--warn);
-      border-color: rgba(255, 180, 84, 0.25);
+      border-color: rgba(180, 83, 9, 0.25);
     }
     .coverage-state.not-callable {
       background: var(--gray-soft);
@@ -588,6 +615,17 @@
         </span>
       </div>
     </header>
+
+    <!-- ============ DISCLAIMER (medical-app honesty pattern) ============ -->
+    <aside class="disclaimer-box" role="note">
+      <strong>Informational only — not medical advice</strong>
+      DoseDNA is a research-grade tool for understanding how your DNA may
+      affect common medications. Always confirm any decision with a clinician
+      or pharmacist before changing a prescription. Some genes (notably
+      <code style="font-family: var(--mono);">CYP2D6</code>) can't be reliably
+      called from consumer DNA arrays — those are flagged as
+      <em>coverage limited</em> rather than guessed.
+    </aside>
 
     <!-- ============ STEP 1: LOAD DNA ============ -->
     <section class="card" aria-labelledby="step1-h">
